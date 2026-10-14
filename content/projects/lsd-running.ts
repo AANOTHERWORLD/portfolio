@@ -87,6 +87,13 @@ export const lsdRunning: ProjectBundle = {
       "The design was completed and handed to the fabricator, with expansion into the adjacent space included in the scope. Supplied photographs and film document the built space. Not every concept detail is proven built, and the renders shown alongside are design visualizations.",
     ],
     imageCredit: "Renders, axonometric drawings, and workshop photography by Rapt Studio, from the LSD Running project book.",
+    sectionImages: {
+      story: "lsd-product-run-1",
+      challenge: "lsd-workshop",
+      vision: "lsd-scheme-minimal",
+      leadership: null,
+      outcome: "lsd-photo-bench-wide",
+    },
     involvement:
       "Design Director. Led the design with the Rapt team: ran the workshop, directed the five-scheme exploration and the synthesis, and directed the handoff to the fabricator.",
   },
