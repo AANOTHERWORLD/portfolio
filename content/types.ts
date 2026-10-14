@@ -164,6 +164,7 @@ export interface Claim {
 }
 
 export interface Asset {
+  motion?: { file: string; loop?: boolean; muted?: boolean };
   id: string;
   projectId: string;
   file: string;
