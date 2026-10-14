@@ -74,6 +74,29 @@ function Glance({ bundle }: { bundle: ProjectBundle }) {
   );
 }
 
+function FeaturedPublication({ bundle }: { bundle: ProjectBundle }) {
+  const publication = bundle.narrative.featuredPublication;
+  if (!publication) return null;
+  const asset = getAsset(bundle, publication.assetId);
+  if (!asset) return null;
+  return (
+    <section className="project-section" aria-labelledby="featured-publication">
+      <div className="grid-2">
+        <div className="prose">
+          <p className="tag">Selected press</p>
+          <h2 id="featured-publication" className="section__title">{publication.title}</h2>
+          <p>{publication.description}</p>
+          <p><a href={publication.url} className="text-link">View the magazine issue</a></p>
+          <p className="picture__credit">{asset.credit}</p>
+        </div>
+        <a href={publication.url} aria-label={`${publication.title}: view the magazine issue`}>
+          <Picture asset={asset} showCaption={false} sizes="(min-width: 900px) 55vw, 100vw" />
+        </a>
+      </div>
+    </section>
+  );
+}
+
 function Credits({ bundle }: { bundle: ProjectBundle }) {
   const { project, narrative } = bundle;
   const credits = getClaims(bundle, "credits");
@@ -156,11 +179,12 @@ function FullTemplate({ bundle }: { bundle: ProjectBundle }) {
   const { project, narrative, decisions } = bundle;
   const assets = visibleAssets(bundle);
   const usedIds = new Set<string>([project.heroAssetId, ...decisions.flatMap((d) => d.assetIds), ...(narrative.scaleTranslation.map((s) => s.assetId).filter(Boolean) as string[])]);
-  const gallery = assets.filter((a) => !usedIds.has(a.id));
+  const gallery = assets.filter((a) => !usedIds.has(a.id) && a.id !== narrative.featuredPublication?.assetId);
   return (
     <article className="wrap">
       <Opening bundle={bundle} />
       <Glance bundle={bundle} />
+      <FeaturedPublication bundle={bundle} />
 
       {narrative.summary && narrative.summary.length > 0 && (
         <section className="project-section project-section--lead" aria-label="In brief">
@@ -241,11 +265,12 @@ function FullTemplate({ bundle }: { bundle: ProjectBundle }) {
 
 function LightTemplate({ bundle }: { bundle: ProjectBundle }) {
   const { project, narrative } = bundle;
-  const assets = visibleAssets(bundle).filter((a) => a.id !== project.heroAssetId && !bundle.decisions.some((d) => d.assetIds.includes(a.id)));
+  const assets = visibleAssets(bundle).filter((a) => a.id !== project.heroAssetId && a.id !== narrative.featuredPublication?.assetId && !bundle.decisions.some((d) => d.assetIds.includes(a.id)));
   return (
     <article className="wrap">
       <Opening bundle={bundle} />
       <Glance bundle={bundle} />
+      <FeaturedPublication bundle={bundle} />
       <section className="project-section" aria-labelledby="story">
         <div className="grid-2">
           <div className="project-section__head"><p className="tag">The work</p><h2 id="story" className="section__title">Context, idea, and what was made</h2></div>
