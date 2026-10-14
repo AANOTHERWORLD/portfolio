@@ -114,6 +114,57 @@ export const googleRoom98: ProjectBundle = {
     },
   ],
   assets: [
+{
+    "id": "room98-motion-presentation",
+    "projectId": "google-room-98",
+    "file": "google-room-98/room98-motion-presentation.jpg",
+    "motion": {
+        "file": "google-room-98/room98-motion-presentation.mp4",
+        "loop": true,
+        "muted": true
+    },
+    "type": "process",
+    "caption": "The presentation setting changes through the supplied motion sequence.",
+    "alt": "Room 98 presentation animation. Play to view the changes in the room.",
+    "creator": "Rapt Studio project archive",
+    "credit": "Source animation from the Room 98 project archive",
+    "permission": "confirmed",
+    "lens": "interiors-behavior"
+},
+{
+    "id": "room98-motion-collaboration",
+    "projectId": "google-room-98",
+    "file": "google-room-98/room98-motion-collaboration.jpg",
+    "motion": {
+        "file": "google-room-98/room98-motion-collaboration.mp4",
+        "loop": true,
+        "muted": true
+    },
+    "type": "process",
+    "caption": "The collaboration setting shifts between working configurations.",
+    "alt": "Room 98 collaboration animation. Play to view the changes in the room.",
+    "creator": "Rapt Studio project archive",
+    "credit": "Source animation from the Room 98 project archive",
+    "permission": "confirmed",
+    "lens": "interiors-behavior"
+},
+{
+    "id": "room98-motion-deliberation",
+    "projectId": "google-room-98",
+    "file": "google-room-98/room98-motion-deliberation.jpg",
+    "motion": {
+        "file": "google-room-98/room98-motion-deliberation.mp4",
+        "loop": true,
+        "muted": true
+    },
+    "type": "process",
+    "caption": "The deliberation setting changes through the supplied motion sequence.",
+    "alt": "Room 98 deliberation animation. Play to view the changes in the room.",
+    "creator": "Rapt Studio project archive",
+    "credit": "Source animation from the Room 98 project archive",
+    "permission": "confirmed",
+    "lens": "interiors-behavior"
+},
     {
       id: "room98-photo-screen-reveal",
       projectId: id,
