@@ -39,7 +39,7 @@ export default function Picture({ asset, sizes = "(min-width: 1100px) 1100px, 10
   }
   const typeLabel = asset.projectId === "watt-plaza" && asset.type === "render" ? "AI-assisted concept render" : TYPE_LABEL[asset.type];
   return (
-    <figure className={`picture ${fit === "cover" ? "picture--cover" : ""} ${image.vector ? "picture--vector" : ""} ${className ?? ""}`}>
+    <figure className={`picture ${fit === "cover" ? "picture--cover" : ""} ${image.vector ? "picture--vector" : ""} ${asset.surface === "light" ? "picture--light" : ""} ${className ?? ""}`}>
       <div className="picture__media" style={fit === "cover" ? { aspectRatio: `${image.width} / ${image.height}` } : undefined}>
         {asset.motion && showCaption ? <video
           controls
