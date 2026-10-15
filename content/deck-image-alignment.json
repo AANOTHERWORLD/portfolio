@@ -1,0 +1,995 @@
+{
+  "deck": "https://www.figma.com/slides/3J5oiRVDxqs65zExHJsrXS",
+  "updated": "2026-10-15",
+  "heroes": [
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-university-space",
+      "sourceSha1": "6d9f5d1a1ce693d86ae3ca813be7f3616c6b799a",
+      "slide": 5
+    },
+    {
+      "projectId": "lsd-running",
+      "assetId": "lsd-photo-bench-arc",
+      "sourceSha1": "f39126e69714b335ffb3df7da4a05daaede6b492",
+      "slide": 11
+    },
+    {
+      "projectId": "intuit-turbotax-retail",
+      "assetId": "intuit-sm-forum",
+      "sourceSha1": "c24273efbfa6e20d70f819b35667889f1c95593a",
+      "slide": 14
+    },
+    {
+      "projectId": "google-room-98",
+      "assetId": "room98-photo-entry-arch",
+      "sourceSha1": "062e0412c94c7988671f5464a0186fb59becfebd",
+      "slide": 19
+    },
+    {
+      "projectId": "tinder-hq",
+      "assetId": "tinder-library-deck",
+      "sourceSha1": "7e2a627c5e90fe259276b8b23aa1ec34352fd9af",
+      "slide": 22
+    },
+    {
+      "projectId": "openai",
+      "assetId": "openai-bellevue-stairs",
+      "sourceSha1": "d7ad57e2c60939a75ccc2275f0ff3bf8ddc3b602",
+      "slide": 26
+    },
+    {
+      "projectId": "kilroy-oyster-point",
+      "assetId": "kilroy-photo-amphitheatre-overhead",
+      "sourceSha1": "6fcc7e5ad67d35bb28d85c1fb28305e642aeb5a9",
+      "slide": 30
+    },
+    {
+      "projectId": "watt-plaza",
+      "assetId": "watt-departure-aerial",
+      "sourceSha1": "7077ee9a9f87f122c30c206096377778e9e1b973",
+      "slide": 33
+    }
+  ],
+  "assets": [
+    {
+      "projectId": "openai",
+      "assetId": "openai-bellevue-stairs",
+      "file": "openai/bellevue-stairs-hero.jpeg",
+      "sourceSha1": "d7ad57e2c60939a75ccc2275f0ff3bf8ddc3b602",
+      "sourceDriveFileId": "12v1diCvtAc_UrZcADcWQm5l84RoOi9eS",
+      "slides": [
+        1,
+        26,
+        27,
+        38,
+        40
+      ],
+      "role": "project-intro-hero"
+    },
+    {
+      "projectId": "google-room-98",
+      "assetId": "room98-photo-entry-arch",
+      "file": "google-room-98/room98-photo-entry-arch.jpg",
+      "sourceSha1": "062e0412c94c7988671f5464a0186fb59becfebd",
+      "sourceDriveFileId": "1cDco270AcvNvprMjmti4HVPgGkEcdvA5",
+      "slides": [
+        4,
+        19,
+        38
+      ],
+      "role": "project-intro-hero"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-university-space",
+      "file": "google-gso-home-of-the-internet/gso-university-space.jpg",
+      "sourceSha1": "6d9f5d1a1ce693d86ae3ca813be7f3616c6b799a",
+      "sourceDriveFileId": "1tP-BpkpHKdJBzu4jkkHB9QRRvn_-aGlG",
+      "slides": [
+        5
+      ],
+      "role": "project-intro-hero"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-recruitment-brochure",
+      "file": "google-gso-home-of-the-internet/gso-recruitment-brochure.jpg",
+      "sourceSha1": "85471576f13757db5fcca426f7924c90aac11535",
+      "sourceDriveFileId": "1D_6NCwvJqGNl8msssbTS9QZ0k28J8cRT",
+      "slides": [
+        6
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-university-shared-journey",
+      "file": "google-gso-home-of-the-internet/gso-university-shared-journey.jpg",
+      "sourceSha1": "ff98ff292e8b9237cd42e6a5c374599842a96fb5",
+      "sourceDriveFileId": "1FFN9LULrEX7rVLvLufLmnNa1e4f7kkIu",
+      "slides": [
+        6,
+        7
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-recruitment-phone",
+      "file": "google-gso-home-of-the-internet/deck-9367903eb30b.webp",
+      "sourceSha1": "9367903eb30b563573f42b144b516c0d787fcf28",
+      "sourceDriveFileId": "1-arLfobMBhxOqtA3b2UkjPEoIIjmhsTL",
+      "slides": [
+        6
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-university-concept",
+      "file": "google-gso-home-of-the-internet/deck-77f8cb65e255.webp",
+      "sourceSha1": "77f8cb65e2558b696481a1ece60aed598a9178fd",
+      "sourceDriveFileId": "1MHdnlvyN5XkAa7XTwtn9u227Jy9FooDD",
+      "slides": [
+        7
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-alc-2026-welcome",
+      "file": "google-gso-home-of-the-internet/gso-alc-2026-welcome.png",
+      "sourceSha1": "7a2bfa3428435dcb47379fc199fe362a5b3c4252",
+      "sourceDriveFileId": "1EXX0rpmWSpINglaEVis8eRArRwEsoB1v",
+      "slides": [
+        7
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-university-prompt-cards",
+      "file": "google-gso-home-of-the-internet/gso-university-prompt-cards.jpg",
+      "sourceSha1": "2f53a64506cd07dd40463632088728580f9d1d49",
+      "sourceDriveFileId": "1_BHWhuera5_TiN9p_qQ1ZKOQQVJBEc_p",
+      "slides": [
+        8
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-card-blue",
+      "file": "google-gso-home-of-the-internet/deck-4f95d3a154a9.webp",
+      "sourceSha1": "4f95d3a154a95eab6d83a72b9d588d57f76a8150",
+      "sourceDriveFileId": "18PGGKpyz67qe7hwIJMD8mwuFpAY3rkJg",
+      "slides": [
+        8
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-card-yellow",
+      "file": "google-gso-home-of-the-internet/deck-a0651e8d1a95.webp",
+      "sourceSha1": "a0651e8d1a954242ae14ef93e97bf5ee07716ee9",
+      "sourceDriveFileId": "1MfLftwQQNfwqXK35cIjo9Y9cFLhB7LZ0",
+      "slides": [
+        8
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-card-red",
+      "file": "google-gso-home-of-the-internet/deck-50daf6aa82d0.webp",
+      "sourceSha1": "50daf6aa82d00fa6d42b4c52dadaadd13635afdb",
+      "sourceDriveFileId": "1xwl7WEs9iAT7lj8CFQja79G12rTi3AWx",
+      "slides": [
+        8
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-prompt-question",
+      "file": "google-gso-home-of-the-internet/gso-prompt-question.png",
+      "sourceSha1": "2b47c8c61707afdd19902629d989b7499921b5c1",
+      "sourceDriveFileId": "1lx1XIN7IOut8akHJwk9Q8W8C4hoKDsfW",
+      "slides": [
+        8
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-prompt-movie",
+      "file": "google-gso-home-of-the-internet/gso-prompt-movie.png",
+      "sourceSha1": "da9fe2ca9badd634898a640d1e59edd0ee39b97f",
+      "sourceDriveFileId": "1SliB2AAw0kOMHimPXTJ458mJear1LuiX",
+      "slides": [
+        8
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-prompt-advice",
+      "file": "google-gso-home-of-the-internet/gso-prompt-advice.png",
+      "sourceSha1": "3916f92bced50a53820eca1861ec73829492fc46",
+      "sourceDriveFileId": "1ON5ZH6Gjhtu6AMIz5htr7ix4O9bTEymV",
+      "slides": [
+        8
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-field-of-dreams",
+      "file": "google-gso-home-of-the-internet/deck-85b7e7d83529.webp",
+      "sourceSha1": "85b7e7d83529775cb4d038cf9329a754a495e899",
+      "sourceDriveFileId": "1mSGRdy4gzZHJQ9sxsEw_flscB4IEJO95",
+      "slides": [
+        9
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-arrival-signage",
+      "file": "google-gso-home-of-the-internet/deck-76b18f6095d9.webp",
+      "sourceSha1": "76b18f6095d9ed9bfb589b1095157e23f4ccd00d",
+      "sourceDriveFileId": "1y10dXVTEZvzmcQ7m8v99q2Q6ZeKEFuCL",
+      "slides": [
+        9
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-event-screen",
+      "file": "google-gso-home-of-the-internet/deck-8f171e505411.webp",
+      "sourceSha1": "8f171e5054110a922c2b1e728588f7fde85c9392",
+      "sourceDriveFileId": "1CSlvWMMOylU5LUqUTpEE3sAI33k9Kw8K",
+      "slides": [
+        9
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-steam-lab",
+      "file": "google-gso-home-of-the-internet/gso-steam-lab-visualization.jpg",
+      "sourceSha1": "79876064920c787f3ae16472151ee7892e3e9083",
+      "sourceDriveFileId": "16Zp-Xf2xJbpyjacoVDMmv4XuPCD4HRgN",
+      "slides": [
+        9
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-shared-journey-map",
+      "file": "google-gso-home-of-the-internet/deck-b090744f44bc.webp",
+      "sourceSha1": "b090744f44bc6526137a62f7e2f56961f52f7e48",
+      "sourceDriveFileId": "1SzNZG1xTuCxxjT9bQKI_CB23WOJ1yTqY",
+      "slides": [
+        9
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-data-center-context",
+      "file": "google-gso-home-of-the-internet/deck-0610c08db947.webp",
+      "sourceSha1": "0610c08db94712ea0deea0c49d2785c87285912f",
+      "sourceDriveFileId": "1ZlmMxO8OhTswKiBGluEGzTXQfjWQ9pek",
+      "slides": [
+        9
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-operator-context",
+      "file": "google-gso-home-of-the-internet/deck-b911711498a7.webp",
+      "sourceSha1": "b911711498a7223d886c864e0a1dacb9e940563c",
+      "sourceDriveFileId": "1ORs4vtwRBTDnaCJzv2BAP8R_HP_U9jCT",
+      "slides": [
+        9
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-learning-context",
+      "file": "google-gso-home-of-the-internet/deck-4cd5ac370c2d.webp",
+      "sourceSha1": "4cd5ac370c2d442394cd9196f98f9ee6b9945500",
+      "sourceDriveFileId": "1nNt89-fSt1uGrxGIq16oHK64XQJhASGh",
+      "slides": [
+        9
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-steam-truck",
+      "file": "google-gso-home-of-the-internet/deck-7afa08074c8a.webp",
+      "sourceSha1": "7afa08074c8aa5e2447c3b889812faf926061877",
+      "sourceDriveFileId": "1-HAG7Jr61Hlsw1IU42ngFicfleJsKQRR",
+      "slides": [
+        9
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-event-experience",
+      "file": "google-gso-home-of-the-internet/deck-62f1c50a2f64.webp",
+      "sourceSha1": "62f1c50a2f64679fbd787b5e2517336b61154ee4",
+      "sourceDriveFileId": "14OOfj8KvSDe-evInLJdDY86-GD3y4G--",
+      "slides": [
+        9
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-learning-kit",
+      "file": "google-gso-home-of-the-internet/deck-d3c827eb2975.webp",
+      "sourceSha1": "d3c827eb2975497de8da8e8d1a9011270fdd7643",
+      "sourceDriveFileId": "1VBu8ou_s80CeQ2eUJTUWdraQABDkdPvr",
+      "slides": [
+        9
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-gso-home-of-the-internet",
+      "assetId": "gso-recruitment-poster",
+      "file": "google-gso-home-of-the-internet/deck-9bdf79dba2d7.webp",
+      "sourceSha1": "9bdf79dba2d7eb385e4b60751c6cce3688718162",
+      "sourceDriveFileId": "1HKsVbJ91Ia78gRjln_Mme77h2frMr5wZ",
+      "slides": [
+        10
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "lsd-running",
+      "assetId": "lsd-product-boulder",
+      "file": "lsd-running/lsd-product-boulder-pair.jpg",
+      "sourceSha1": "b627ee5a29032eabbee8a7c3c16bf4c4ed076872",
+      "sourceDriveFileId": "1Z2NT5BN6F-1PgJoPhYS3bsDza--p_e1M",
+      "slides": [
+        11,
+        12
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "lsd-running",
+      "assetId": "lsd-photo-bench-arc",
+      "file": "lsd-running/lsd-store-bench-arc.jpg",
+      "sourceSha1": "f39126e69714b335ffb3df7da4a05daaede6b492",
+      "sourceDriveFileId": "1a7uYJmomltQi-eFZvgAoCjkbB4cpLHG8",
+      "slides": [
+        11
+      ],
+      "role": "project-intro-hero"
+    },
+    {
+      "projectId": "lsd-running",
+      "assetId": "lsd-store-interior-deck",
+      "file": "lsd-running/deck-d265751556e6.webp",
+      "sourceSha1": "d265751556e6ad724d10584744307af879a78496",
+      "sourceDriveFileId": "1tYyBaFepGMP5EJv625Ilw7lAcH3n7wuy",
+      "slides": [
+        12
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "lsd-running",
+      "assetId": "lsd-photo-bench-wide",
+      "file": "lsd-running/lsd-store-bench-wide.jpg",
+      "sourceSha1": "d5703233eb5eaf94ff32eb3c6206be10ca48217d",
+      "sourceDriveFileId": "11jdWWQv9wmImULYHyCWBQJeXCVUqZnNd",
+      "slides": [
+        12
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "lsd-running",
+      "assetId": "lsd-video-30s-wordmark",
+      "file": "lsd-running/video-30s-wordmark.jpg",
+      "sourceSha1": "b88c63526cfde34fa0945387b150eefd51adf4b7",
+      "sourceDriveFileId": "1NBgvp8i1rgIBJXbo4tM_1XJEbAqf5W9W",
+      "slides": [
+        12
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "lsd-running",
+      "assetId": "lsd-film-community",
+      "file": "lsd-running/deck-528ed8cd4c71.webp",
+      "sourceSha1": "528ed8cd4c71a5a5d3e473ba711c3947d725604d",
+      "sourceDriveFileId": "1PIOe2wvFWnJ4J7ItwJMxe4Q7qsQ3AqQ5",
+      "slides": [
+        12
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "lsd-running",
+      "assetId": "lsd-store-material-study",
+      "file": "lsd-running/deck-39d9fc0e9801.webp",
+      "sourceSha1": "39d9fc0e98014ccfcaa105469e31699a388870b3",
+      "sourceDriveFileId": "1YmeigyLAzl9heoeNthHejsxiFbA0CsEp",
+      "slides": [
+        13
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "intuit-turbotax-retail",
+      "assetId": "intuit-sm-forum",
+      "file": "intuit-turbotax-retail/deck-c24273efbfa6.webp",
+      "sourceSha1": "c24273efbfa6e20d70f819b35667889f1c95593a",
+      "sourceDriveFileId": "1wS7np8t-5R8C0-LjwwRuduyCMXmEIDfY",
+      "slides": [
+        14
+      ],
+      "role": "project-intro-hero"
+    },
+    {
+      "projectId": "intuit-turbotax-retail",
+      "assetId": "intuit-chicago-early-sketch",
+      "file": "intuit-turbotax-retail/intuit-chicago-early-sketch.png",
+      "sourceSha1": "4050c6879345a2c22c62f1060eba11b74f3bec72",
+      "sourceDriveFileId": "1s6YbCCe_f97iZl27GIFQqqbWOrvjh4r4",
+      "slides": [
+        15
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "intuit-turbotax-retail",
+      "assetId": "intuit-chicago-forum",
+      "file": "intuit-turbotax-retail/deck-24c4ce0de99e.webp",
+      "sourceSha1": "24c4ce0de99ec65174989d83b4368e7875bc89cf",
+      "sourceDriveFileId": "1I8USOgtIdYN82Ud1J7aSdEmV7vGyot09",
+      "slides": [
+        15
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "intuit-turbotax-retail",
+      "assetId": "intuit-discovery-storyboard",
+      "file": "intuit-turbotax-retail/intuit-santa-monica-discovery-ux.png",
+      "sourceSha1": "fde10d0236dcbd40acab507385fbbabe83d76dd5",
+      "sourceDriveFileId": "1HZLTBfcwRg1DwOTm00PvwCnl_zxYxIVU",
+      "slides": [
+        16
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "intuit-turbotax-retail",
+      "assetId": "intuit-sm-concierge",
+      "file": "intuit-turbotax-retail/deck-b2ea49a0c889.webp",
+      "sourceSha1": "b2ea49a0c88962d55c7e9ecef7cd905c001b6dd8",
+      "sourceDriveFileId": "1YcN0k58pKIJzgeKaXQxeycKCcpw06iee",
+      "slides": [
+        16
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "intuit-turbotax-retail",
+      "assetId": "intuit-sm-bar",
+      "file": "intuit-turbotax-retail/deck-44e64daa3648.webp",
+      "sourceSha1": "44e64daa3648660ee58adfea1b17ce91c73b71e0",
+      "sourceDriveFileId": "1lzrnLSPr9vYroOJ0LbpNfvbcL5zWDI6W",
+      "slides": [
+        16
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "intuit-turbotax-retail",
+      "assetId": "intuit-concierge-deck",
+      "file": "intuit-turbotax-retail/deck-afecc6d15dfd.webp",
+      "sourceSha1": "afecc6d15dfd6d1a5add73ce1b1a7a2edc1aa959",
+      "sourceDriveFileId": "1kyEPlniAc8ZDlu1e3Cy5zDpZmmozgHTS",
+      "slides": [
+        16
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "intuit-turbotax-retail",
+      "assetId": "intuit-retail-concierge",
+      "file": "intuit-turbotax-retail/deck-6c99faccbff4.webp",
+      "sourceSha1": "6c99faccbff466936e5532f34493ef6aea487d74",
+      "sourceDriveFileId": "1fsgIkDRsnL-OceOFf7ypkIfr79b7V6ds",
+      "slides": [
+        17
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "intuit-turbotax-retail",
+      "assetId": "intuit-consultation-room",
+      "file": "intuit-turbotax-retail/intuit-render-consultation-room.jpg",
+      "sourceSha1": "42aac793d58650ff308acae6c3c1934e841e6822",
+      "sourceDriveFileId": "1LDkD3jXyzbftr6ngcHCqIgkXwMJXYs4d",
+      "slides": [
+        17
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "intuit-turbotax-retail",
+      "assetId": "intuit-retail-lounge",
+      "file": "intuit-turbotax-retail/intuit-retail-render-lounge.jpg",
+      "sourceSha1": "9c119d837fbecdc87d6e09b0e2bfba4ed85eeee0",
+      "sourceDriveFileId": "1QnOxfotc5DeNQE5cs9X324UXm0DQFAXI",
+      "slides": [
+        17
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "intuit-turbotax-retail",
+      "assetId": "intuit-upper-lounge-deck",
+      "file": "intuit-turbotax-retail/deck-057833d98214.webp",
+      "sourceSha1": "057833d98214adcce3a081eb9c1a80aa6ef84ae5",
+      "sourceDriveFileId": "1lv8smD0EC19GoFnb1cvBgng1H-CAPZCr",
+      "slides": [
+        17
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "intuit-turbotax-retail",
+      "assetId": "intuit-forum-screen-deck",
+      "file": "intuit-turbotax-retail/deck-b5d80df945fd.webp",
+      "sourceSha1": "b5d80df945fd5e4b924a8615f6b64bed435affa5",
+      "sourceDriveFileId": "1LcGHMKd2xOGh8rSNpwcCnBXC-tHVM1HY",
+      "slides": [
+        18
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-room-98",
+      "assetId": "room98-photo-screen-reveal",
+      "file": "google-room-98/room98-photo-screen-reveal.jpg",
+      "sourceSha1": "3652dcc93028ef9fd0d66dbee85ecef8a088f771",
+      "sourceDriveFileId": "1lcrRUmG_abdHKGQxbDPU4EwCWBAbLu0f",
+      "slides": [
+        19,
+        20
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-room-98",
+      "assetId": "room98-photo-presentation-audience",
+      "file": "google-room-98/room98-photo-presentation-audience.jpg",
+      "sourceSha1": "6ffbebd8bbc0a83af0540b05c29757ce5c33a7db",
+      "sourceDriveFileId": "1t2mKHREJS-W2Y2mOBQFGGNKVInOrV1Zw",
+      "slides": [
+        20
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-room-98",
+      "assetId": "room98-photo-table-touch",
+      "file": "google-room-98/room98-photo-table-touch.jpg",
+      "sourceSha1": "40066a7a62275dea84a5bebc40c104673496ecc5",
+      "sourceDriveFileId": "1x5BExmUqAekRaBzOTX2EjQlyko2RTouQ",
+      "slides": [
+        20
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "google-room-98",
+      "assetId": "room98-photo-collaboration-table",
+      "file": "google-room-98/room98-photo-collaboration-table.jpg",
+      "sourceSha1": "0dd82105d72d447c5736e1fe9a44765e8dd6cb21",
+      "sourceDriveFileId": "1CcFcdyMBQgltDHIFJwlCZTVga1HU6mmS",
+      "slides": [
+        21
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "tinder-hq",
+      "assetId": "tinder-21",
+      "file": "tinder-hq/tinder-21.jpg",
+      "sourceSha1": "b3e718eaf8228f200f40d3ada7ae9cf1b22457d3",
+      "sourceDriveFileId": "121_HHgQV5RWYFMLy-okh5Y9HbqX_HKtA",
+      "slides": [
+        22,
+        23
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "tinder-hq",
+      "assetId": "tinder-library-deck",
+      "file": "tinder-hq/deck-7e2a627c5e90.webp",
+      "sourceSha1": "7e2a627c5e90fe259276b8b23aa1ec34352fd9af",
+      "sourceDriveFileId": "1uO-Pb8xVleXHK_oNo715JfpUkbHUb0zz",
+      "slides": [
+        22
+      ],
+      "role": "project-intro-hero"
+    },
+    {
+      "projectId": "tinder-hq",
+      "assetId": "tinder-interior-design-cover",
+      "file": "tinder-hq/interior-design-april-2023-cover.jpg",
+      "sourceSha1": "bb1917d70353063333f44e09f336045c6c9853d5",
+      "sourceDriveFileId": "1BGultgZWuzH2GuwWJJ5PGYggAZdTeQ4J",
+      "slides": [
+        23
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "tinder-hq",
+      "assetId": "tinder-24",
+      "file": "tinder-hq/tinder-24.jpg",
+      "sourceSha1": "8701926fd23fe6abb3046768e61e538db13c1dea",
+      "sourceDriveFileId": "1wWG7PjYEC3VR4T9XGnGNySEofWB6D82a",
+      "slides": [
+        23,
+        38
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "tinder-hq",
+      "assetId": "tinder-12",
+      "file": "tinder-hq/tinder-12.jpg",
+      "sourceSha1": "af4872aa25a40ba11aac3eb015c1b5cc75d5b045",
+      "sourceDriveFileId": "1_cb-HIuv4WKd9TCHXQLBX39msR2IL7C8",
+      "slides": [
+        23
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "tinder-hq",
+      "assetId": "tinder-gallery-deck",
+      "file": "tinder-hq/deck-62018349dcef.webp",
+      "sourceSha1": "62018349dcefe7d83e89a7e9de19f22e82d43dbc",
+      "sourceDriveFileId": "1dTIiKCChjPJmBZRsxbZ5YkhTywp6m6SW",
+      "slides": [
+        23
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "tinder-hq",
+      "assetId": "tinder-20",
+      "file": "tinder-hq/tinder-20.jpg",
+      "sourceSha1": "3458875a4b5379bfa12e22d100c2d6a1259ac709",
+      "sourceDriveFileId": "1bpxG76HeBI0O8bwzwkXivjeSt_cJaUoA",
+      "slides": [
+        24
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "tinder-hq",
+      "assetId": "tinder-07",
+      "file": "tinder-hq/tinder-07.jpg",
+      "sourceSha1": "72c6dc7b1da2cb7012723e8f73f5c78535839225",
+      "sourceDriveFileId": "11BZ83tph9SFTwr4LqDBwtF2_xFHHdhYY",
+      "slides": [
+        25
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "openai",
+      "assetId": "openai-tokyo-1661",
+      "file": "openai/tokyo-DSCF1661.jpg",
+      "sourceSha1": "258235a5f6e82e5d0cd6557633f83744e6934c2d",
+      "sourceDriveFileId": "16MqnGisv5ShhqiEbZ5Ng_sbSkJUZ86cs",
+      "slides": [
+        27,
+        28
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "openai",
+      "assetId": "openai-bellevue-cafe-people",
+      "file": "openai/bellevue-cafe-people.jpg",
+      "sourceSha1": "0aae029e89d7079f3d092fc2fcec40d0b693e4a4",
+      "sourceDriveFileId": "1ru2Uq9sFY604ge9VQqSXcgZg0GjY8Hgw",
+      "slides": [
+        27
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "openai",
+      "assetId": "openai-bellevue-brown-couch",
+      "file": "openai/bellevue-browncouch.jpg",
+      "sourceSha1": "21c582a439fdc47765564b89d9e6d70608129625",
+      "sourceDriveFileId": "1_1nmfzCP-ss3qbXv9vs50qtv5X_tMRr8",
+      "slides": [
+        27
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "openai",
+      "assetId": "openai-bellevue-library",
+      "file": "openai/bellevue-library.jpg",
+      "sourceSha1": "d2e0c95c28c2f86d6ec7006ab44fc4e6677e2a8f",
+      "sourceDriveFileId": "117puWKfakqkNKtDNrlSTBtyUSqcNGple",
+      "slides": [
+        27,
+        29
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "openai",
+      "assetId": "openai-bellevue-cafe-detail",
+      "file": "openai/deck-ee0f4488d73e.webp",
+      "sourceSha1": "ee0f4488d73e89ad103362072a64748ba7b0dbcf",
+      "sourceDriveFileId": "1z8-rOoclcO3-mAEVQdVlQm-yzTgk50ft",
+      "slides": [
+        27
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "openai",
+      "assetId": "openai-bellevue-gameroom",
+      "file": "openai/bellevue-gameroom.jpg",
+      "sourceSha1": "480c620cfd5fa93c8c5f026f45c42ac31bbdef99",
+      "sourceDriveFileId": "1IrIhnvjQOXf2BXJ0-lffVKmleQUhnNvT",
+      "slides": [
+        27
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "kilroy-oyster-point",
+      "assetId": "kilroy-photo-atrium",
+      "file": "kilroy-oyster-point/kilroy-photo-atrium.jpg",
+      "sourceSha1": "3d5e2369393ceb7fa501552a8abe3fda04e1c20d",
+      "sourceDriveFileId": "19JAQgwCRkdGHHUUlHC-KxXbJg0d9r09H",
+      "slides": [
+        30
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "kilroy-oyster-point",
+      "assetId": "kilroy-photo-amphitheatre-overhead",
+      "file": "kilroy-oyster-point/kilroy-photo-amphitheatre-overhead.jpg",
+      "sourceSha1": "6fcc7e5ad67d35bb28d85c1fb28305e642aeb5a9",
+      "sourceDriveFileId": "1VLWiBlmHzdkigaTcEmtOp6Vssq30bPlS",
+      "slides": [
+        30
+      ],
+      "role": "project-intro-hero"
+    },
+    {
+      "projectId": "kilroy-oyster-point",
+      "assetId": "kilroy-atrium-deck",
+      "file": "kilroy-oyster-point/deck-887e070c228c.webp",
+      "sourceSha1": "887e070c228c92b522ef7c1c5486a95f08515899",
+      "sourceDriveFileId": "1NplZT4dtXVwdbw-fy7jQKHSvb-ri0Lv5",
+      "slides": [
+        31,
+        38
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "kilroy-oyster-point",
+      "assetId": "kilroy-photo-dining-display",
+      "file": "kilroy-oyster-point/kilroy-photo-dining-display.jpg",
+      "sourceSha1": "ec773c6db40fac89207ad87eb0e30b3a745bf6e2",
+      "sourceDriveFileId": "1o4Ilsv8GEw3v96fhuL__7KI25d5lQb7m",
+      "slides": [
+        31
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "kilroy-oyster-point",
+      "assetId": "kilroy-dining-deck",
+      "file": "kilroy-oyster-point/deck-da876f43c067.webp",
+      "sourceSha1": "da876f43c06796c970eff6d9c2f0140bcb454563",
+      "sourceDriveFileId": "1pfvQRFmO3DOf50t_2YY4dscKeYeI6p77",
+      "slides": [
+        31
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "kilroy-oyster-point",
+      "assetId": "kilroy-photo-cafe",
+      "file": "kilroy-oyster-point/kilroy-photo-cafe.jpg",
+      "sourceSha1": "82aab7b284b0811160dc664caf314049fee803aa",
+      "sourceDriveFileId": "13YzbDK18PyPpgdK7cBF2LYSUp0OEiD8R",
+      "slides": [
+        31
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "kilroy-oyster-point",
+      "assetId": "kilroy-food-hall-deck",
+      "file": "kilroy-oyster-point/deck-b657befce529.webp",
+      "sourceSha1": "b657befce529236409b7be1e39635433bd58a283",
+      "sourceDriveFileId": "1_iA-qL_bhwmRvYiaW1XgBuWL9OJcvZUM",
+      "slides": [
+        32
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "watt-plaza",
+      "assetId": "watt-departure-aerial",
+      "file": "watt-plaza/watt-departure-aerial.png",
+      "sourceSha1": "7077ee9a9f87f122c30c206096377778e9e1b973",
+      "sourceDriveFileId": "1OT5cw1lqk5L1fS3YxjDTSJ9bI0JbFwuK",
+      "slides": [
+        33
+      ],
+      "role": "project-intro-hero"
+    },
+    {
+      "projectId": "watt-plaza",
+      "assetId": "watt-departure-arrival",
+      "file": "watt-plaza/watt-departure-arrival.png",
+      "sourceSha1": "30771c91c4b20d0f6651613fe11ac431f635f812",
+      "sourceDriveFileId": "16nkTao6xbBKs0Od5ubuqpbvlSKzuW0ua",
+      "slides": [
+        34,
+        38
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "watt-plaza",
+      "assetId": "watt-extension-arrival",
+      "file": "watt-plaza/watt-extension-arrival.png",
+      "sourceSha1": "a2448febc7acb0c26668524ce3b94b8ab6b685d5",
+      "sourceDriveFileId": "1LmMe2TXYra_-DPI48BN-yPmxj_0y4_Sg",
+      "slides": [
+        34
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "watt-plaza",
+      "assetId": "watt-expansion-arrival",
+      "file": "watt-plaza/watt-expansion-arrival.png",
+      "sourceSha1": "db076a176765d15cbff7ddae067fd4cfe7c80801",
+      "sourceDriveFileId": "1TgSsoF0Xm6nrNFeeElPU-gHckvKAKWKS",
+      "slides": [
+        34
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "watt-plaza",
+      "assetId": "watt-extension-program",
+      "file": "watt-plaza/deck-28bab2dbd523.webp",
+      "sourceSha1": "28bab2dbd5238058462dacc7fec23b3071e254c7",
+      "sourceDriveFileId": "1h0OxsLyAVjGWQ6Hm4pn-IRBQuvLqbsUv",
+      "slides": [
+        35
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "watt-plaza",
+      "assetId": "watt-departure-program",
+      "file": "watt-plaza/deck-4292e73f125a.webp",
+      "sourceSha1": "4292e73f125a0adb85ed2e614d84184c575cdab4",
+      "sourceDriveFileId": "1XreQsulvnh2tYUuOUq68P0r5HAmQza9K",
+      "slides": [
+        35
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "watt-plaza",
+      "assetId": "watt-expansion-program",
+      "file": "watt-plaza/deck-dfcd409d74a0.webp",
+      "sourceSha1": "dfcd409d74a02dc6c20c4522c829aa18a76b38ff",
+      "sourceDriveFileId": "1WzwdsWj9NhovmYuaOtHpHKUvIZhjcV8_",
+      "slides": [
+        35
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "watt-plaza",
+      "assetId": "watt-early-sketches",
+      "file": "watt-plaza/deck-bb0d8c30d450.webp",
+      "sourceSha1": "bb0d8c30d45030af30fdc276de3ef639dca15e90",
+      "sourceDriveFileId": "1LKPLgT9ktJXk6je80ERxwWyrksNUIygU",
+      "slides": [
+        36
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "watt-plaza",
+      "assetId": "watt-extension-markup",
+      "file": "watt-plaza/watt-process-extension-markup.png",
+      "sourceSha1": "4ffb67213cac75425ff118325e81cc0814722509",
+      "sourceDriveFileId": "1dYjyAdYo811cw-myL2hUrtenHAoCzrQV",
+      "slides": [
+        36
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "watt-plaza",
+      "assetId": "watt-departure-sketch",
+      "file": "watt-plaza/deck-8116d9f793a3.webp",
+      "sourceSha1": "8116d9f793a391e4b3125d586459bc19ff479106",
+      "sourceDriveFileId": "1-ECyoC7TrBP0bYNUIgLfyJE6LDIzwiCY",
+      "slides": [
+        36
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "watt-plaza",
+      "assetId": "watt-design-markup",
+      "file": "watt-plaza/deck-548a5195b191.webp",
+      "sourceSha1": "548a5195b191a04d8f8b4fcfd6c0e238f6c7fed9",
+      "sourceDriveFileId": "1Sp85lbJCwq8RQL4S0epGiRAR8VrmHY_P",
+      "slides": [
+        36
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "watt-plaza",
+      "assetId": "watt-weave-workflow",
+      "file": "watt-plaza/watt-process-weave-workflow.png",
+      "sourceSha1": "4b12cdde654cff40c2db5f47ca833c081b71e4ef",
+      "sourceDriveFileId": "1O2z9Q5s3frXVA08zfd1ohMclZTiixR-v",
+      "slides": [
+        36
+      ],
+      "role": "supporting"
+    },
+    {
+      "projectId": "watt-plaza",
+      "assetId": "watt-departure-close",
+      "file": "watt-plaza/deck-c631ae165409.webp",
+      "sourceSha1": "c631ae1654093723e0133eaac5d5539933474878",
+      "sourceDriveFileId": "1sMKo1V7_yJgVbY_GYMCZWV8y6VdPIxiO",
+      "slides": [
+        37
+      ],
+      "role": "supporting"
+    }
+  ]
+}
