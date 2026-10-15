@@ -40,7 +40,7 @@ export default function AboutPage() {
 
       <section className="section" aria-labelledby="experience">
         <div className="grid-2">
-          <div><p className="tag">Experience</p><h2 id="experience" className="section__title">Current role, past roles, and next focus</h2></div>
+          <div><p className="tag">Experience</p><h2 id="experience" className="section__title">Experience</h2></div>
           <div>
             <ol className="timeline timeline--ink">
               {profile.experience.map((item, i) => (
@@ -48,7 +48,6 @@ export default function AboutPage() {
                   <span>{item.title}{i === 0 && <span className="tag tag--status">Current</span>}</span><span>{item.practice}</span><span>{item.years}</span>
                 </li>
               ))}
-              <li className="timeline__row timeline__row--next"><span>Next focus</span><span>Creative Director, multidisciplinary design practice</span><span>Seeking</span></li>
             </ol>
           </div>
         </div>

@@ -18,7 +18,7 @@ export const googleRoom98: ProjectBundle = {
         "assetId": "room98-photo-entry-arch"
       }
     ],
-    "thesis": "A flexible, theatrical setting for an offering that keeps changing.",
+    "thesis": "From audience to participant.",
     "clientDisplayName": "Google, Customer Experience Center (Los Angeles)",
     "practice": "Rapt Studio",
     "location": "Playa Vista, Los Angeles, California",
@@ -37,7 +37,7 @@ export const googleRoom98: ProjectBundle = {
       "interiors-behavior",
       "brand-detail"
     ],
-    "portfolioRole": "Brand as place",
+    "portfolioRole": "Connect the scales",
     "typeLabel": "Experience center",
     "disciplines": "Interiors, Naming, Program",
     "sequence": 3,
@@ -51,14 +51,13 @@ export const googleRoom98: ProjectBundle = {
   "narrative": {
     "projectId": "google-room-98",
     "summary": [
-      "Room 98 was designed to give physical form to an offering that is difficult to see and continually changing. The challenge was to make Google's capabilities relevant to different businesses while supporting new content, questions and ways of working.",
-      "We developed the space and experience together, using theater to organize a sequence of demonstration, exploration and decision-making."
+      "Naming, architecture and program shape a visitor sequence from presentation to exploration. A theatrical setting invites guests to become active participants while accommodating an evolving digital offering.",
+      "As Senior Designer, I developed concepts and strategy with the Rapt team across naming, space and program through delivery."
     ],
     "story": [
       "In the Presentation Room, light, sound and data establish a shared focus. A large screen then splits open, revealing the space beyond. Guests move through what had been the stage and take a more active role in the conversation.",
       "Each setting supports a different relationship with information. A wall of light makes data visible at the scale of the room. Interactive tables invite smaller groups to investigate together. In the Deliberation Room, information is projected onto the floor, keeping people oriented toward one another as they compare options and discuss next steps.",
-      "Flexibility is built into the experience. Seats swivel as attention moves around the room. Tables change height to support different working postures. Lighting and media signal transitions and bring quiet architectural surfaces to life.",
-      "The environment can be staged around the customer and the question at hand, giving an evolving digital offering a setting where people can understand its relevance and begin to work with it."
+      "Flexibility is built into the experience. Seats swivel as attention moves around the room. Tables change height to support different working postures. Lighting and media signal transitions and bring quiet architectural surfaces to life."
     ],
     "challenge": [
       "Google wanted a place in Los Angeles to host executive customers, somewhere that would move a visit from presentation to working session, and that would carry a name and identity of its own rather than reading as a meeting suite. The space was small, 4,000 square feet, and the program was ambitious: a presentation room, a deliberation room, two collaboration rooms, and a sequence of sessions that had to feel designed rather than scheduled.",
@@ -90,7 +89,7 @@ export const googleRoom98: ProjectBundle = {
       "As senior designer, I developed concepts and design strategy with the Rapt team, from early development through delivery and execution. Across the three deliverables, naming, architecture and program were decided together. The Rapt team developed the interiors, the identity system and the program guidelines with Google's stakeholders."
     ],
     "outcome": [
-      "Completed. The measures stated for the center at the time, full occupancy, customer conversion, and follow-on meetings, were goals. No measured results are reported here."
+      "Completed experience center. Naming, space and program connect presentation with shared exploration."
     ],
     "imageCredit": "Photography: MO Studio. Renderings and plans: Rapt Studio. The theater diagram is redrawn for this portfolio.",
     "sectionTitles": {

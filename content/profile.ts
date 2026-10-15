@@ -11,26 +11,23 @@ export const profile: Profile = {
   leadershipSummary:
     "My role is to make the ambition clear, give the team useful criteria, and help resolve the decisions that shape the work. I lead through shared language, constructive critique, and close attention to how the idea becomes a real experience.",
   aboutIntro: [
-    "I am a multidisciplinary design leader working at the intersection of architecture, interiors, brand, and experience.",
-    "Over more than 15 years, my practice has evolved from architectural design into creative leadership, shaped by the belief that the most meaningful environments emerge when strategic intent and physical experience are considered together.",
-    "As Design Director at Rapt Studio, I lead a multidisciplinary team of 13 designers across seven concurrent projects. My responsibilities span creative direction, client relationships, project profitability, and contributions to business development and staffing.",
-    "I believe the role of creative leadership is to establish a clear vision, create the conditions for talented people to do their best work, and ensure that the original idea remains meaningful as it moves through different disciplines, scales, and complexities.",
-    "My work spans workplace environments, retail concepts, branded experiences, and cultural and community-focused initiatives. Across each, my focus is consistent: connecting people, place, and purpose through thoughtful, ambitious design.",
+    "Creative leadership across architecture, interiors, brand and experience.",
+    "My background in architecture taught me to move between the whole and the detail. Over more than 15 years, my practice has expanded into brand and creative strategy, connecting what an organization stands for with how people experience it.",
+    "As Design Director at Rapt Studio, I lead 13 multidisciplinary designers across seven concurrent projects. I am accountable for project profitability and internal resources, guide client relationships and team development, and contribute to business development.",
   ],
   leadershipSnapshot: [
     "15+ years in architecture, interiors, and experience-led design",
-    "13 multidisciplinary team members under current leadership",
-    "7 concurrent projects under current oversight",
+    "13 designers across disciplines",
+    "7 concurrent projects",
     "Project-level profitability accountability",
-    "Business development and staffing participation",
+    "Resource planning and business development",
   ],
   careerNarrative: [
     "I am Jamel Williams, a Design Director at Rapt Studio. My background in architecture informs a practice that spans interiors, brand, and creative strategy. I work across these disciplines because a place is experienced as a whole: its story, spatial organization, material character, and smallest interactions shape one another.",
     "Architecture taught me to move between the whole and the detail. Brand and strategy expanded that view to include the people a project needs to reach and the meaning it should carry. Together, they shape how I establish direction and judge whether a design decision serves the larger idea.",
   ],
   leadershipNarrative: [
-    "I establish a clear idea early, then work with the team to translate it into decisions. My contribution moves between framing the brief, guiding concepts, discussing choices with clients, and maintaining continuity as the design develops.",
-    "I value critique that explains why a choice matters. Shared criteria give collaborators room to contribute and make it easier to resolve competing priorities. The aim is a coherent result that benefits from the strengths of the people making it.",
+    "I use critique to explain why a choice matters and bring client feedback into the design process. Shared criteria give specialists room to contribute while helping the team resolve competing priorities.",
   ],
   workingStyle: [
     "Establish the idea early and write down the criteria for judging decisions against it.",

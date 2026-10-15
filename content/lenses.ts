@@ -40,7 +40,7 @@ export const lensById: Record<LensId, Lens> = Object.fromEntries(lenses.map((l) 
   Lens
 >;
 
-export const lensHeading = "Designing across disciplines";
+export const lensHeading = "Fields of application";
 
 export const lensIntro =
-  "I bring culture, place, interiors and detail into the same design conversation, connecting what an organization stands for with how people experience it. Each perspective informs the others as the work develops, from the overall concept to the smallest detail.";
+  "Five creative practices guide how I work. These four fields describe where that practice takes form, connecting organizational ambition with places, interactions and brand expression.";

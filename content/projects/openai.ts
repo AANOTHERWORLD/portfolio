@@ -19,14 +19,14 @@ export const openai: ProjectBundle = {
         "label": "OpenAI Bellevue"
       }
     ],
-    "thesis": "Two offices, one hospitality sensibility, each shaped by its city.",
+    "thesis": "One sensibility. Two cities.",
     "clientDisplayName": "OpenAI",
     "practice": "Rapt Studio",
     "location": "Bellevue, Washington and Tokyo, Japan",
     "years": "2025 to present",
     "status": "in-progress",
     "statusNote": "Bellevue: Floors 16 and 17 built, Floors 15 and 18 in development. Tokyo: completed office shown in photography.",
-    "role": "Design Director, Rapt Studio",
+    "role": "Design Director through design development, Rapt Studio",
     "scope": "Bellevue: a phased home for the emerging Applied team in the Pacific Northwest, a hospitality-driven workplace for engineers at scale. Tokyo: an interim home of about 36,500 square feet in an existing high-rise, on an accelerated twelve-month schedule, for about two hundred people who host clients.",
     "team": [
       "Rapt Studio team"
@@ -41,7 +41,7 @@ export const openai: ProjectBundle = {
       "interiors-behavior",
       "brand-detail"
     ],
-    "portfolioRole": "Culture at two scales",
+    "portfolioRole": "Guide the team",
     "typeLabel": "Workplace, two offices",
     "disciplines": "Interiors, Hospitality",
     "sequence": 16,
@@ -54,13 +54,12 @@ export const openai: ProjectBundle = {
   "narrative": {
     "projectId": "openai",
     "summary": [
-      "OpenAI's workplaces asked a shared question: how could a company shaping digital tools create physical places that feel deeply human? Bellevue and Tokyo approached that question through hospitality, craft and the character of each city.",
-      "I developed the early concept work with August Petersen and strategist David Michon, helping establish the direction that won the project. We explored hospitality as a way to remove everyday friction and make people feel considered, supported by environments that invite curiosity, conversation and focused work. I then served as Design Director through design development for both Bellevue and Tokyo."
+      "A shared hospitality sensibility responds to Bellevue and Tokyo through local craft, materials and expectations of care.",
+      "I developed the early concept with August Petersen and David Michon, then guided the Rapt team through client feedback and design development. The wider team and local partners carried the work into later phases."
     ],
     "story": [
-      "The early pitch was developed by Jamel Williams, August Petersen and David Michon. Design development and the work that followed were carried by the wider Rapt Studio team and local partners.",
-      "In Bellevue, the early studies explored psychological safety, discovery and craft as a source of human connection. The later narrative brings together Pacific Northwest forests and coastline, the visible hand of the maker, and layered hospitality, expressed through timber, colored stone, upholstery, planting, art and varied settings for gathering and retreat. Floors 16 and 17 are built, and Floors 15 and 18 are in development.",
-      "In Tokyo, a shared hospitality sensibility is translated through Quiet Depth, Harness Dynamism and Crafted Utility. Discovery connects OpenAI's San Francisco identity with local expectations of care, hosting and informal connection. The strategy combines the anticipation of omotenashi with Californian ease, and keeps much of the existing fit-out. About 36,500 RSF and about 200 desks are design-program figures, not occupied headcount."
+      "In Bellevue, the early studies explored psychological safety, discovery and craft as a source of human connection. The later narrative brings together Pacific Northwest forests and coastline, the visible hand of the maker, and layered hospitality, expressed through timber, colored stone, upholstery, planting, art and varied settings for gathering and retreat.",
+      "In Tokyo, a shared hospitality sensibility is translated through Quiet Depth, Harness Dynamism and Crafted Utility. Discovery connects OpenAI's San Francisco identity with local expectations of care, hosting and informal connection. The strategy combines the anticipation of omotenashi with Californian ease, and keeps much of the existing fit-out."
     ],
     "challenge": [
       "OpenAI was growing fast in three directions at once: adding products to research, scaling from a few hundred people toward thousands, and spreading from one San Francisco center to offices around the world. Each new office had to feel unmistakably OpenAI without copying San Francisco, and each had a different job.",
@@ -95,10 +94,10 @@ export const openai: ProjectBundle = {
       }
     ],
     "leadership": [
-      "As Design Director through design development, I worked closely with the team to translate the early concepts into developed designs for Bellevue and Tokyo. As the work evolved, I guided responses to client feedback and goals while maintaining the core design intent, including the shared sensibility that frames both offices and the decision to let each city set its own form. My involvement ended at design development; later phases were carried by the wider Rapt team and local partners."
+      "I guided the team's responses to client feedback while maintaining a shared hospitality direction. Common criteria for gathering, materials and daily rituals gave specialists room to respond to each city's character and the needs of its teams."
     ],
     "outcome": [
-      "Bellevue's Floors 16 and 17 are built, with Floors 15 and 18 in development. The Tokyo office is shown in completed photography. My role on both projects extended from early concept collaboration through design development; the wider Rapt team and local partners carried the work into subsequent phases."
+      "Bellevue floors 16 and 17 are built; floors 15 and 18 remain in development. Tokyo is documented in completed photography."
     ],
     "imageCredit": "Diagrams redrawn for this portfolio. Bellevue photography: Trevor Tondro. Tokyo photography: Erik.",
     "sectionTitles": {

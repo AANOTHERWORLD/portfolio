@@ -36,7 +36,7 @@ export const lsdRunning: ProjectBundle = {
     "caseStudy": "full",
     "inPdf": true,
     "landingTile": true,
-    "portfolioRole": "Identity in detail",
+    "portfolioRole": "Define the direction",
     "typeLabel": "Retail store and brand language",
     "disciplines": "Brand language, Retail design, Art direction",
     "sequence": 8,
@@ -50,13 +50,12 @@ export const lsdRunning: ProjectBundle = {
   "narrative": {
     "projectId": "lsd-running",
     "summary": [
-      "I worked with the client to develop a brand language and art direction for LSD Running, connecting the identity, the store and the way the brand would be photographed. The aim was to give a new running retailer a distinct point of view that could hold together its own ambitions and the products it curated from other brands.",
-      "We began by looking at what luxury could mean within running culture. The workshops brought the conversation back to curation, craft and expertise, and transparency: fewer, more considered elements, a place to discover and understand products, and an honest way of telling their stories."
+      "Five schemes explored how a small running store could support product testing, community and storage. Curation, craft and expertise, and transparency became shared criteria for one language across identity, space and art direction.",
+      "As Design Director, I led the workshop, team exploration, design synthesis and fabrication handoff with the Rapt team."
     ],
     "story": [
       "That thinking carried from the logo mark into the fixtures and materials of the space, and into the direction for product photography and lifestyle shoots. We treated these as connected decisions. The store could give photography its setting, while the images extended the character of the physical space beyond its walls.",
-      "Curved metal tubes, stone supports, a continuous clothing rail and a central rock display gave the brand a physical vocabulary. The same elements could frame a shoe, support a display or become a place to sit. They brought together the precision of technical equipment and the roughness of outdoor terrain.",
-      "The work established a direction the client could keep building on, from the scale of a mark to the atmosphere of a room and the composition of an image."
+      "Curved metal tubes, stone supports, a continuous clothing rail and a central rock display gave the brand a physical vocabulary. The same elements could frame a shoe, support a display or become a place to sit. They brought together the precision of technical equipment and the roughness of outdoor terrain."
     ],
     "challenge": [
       "LSD Running, named for long slow distance running, was opening its first store at 1533 Echo Park Avenue. The plan was to sell international brands new to the United States, then move toward its own products. Community sat at the center of the business: run clubs, events, and races.",
@@ -91,11 +90,11 @@ export const lsdRunning: ProjectBundle = {
       }
     ],
     "leadership": [
-      "I led the design with the internal Rapt team. That began with the on-site workshop with the client and the fabricator, which I led, then directed the LA studio's iterative swarms through five schemes to the final design, and the handoff to fabrication."
+      "I guided the team's five explorations toward a synthesis: concealed storage, adaptable display and a restrained material language. Shared criteria helped us combine the strongest contributions into one direction."
     ],
     "leadershipMoment": "The five schemes were strong in different ways, and the easy move was to pick one. Instead we treated them as a set of answers to the three prompts and combined them: the perimeter storage from the Functional scheme, the convertible modules from Communal, the landscape idea from Experiential, and the restraint of Minimal. The final design is a synthesis rather than a winner.",
     "outcome": [
-      "The design was completed and handed to the fabricator, with expansion into the adjacent space included in the scope. Supplied photographs and film document the built space. Not every concept detail is proven built, and the renders shown alongside are design visualizations."
+      "The completed store is documented in photographs and film. My scope included the design and fabrication handoff, with expansion into the adjacent space. Concept renders show the design studies and are identified separately from built photography."
     ],
     "imageCredit": "Renders, axonometric drawings, and workshop photography by Rapt Studio, from the LSD Running project book.",
     "sectionTitles": {
@@ -103,7 +102,7 @@ export const lsdRunning: ProjectBundle = {
       "challenge": "A small first store with four jobs",
       "vision": "Three prompts for a small room",
       "leadership": "Leading the workshop and the design",
-      "outcome": "Handed to the fabricator"
+      "outcome": "Built expression"
     },
     "sectionImages": {
       "story": "lsd-product-run-1",

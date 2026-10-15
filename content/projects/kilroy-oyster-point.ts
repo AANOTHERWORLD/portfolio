@@ -30,7 +30,7 @@ export const kilroyOysterPoint: ProjectBundle = {
     "caseStudy": "full",
     "inPdf": true,
     "landingTile": true,
-    "portfolioRole": "Leadership under complexity",
+    "portfolioRole": "Protect the intent",
     "typeLabel": "Campus amenity and food hall",
     "disciplines": "Interiors, FF&E, Hospitality",
     "sequence": 4,
@@ -44,13 +44,12 @@ export const kilroyOysterPoint: ProjectBundle = {
   "narrative": {
     "projectId": "kilroy-oyster-point",
     "summary": [
-      "At Kilroy Oyster Point, shared amenities connect the daily life of a workplace campus with the character of the California coast. Dining, gathering, and retreat become part of a continuous experience, expressed through materials, furnishings, and the relationship between inside and outside.",
-      "I led the design for Rapt Studio's scope, maintaining the concept through design development and construction. The work required coordination with the wider project team so that interiors, architecture, and landscape could contribute to a coherent place.",
-      "The completed interiors demonstrate how hospitality can give a large campus a more personal scale."
+      "A coastal direction connects dining, gathering and retreat through materials, furnishings and the relationship between inside and outside.",
+      "As Design Director for Rapt's scope, I led interiors and furnishings through development and construction, coordinating with the architecture and landscape teams to carry the idea into daily campus life."
     ],
     "challenge": [
-      "Oyster Point is a ground-up waterfront campus for life science and biotechnology work, about three million square feet across twelve buildings on fifty acres, with a new phase adding four workspace buildings and a food and beverage building. Rapt was brought on by the base-building architect to design the interiors that would make the campus a place: lobbies, amenities, the fitness and conference centers, the food hall, and the furnishings in the landscape.",
-      "The judgment required was patience as much as invention. Five years of design and delivery, a developer client, a base-building architect, a landscape architect, and a general contractor each held part of the outcome. The amenity building could easily have become a serviceable corporate cafe. The ambition was for it to be the reason people crossed the campus."
+      "A large waterfront life science campus needed shared places that invited people to gather throughout the day. Rapt's scope connected lobbies, amenities, dining and furnishings with the surrounding architecture and landscape.",
+      "Over five years of design and delivery, coordination across the client, architects, landscape team and contractor was central to maintaining the coastal direction."
     ],
     "insight": [
       "The campus already had a story in its site: the bay, the adjacent marina, and the shoreline ecology. If the interiors drew from the same place as the landscape, the amenity building would feel like a continuation of the walk rather than an interruption of it."
@@ -89,14 +88,14 @@ export const kilroyOysterPoint: ProjectBundle = {
       "I led the design for Rapt's scope with the internal team, holding the concept from the first marketing renderings through construction and the photography in August 2025. The Rapt team developed the interiors and furnishings, DGA designed the buildings, Field Operations designed the landscape, and Kilroy directed the campus."
     ],
     "outcome": [
-      "Completed and photographed in August 2025 across the south amenity building, a lobby, the fitness center, and the north amenity. The photography brief placed materials at the center as the placemaking tool: uniting employees through a dining and campus amenity experience. The campus opened its new phase in 2024."
+      "Completed interiors and amenities, documented in August 2025 photography. Rapt developed interiors and furnishings; DGA designed the buildings and Field Operations designed the landscape."
     ],
     "imageCredit": "Completed photography, August 2025, supplied by Rapt Studio; photographer credit to be confirmed. Marketing renderings by Rapt Studio.",
     "sectionTitles": {
       "challenge": "A campus that needed a reason to cross it",
       "vision": "Restaurant and retreat",
       "leadership": "Holding the concept through delivery",
-      "outcome": "Completed in August 2025"
+      "outcome": "Completed and photographed"
     },
     "sectionImages": {
       "story": null,

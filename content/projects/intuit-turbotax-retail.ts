@@ -5,7 +5,7 @@ export const intuitTurbotaxRetail: ProjectBundle = {
     "id": "intuit-turbotax-retail",
     "title": "Intuit TurboTax Retail and Flagship",
     "slug": "intuit-turbotax-retail",
-    "thesis": "Replacing financial stress with the experience of being helped.",
+    "thesis": "Make help feel human.",
     "clientDisplayName": "Intuit (TurboTax)",
     "practice": "Rapt Studio",
     "location": "United States, multiple markets",
@@ -43,7 +43,7 @@ export const intuitTurbotaxRetail: ProjectBundle = {
         "assetId": "intuit-sm-forum"
       }
     ],
-    "portfolioRole": "Flagship integration",
+    "portfolioRole": "Read the context",
     "typeLabel": "Retail and flagship environments",
     "disciplines": "Retail design, Brand experience, Strategy",
     "sequence": 2,
@@ -174,15 +174,15 @@ export const intuitTurbotaxRetail: ProjectBundle = {
       "leadership": null,
       "outcome": "intuit-forum-screen-deck"
     },
-    "involvement": "Design Director. Led the Store Bible structure, the emotional territory, the ritual spine, and the imperatives, and directed the environment designs, the hero system, and the flagship concepts."
+    "involvement": "Design Director. Led the experience direction, Store Bible structure, environment designs and flagship concepts with the Rapt team."
   },
   "decisions": [
     {
       "id": "intuit-d1",
       "projectId": "intuit-turbotax-retail",
-      "title": "Hero system: DNA, then dressing",
+      "title": "Consistent elements across store sizes",
       "question": "How does a brand earn recognition across three store sizes?",
-      "choice": "A three by three hero system, three acts across three tiers, where each hero element has a constant DNA that is identical in every format. Only richness and scale flex with footprint.",
+      "choice": "Keep the defining features of key brand elements consistent across three retail formats, adapting their scale and finish to each footprint.",
       "rationale": "Recognition comes from constancy in the few things people remember. Everything else can change with the market.",
       "tradeoff": "Less local variation in the hero elements, in exchange for instant recognition in any city.",
       "assetIds": [

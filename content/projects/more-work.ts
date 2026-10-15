@@ -116,7 +116,7 @@ const specs: Spec[] = [
     summary: [
       "Lightspark's workplace sits beneath exposed timber trusses, where a dark stair and black millwork volumes organize the floor into places to work, meet, and pause.",
       "Within that structure, a library alcove of collected objects, a lounge beneath the company mark, and a shared kitchen under a typographic light fixture give the brand a physical presence in everyday spaces.",
-      "I led the design with the Rapt Studio team. The photographs show the completed interior.",
+      "I led the design with the Rapt Studio team.",
     ],
     years: "2025",
     location: "",
@@ -148,7 +148,7 @@ const specs: Spec[] = [
     summary: [
       "Mama Rouge is a restaurant interior in which saturated red lacquer, patterned banquettes, and warm timber tables meet a tin ceiling and an oval soffit holding a golden fiber chandelier.",
       "Cast ornamental screens, a mirrored back bar, and a corridor of streaking yellow and red light lead guests between rooms, so detail and atmosphere carry the identity as much as the plan does.",
-      "I worked on this project as a designer at Collective Architecture. The photographs show the completed restaurant.",
+      "I worked on this project as a designer at Collective Architecture.",
     ],
     years: "2016",
     practice: "Collective Architecture",
@@ -182,7 +182,7 @@ const specs: Spec[] = [
     summary: [
       "Bar April Jean pairs a flowing script wordmark with a palette of rust red and deep green, and carries it through a collage illustration style, menus, social posts, and a projecting sign on a green corner building.",
       "At the bar itself, the identity meets the everyday: hands, glasses, and printed menus on stands, with warm timber and a full back bar.",
-      "I led the design with the Rapt Studio team. The images combine photographs of the bar with identity and signage design.",
+      "I led the design with the Rapt Studio team.",
     ],
     years: "2024",
     location: "",
@@ -243,7 +243,7 @@ const specs: Spec[] = [
     summary: [
       "Club Gemini turns a room into an evening lounge: deep violet velvet curtains, low blue sofas, candlelight, and dark florals, all under saturated purple and magenta light.",
       "The details, a hand-held glass, a menu card beside a candle, a coffee table of flowers, keep the atmosphere intimate and specific.",
-      "I led the design with the Rapt Studio team. The images are event documentation.",
+      "I led the design with the Rapt Studio team.",
     ],
     years: "2024",
     location: "",

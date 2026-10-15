@@ -16,7 +16,6 @@ export default function HomePage() {
   const tiles = getLandingTiles();
   const featured = getHomepageProjects();
   const counts = getLensCounts();
-  const approachExample = getApproachExamples("define-the-direction").find((e) => e.project.project.id === "watt-plaza");
   const lsd = getProjectById("lsd-running");
   const mobileHero = lsd ? getAsset(lsd, "lsd-photo-bench-arc") : null;
   const portrait = getProfileAsset(profile.portraitAssetId);
@@ -87,7 +86,7 @@ export default function HomePage() {
             <h2 id="work-heading" className="work-section__heading">Work</h2>
             <p className="work-section__range">&copy;{portfolio.workRangeLabel}</p>
             <p className="work-section__intro">
-              I help teams carry a clear idea from concept into the places and experiences people encounter every day, across workplaces, shared amenities, retail environments and brand platforms.
+              Selected projects show how I establish creative direction, guide teams across disciplines and carry an idea through changing contexts and scales.
             </p>
           </div>
           <div className="work-section__cards">
@@ -137,7 +136,7 @@ export default function HomePage() {
             </div>
             {recognition.length > 0 && (
               <div className="band-row">
-                <p className="band-row__label" data-reveal>Recognition Highlights</p>
+                <p className="band-row__label" data-reveal>Project and studio recognition</p>
                 <ul className="ruled-list">
                   {recognition.map((claim) => (
                     <li key={claim.id} className={`line-row ${claim.status === "awaiting" ? "claim--awaiting" : ""}`} data-reveal data-sweep>
@@ -156,9 +155,9 @@ export default function HomePage() {
       {/* 6. Approach preview and invitation */}
       <section className="section wrap" aria-labelledby="approach-heading" data-reveal>
         <p className="tag">Approach</p>
-        <h2 id="approach-heading" className="section__title">Direction is established early and carried through teams</h2>
-        {approachExample && <p className="lede">{approachExample.example.example} <Link href={`/work/${approachExample.project.project.slug}/`} className="text-link" data-sweep>See {approachExample.project.project.title}</Link></p>}
-        <p><Link href="/approach/" className="text-link" data-sweep>Read the full approach</Link></p>
+        <h2 id="approach-heading" className="section__title">Set a clear direction. Give teams the tools to carry it through.</h2>
+        <p className="lede">I translate research and ambition into a creative idea, then establish shared criteria that help teams develop it across disciplines. Through critique, client dialogue and delivery, I keep decisions connected to the intent.</p>
+        <p><Link href="/approach/" className="text-link" data-sweep>Explore my approach to creative direction</Link></p>
       </section>
 
       <section className="section wrap section--invite" aria-labelledby="invite-heading" data-reveal>

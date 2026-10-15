@@ -27,7 +27,7 @@ export default function WorkPage() {
         <div className="work-banner__scrim" aria-hidden="true" />
         <div className="work-banner__text wrap">
           <h1 id="work-title" className="work-banner__title">Work</h1>
-          <p className="work-banner__lede">I help teams carry a clear idea from concept into the places and experiences people encounter every day, across workplaces, shared amenities, retail environments and brand platforms.</p>
+          <p className="work-banner__lede">Selected projects show how I establish creative direction, guide teams across disciplines and carry an idea through changing contexts and scales.</p>
         </div>
       </section>
       <div className="wrap">

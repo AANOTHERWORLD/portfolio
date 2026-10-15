@@ -23,7 +23,7 @@ export const approachSteps: ApproachStep[] = [
     id: "guide-the-team",
     number: 4,
     title: "Guide the Team",
-    summary: "Build shared understanding and empower multidisciplinary specialists to contribute coherently.",
+    summary: "Give specialists shared criteria and room to contribute.",
   },
   {
     id: "protect-the-intent",
@@ -35,14 +35,12 @@ export const approachSteps: ApproachStep[] = [
 
 export const approachHeading = "Creative Direction as a Practice";
 export const approachIntro = [
-  "Strong creative leadership requires more than a compelling initial idea. It requires the ability to establish a shared direction, build alignment across disciplines, and guide teams through the competing demands of design, delivery, and business.",
-  "My approach is built around five interconnected practices. Together, they help transform complex ambitions into clear creative ideas, empower teams to make meaningful decisions, and protect design excellence from concept through completion.",
-  "The goal is not to create the same outcome repeatedly, but to establish a consistent standard of creative thinking across different people, projects, and scales.",
+  "My practice connects understanding the brief with directing the work. I establish a clear idea, give teams criteria for developing it, and guide decisions as the project moves across disciplines and into delivery. Five practices shape that process.",
 ];
 // Short statements shown under a step, keyed by step id.
 export const approachStatements: Record<string, string> = {
-  "guide-the-team": "Creative leadership is not about making every decision. It is about giving people the shared understanding, confidence, and responsibility to make good decisions together.",
-  "protect-the-intent": "The measure of a strong design direction is not how closely the final result resembles its first sketch, but how successfully its defining idea survives budget, schedule, technical coordination, and change.",
+  "guide-the-team": "Shared criteria give people the confidence and responsibility to make good decisions together.",
+  "protect-the-intent": "A strong direction gives the team a basis for adapting to budget, schedule and technical constraints while preserving the intended experience.",
 };
 
 export const approachAi = {
@@ -53,53 +51,53 @@ export const approachAi = {
 
 export const approachExamples: ApproachExample[] = [
   {
-    step: "read-the-context",
-    projectId: "google-gso-home-of-the-internet",
-    example: "A request for a recruiting campaign became a community platform once discovery showed that data center work was invisible to the towns that host it.",
+    "step": "read-the-context",
+    "projectId": "tinder-hq",
+    "example": "Cultural discovery identified different ways people connect, giving the workplace a basis in behavior."
   },
   {
-    step: "read-the-context",
-    projectId: "tinder-hq",
-    example: "Five interview sessions, nine stakeholders, and eight team swarms established what culture meant for Tinder before any plan was drawn.",
+    "step": "read-the-context",
+    "projectId": "intuit-turbotax-retail",
+    "example": "For TurboTax, the experience of receiving help became a basis for design decisions: a visible welcome, thoughtful intake and protected conversations."
   },
   {
-    step: "define-the-direction",
-    projectId: "intuit-turbotax-retail",
-    example: "Relief became the ownable emotional territory for TurboTax retail, with six imperatives, from designing the system rather than the store to signaling permanence, as the criteria for every store decision.",
+    "step": "define-the-direction",
+    "projectId": "lsd-running",
+    "example": "Five schemes were synthesized around shared criteria for curation, craft and expertise, and transparency."
   },
   {
-    step: "define-the-direction",
-    projectId: "watt-plaza",
-    example: "When the Watt Plaza brief grew from a plaza to a whole building, three futures with different positions let the client compare how much change each one required.",
+    "step": "define-the-direction",
+    "projectId": "watt-plaza",
+    "example": "Distinct positions connected the property to neighborhood life, tenant hospitality or retail activity, giving the client alternatives to evaluate."
   },
   {
-    step: "connect-the-scales",
-    projectId: "tinder-hq",
-    example: "Human connection as a gradient shaped the stacking of floors, the geometry of a library table, and a prize wall of company easter eggs.",
+    "step": "connect-the-scales",
+    "projectId": "google-gso-home-of-the-internet",
+    "example": "One direction connects recruitment messaging, continued education, GSO's first learning space, and tools for operators and facilitators."
   },
   {
-    step: "connect-the-scales",
-    projectId: "lsd-running",
-    example: "Three brand pillars, curation, craft and expertise, and transparency, were carried from the mark into the store and the way it was photographed.",
+    "step": "connect-the-scales",
+    "projectId": "google-room-98",
+    "example": "Naming, architecture and program shape a visitor sequence from audience to participant."
   },
   {
-    step: "guide-the-team",
-    projectId: "intuit-turbotax-retail",
-    example: "A naming crosswalk retired legacy terminology before the first client presentation, so every Intuit team discussed the same stores, tiers, and environments.",
+    "step": "guide-the-team",
+    "projectId": "openai",
+    "example": "Shared hospitality criteria guided the team's response to client feedback while giving Bellevue and Tokyo distinct local expressions."
   },
   {
-    step: "guide-the-team",
-    projectId: "lsd-running",
-    example: "Five schemes developed through studio swarms were synthesized into one design rather than reduced to a winner.",
+    "step": "guide-the-team",
+    "projectId": "watt-plaza",
+    "example": "Sketches and critique guided the NY and LA teams as a shared Weave workflow supported exploration."
   },
   {
-    step: "protect-the-intent",
-    projectId: "tinder-hq",
-    example: "When the workforce became distributed in 2020, the floors were re-tested against how teams actually worked, and the plan changed without losing the connection spaces.",
+    "step": "protect-the-intent",
+    "projectId": "tinder-hq",
+    "example": "When work became distributed, I led a redesign around team working styles while keeping connection as the organizing idea."
   },
   {
-    step: "protect-the-intent",
-    projectId: "openai",
-    example: "In Tokyo, retaining much of the existing fit-out focused the design effort on hospitality, furniture and targeted changes within an accelerated schedule.",
-  },
+    "step": "protect-the-intent",
+    "projectId": "kilroy-oyster-point",
+    "example": "A coastal direction guided materials, furnishings and indoor-outdoor relationships through development and construction."
+  }
 ];

@@ -5,7 +5,7 @@ export const tinderHq: ProjectBundle = {
     "id": "tinder-hq",
     "title": "Tinder HQ, 8800 Sunset",
     "slug": "tinder-hq",
-    "thesis": "Designing for human connection.",
+    "thesis": "Design for connection.",
     "clientDisplayName": "Tinder (Match Group)",
     "practice": "Rapt Studio",
     "location": "West Hollywood, California",
@@ -50,7 +50,7 @@ export const tinderHq: ProjectBundle = {
         "assetId": "tinder-library-deck"
       }
     ],
-    "portfolioRole": "Human experience",
+    "portfolioRole": "Protect the intent",
     "typeLabel": "Workplace headquarters",
     "disciplines": "Interiors, Environmental graphics, Brand experience",
     "sequence": 1,
@@ -69,21 +69,12 @@ export const tinderHq: ProjectBundle = {
       "description": "Tinder HQ featured on the cover of Interior Design's April 2023 issue.",
       "url": "https://issuu.com/interiordesignmagazine/docs/id_2023_april"
     },
-    "summaryLabels": [
-      "The ambition",
-      "The creative vision",
-      "My role",
-      "The result"
-    ],
     "summary": [
-      "Translate an evolving company culture into an environment that supports meaningful human connection.",
-      "Use different forms of social interaction to inform the spatial character, sequencing, and identity of the headquarters.",
-      "Directed discovery, concept development, interiors, environmental graphics, and a subsequent redesign responding to distributed work.",
-      "A completed workplace with distinct environments shaped around how people gather, interact, and collaborate."
+      "Cultural discovery established a gradient of connection across the headquarters. When work became distributed, the plan changed around team working styles while connection remained the organizing idea.",
+      "As Senior Designer, I developed concepts and strategy with the Rapt team through delivery, then led the distributed-work redesign and photography direction."
     ],
     "challenge": [
-      "Tinder wanted a headquarters that told the true story of its culture. The brief sounded like an interiors project. The real challenge was to define what culture meant for Tinder, in a company that had changed fast and whose brand was still evolving while the building was designed.",
-      "Discovery was built to answer that question before any plan was drawn: five interview sessions with nine stakeholders and eight internal team swarms, organized into four findings, Brand, Organization, Culture, and Future. The judgment required was to turn a company that connects strangers into a place where its own people felt seen, heard, and valued."
+      "Tinder needed a headquarters that expressed an evolving company culture. Interviews and team workshops established different ways people connect, giving the design a basis that could adapt as the brand and working patterns changed."
     ],
     "insight": [
       "Connection is a gradient. It runs from casual to deep, and every kind of it happens somewhere specific in a city: a cafe for watching people, an arcade for playing, a gallery for showing work, a library for staying quiet together, a speakeasy for the honest conversation. The office could put employees inside the real-life experience the app promises its users."

@@ -16,7 +16,7 @@ export default function ContactPage() {
       <section className="page-head" aria-labelledby="contact-title">
         <p className="tag">Contact</p>
         <h1 id="contact-title" className="page-head__title">Let&apos;s shape what comes next</h1>
-        <p className="lede">{portfolio.availability} Email is the fastest way to reach me.</p>
+        <p className="lede">{portfolio.availability}</p>
         <p className="tag">{portfolio.internationalAvailability}</p>
         <ul className="contact-links">
           <li><a href={mailto}>{portfolio.email}</a></li>
@@ -25,7 +25,6 @@ export default function ContactPage() {
           {downloads.portfolioPdf && <li><a href={withBasePath(downloads.portfolioPdf)}>Portfolio PDF</a></li>}
           {downloads.cvPdf && <li><a href={withBasePath(downloads.cvPdf)}>CV</a></li>}
         </ul>
-        <p className="tag">{portfolio.location}</p>
       </section>
     </div>
   );

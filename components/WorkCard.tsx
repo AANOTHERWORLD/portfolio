@@ -35,6 +35,7 @@ export default function WorkCard({ bundle, index, variant = "card" }: Props) {
           </div>
         </div>
         <div className="work-card__text">
+          {project.caseStudy === "full" && <p className="tag">{project.portfolioRole}</p>}
           <h3 className="work-card__title">{project.title}</h3>
           <p className="work-card__thesis">{project.thesis}</p>
           <p className="work-card__meta tag">

@@ -55,6 +55,7 @@ function Opening({ bundle }: { bundle: ProjectBundle }) {
           {project.status !== "completed" && <> <span className="tag tag--status">{STATUS_LABEL[project.status]}</span></>}
         </p>
         {project.permission === "pending" && <DraftBadge note={project.permissionNote} />}
+        {project.caseStudy === "full" && <p className="tag"><Link href={`/approach/#${project.portfolioRole.toLowerCase().replaceAll(" ", "-")}`}>{project.portfolioRole}</Link></p>}
         <h1 className="project-hero__title">{project.title}</h1>
         <p className="project-hero__thesis">{project.thesis}</p>
         {brief.length > 0 && (
@@ -364,11 +365,7 @@ function FullTemplate({ bundle }: { bundle: ProjectBundle }) {
 
       {narrative.expressions?.length ? <Expressions bundle={bundle} /> : (
         <>
-      {narrative.story && narrative.story.length > 0 && (
-        <Section id="story" tag="The story" title={titles.story ?? "How the work developed"} asset={storyImg} extra={storyImgAll.slice(1)} side="right">
-          {narrative.story.map((p, i) => <p key={i}>{p}</p>)}
-        </Section>
-      )}
+
 
       <Section id="challenge" tag="Context" title={titles.challenge ?? "The challenge"} asset={challengeImg} extra={challengeImgAll.slice(1)} side="right">
         {narrative.challenge.map((p, i) => <p key={i}>{p}</p>)}
@@ -382,8 +379,14 @@ function FullTemplate({ bundle }: { bundle: ProjectBundle }) {
 
       <DecisionBlocks bundle={bundle} />
 
+      {narrative.story && narrative.story.length > 0 && (
+        <Section id="story" tag="The story" title={titles.story ?? "How the work developed"} asset={storyImg} extra={storyImgAll.slice(1)} side="right">
+          {narrative.story.map((p, i) => <p key={i}>{p}</p>)}
+        </Section>
+      )}
+
       <section className="project-section" aria-labelledby="scales">
-        <div className="project-section__head"><p className="tag">Translation across scales</p><h2 id="scales" className="section__title">How the idea changed form and stayed itself</h2></div>
+        <div className="project-section__head"><p className="tag">Translation across scales</p><h2 id="scales" className="section__title">The direction in practice</h2></div>
         <div className="scale-sequence">
           {narrative.scaleTranslation.map((step, index) => {
             const asset = getAsset(bundle, step.assetId);
@@ -403,13 +406,13 @@ function FullTemplate({ bundle }: { bundle: ProjectBundle }) {
         </>
       )}
 
-      <Section id="leadership" tag="Leadership and collaboration" title={titles.leadership ?? "What was led, and by whom"} asset={leadershipImg} extra={leadershipImgAll.slice(1)} side="right">
+      <Section id="leadership" tag="My contribution" title={titles.leadership ?? "What was led, and by whom"} asset={leadershipImg} extra={leadershipImgAll.slice(1)} side="right">
         {narrative.leadership.map((p, i) => <p key={i}>{p}</p>)}
         {narrative.leadershipMoment && (<><p className="tag">A moment of alignment</p><p>{narrative.leadershipMoment}</p></>)}
         <ClaimList claims={getClaims(bundle, "leadership")} />
       </Section>
 
-      <Section id="outcome" tag="Outcome and reflection" title={titles.outcome ?? (project.status === "concept" ? "How far the design went" : "What was delivered")} asset={outcomeImg} extra={outcomeImgAll.slice(1)} side="left">
+      <Section id="outcome" tag="Result and status" title={titles.outcome ?? (project.status === "concept" ? "How far the design went" : "What was delivered")} asset={outcomeImg} extra={outcomeImgAll.slice(1)} side="left">
         {narrative.outcome.map((p, i) => <p key={i}>{p}</p>)}
         <ClaimList claims={getClaims(bundle, "outcome")} />
         {narrative.reflection && (<><p className="tag">Reflection</p><p className="statement statement--small">{narrative.reflection}</p></>)}

@@ -5,7 +5,7 @@ export const wattPlaza: ProjectBundle = {
     "id": "watt-plaza",
     "title": "Watt Plaza",
     "slug": "watt-plaza",
-    "thesis": "Making early design choices visible.",
+    "thesis": "Repositioning through experience.",
     "clientDisplayName": "Family-owned commercial office owner, Century City",
     "practice": "Rapt Studio",
     "location": "Century City, Los Angeles, California",
@@ -36,9 +36,9 @@ export const wattPlaza: ProjectBundle = {
         "assetId": "watt-departure-aerial"
       }
     ],
-    "portfolioRole": "Process and possibility",
+    "portfolioRole": "Define the direction",
     "typeLabel": "Building repositioning concept",
-    "disciplines": "Strategy, Visual direction, AI-assisted visualization",
+    "disciplines": "Strategy, Architecture, Experience, Visual direction",
     "sequence": 6,
     "tileSize": 2,
     "relatedProject": "intuit-turbotax-retail",
@@ -50,24 +50,20 @@ export const wattPlaza: ProjectBundle = {
   "narrative": {
     "projectId": "watt-plaza",
     "summary": [
-      "Our work at Watt Plaza began with a focused request to improve the plaza and ground-floor experience. The earlier studies looked at access, planting, signage, seating and the relationship between the exterior and the service tenants experienced inside.",
-      "When the brief expanded, we reconsidered the building as a whole. We developed three potential futures, each taking a different position on the relationship between Watt Plaza, its tenants and Century City."
+      "A plaza upgrade became a question about Watt Plaza's place in Century City. I led concept and design strategy with the NY and LA teams, developing distinct positions that connect architecture, amenities and daily experience."
     ],
     "story": [
-      "Departure opened the building toward the neighborhood, with a public market, shared gardens and a more generous ground plane. Extension concentrated on the tenant experience, connecting the towers through private amenities and a more considered arrival. Expansion introduced an active retail and dining promenade, with tenant spaces overlooking the activity below.",
-      "I worked with the NY and LA teams to develop these concepts while leading the development of AI skills in the studio. We brought sketches, site information and architectural references into a shared workflow in Weave. These gave the studies a direction and a basis for reviewing what came back.",
-      "Drawing remained part of the process throughout. We marked up generated views to specify changes to the architecture, landscape and arrival experience, then used those drawings to guide further iterations. We could test a larger formal idea, review it at the scale of the building and return to specific decisions about access, planting or material.",
-      "The studies gave the client a way to compare futures for the building and discuss how much change each required. As the work developed, we tested material options and more limited interventions, connecting the larger ideas back to the use of the site. The views are concept visualizations and do not establish construction feasibility."
+      "Arrival, accessible routes, outdoor comfort and retail visibility informed the studies. Each position connects these everyday needs to the ground plane, shared amenities and architectural expression.",
+      "Sketches, site information and references guided a shared Weave workflow. We marked up generated views to test specific changes to architecture, landscape and arrival. Critique connected each image to the experience it proposed."
     ],
     "challenge": [
-      "The request began with the plaza and the ground floor: access, planting, signage, seating and how the outside related to the service tenants experienced inside. When the brief widened to the whole building, the question changed from how to improve a plaza to what position Watt Plaza should take toward its tenants and Century City.",
-      "The client needed a way to compare very different answers before committing to one."
+      "The brief expanded from improving the plaza and ground floor to reconsidering the whole property. The client needed distinct positions to evaluate before committing to a direction."
     ],
     "insight": [
-      "Each future takes a different position. Departure faces the neighborhood, Extension serves the tenants, and Expansion adds a retail and dining promenade with tenant spaces overlooking it."
+      "Each position proposes a different relationship between the property, its tenants and Century City."
     ],
     "vision": [
-      "Drawing stayed in the process throughout. Generated views were marked up with specific instructions, and those drawings guided the next round, so the studies could move between the scale of the building and decisions about access, planting and material."
+      "Departure is outward and civic: landscape connections, a marketplace and a roof commons connect the property to neighborhood life. Extension is inward and curated: considered arrivals and a vertical social sequence organize a tenant address around hospitality. The supporting Expansion study uses retail and dining at the base to activate the property, with tenant amenities above."
     ],
     "scaleTranslation": [
       {
@@ -91,20 +87,19 @@ export const wattPlaza: ProjectBundle = {
       }
     ],
     "leadership": [
-      "I led the design with the internal Rapt teams in New York and Los Angeles. I also led the development of AI skills in the studio, including the shared Weave workflow."
+      "As Design Director and primary contributor to concept and design strategy, I led the NY and LA teams in translating positions into architecture and program. I also led studio AI skill development to support the team's exploration."
     ],
     "leadershipMoment": "",
     "outcome": [
-      "The studies gave the client a way to compare futures for the building and discuss how much change each one required. The work is unbuilt, and the views are concept visualizations that do not establish construction feasibility."
+      "Unbuilt concept studies for client discussion. Departure, Extension and the supporting Expansion study make different relationships with tenants and the city visible. Programs and connections remain proposals; the visualizations do not establish construction feasibility."
     ],
-    "reflection": "Drawing stayed part of the process. Marking up generated views let us specify changes and return to specific decisions about access, planting and material.",
     "imageCredit": "Concept studies and process imagery, Rapt Studio. AI-assisted concept images developed in Weave. Unbuilt.",
     "sectionTitles": {
-      "story": "Three futures for one building",
-      "challenge": "From a plaza to a whole building",
-      "vision": "Drawing stayed in the process",
-      "leadership": "Leading the work and the studio's AI practice",
-      "outcome": "Concept studies to compare"
+      "story": "Directing the experience",
+      "challenge": "From plaza upgrade to property position",
+      "vision": "Three positions for one site",
+      "leadership": "Guiding the teams and the exploration",
+      "outcome": "Positions for client discussion"
     },
     "sectionImages": {
       "story": [
@@ -117,7 +112,7 @@ export const wattPlaza: ProjectBundle = {
       "leadership": null,
       "outcome": "watt-departure-close"
     },
-    "involvement": "Design Director. Led the design with the NY and LA teams and led the development of AI skills in the studio."
+    "involvement": "Design Director. Primary contributor to concept and design strategy; led the NY and LA teams and studio AI skill development."
   },
   "decisions": [
     {
