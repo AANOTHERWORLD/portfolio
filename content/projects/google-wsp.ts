@@ -8,7 +8,7 @@ export const googleWsp: ProjectBundle = {
     id,
     title: "Google WSP Campus",
     slug: id,
-    thesis: "Intimacy at scale across a 540,000 square foot campus.",
+    thesis: "A large campus, organized around smaller places to belong.",
     clientDisplayName: "Google",
     practice: "Rapt Studio",
     location: "Los Angeles, California",
@@ -25,7 +25,7 @@ export const googleWsp: ProjectBundle = {
     inPdf: false,
     landingTile: true,
     tiles: [{ x: 48, y: 52, depth: 2, order: 17 }],
-    portfolioRole: "Scale and flexibility",
+    portfolioRole: "Define the direction",
     typeLabel: "Workplace campus",
     disciplines: "Workplace strategy, Planning, Interiors",
     sequence: 17,
@@ -39,9 +39,10 @@ export const googleWsp: ProjectBundle = {
   narrative: {
     projectId: id,
     summary: [
-      "Unbuilt concept, developed 2020 to 2021. Google's WSP campus was a proposed 540,000 square foot adaptive reuse of the Westside Pavilion in Los Angeles. The design had to make a very large floor plate feel like a place where teams belong, and stay flexible for the long term.",
-      "I worked alongside Google's real estate and workplace team, ZGF Architects and SWA Landscape Architecture on concepts and design strategy, from early development through the design stage reached. Google changed direction during the pandemic and the project wrapped in 2021.",
+      "The proposed reuse of Westside Pavilion asked how a 540,000 square foot workplace could feel personal and adapt over time. Team neighborhoods gave the campus a planning structure, connecting a large floor plate with a recognizable home base for each team."
     ],
+    story: ["The concept used adaptable 40-person team neighborhoods within a shared planning framework. Public and secure zones, a central activity floor and usable outdoor amenities connected the needs of individual teams with the wider campus."],
+    sectionTitles: { story: "Intimacy through a planning framework" },
     challenge: [
       "The brief was to transform a 540,000 square foot adaptive reuse project into a design built for long-horizon flexibility. Scale was the risk. A floor plate that large can feel anonymous, and the way teams work will keep changing over the life of the building.",
     ],
@@ -62,9 +63,9 @@ export const googleWsp: ProjectBundle = {
       "As Senior Designer, I developed concepts and design strategy with the Rapt team, working with Google and the architecture and landscape partners on neighborhood planning and amenity spaces. The work concluded in 2021 after Google changed direction during the pandemic.",
     ],
     outcome: [
-      "The campus was not built. Google changed direction during the pandemic and the project wrapped in 2021. The images show design development studies and concept views, and document the planning approach.",
+      "Unbuilt concept studies. Google changed direction during the pandemic and the project concluded in 2021. The drawings and visualizations document the design stage reached."
     ],
-    involvement: "Concepts and design strategy, from early development through the design stage reached.",
+    involvement: "Developed concepts and workplace planning with the Rapt team, alongside Google, ZGF Architects and SWA Landscape Architecture, through the design stage reached.",
   },
   decisions: [
     {

@@ -8,14 +8,14 @@ export const googleTokyoPartnerPlex: ProjectBundle = {
     id,
     title: "Google Tokyo Partner Plex",
     slug: id,
-    thesis: "Hospitality as a transition from the city to a shared experience.",
+    thesis: "From the city to a shared experience.",
     clientDisplayName: "Google",
     practice: "Rapt Studio",
     location: "Shibuya, Tokyo, Japan",
     years: "2019 to 2020",
     status: "completed",
     role: "Senior Designer, Rapt Studio",
-    scope: "Experience concept, interiors, and environmental graphics for a platform where APAC teams host business partners, doubling Google's Tokyo presence.",
+    scope: "Experience concept, interiors and environmental graphics for a center where Google's APAC teams host business partners.",
     team: ["Rapt Studio team"],
     collaborators: ["Google APAC stakeholders"],
     lenses: ["culture-strategy", "interiors-behavior", "brand-detail"],
@@ -23,7 +23,7 @@ export const googleTokyoPartnerPlex: ProjectBundle = {
     caseStudy: "light",
     inPdf: false,
     landingTile: true,
-    portfolioRole: "Candidate: APAC contrast",
+    portfolioRole: "Read the context",
     typeLabel: "Partner experience center",
     disciplines: "Interiors, Environmental graphics, Hospitality",
     sequence: 7,
@@ -37,10 +37,10 @@ export const googleTokyoPartnerPlex: ProjectBundle = {
   narrative: {
     projectId: id,
     summary: [
-      "Above Shibuya, the Partner Plex creates a deliberate shift from the energy of the city to a setting for hosting, exchange, and reflection. Water provides the central idea, informing the sequence of arrival and the character of spaces for different kinds of interaction.",
-      "I worked with the Rapt Studio team and Google's APAC stakeholders to connect the experience concept, interiors, and environmental graphics.",
-      "The completed project shows how a global organization's ambitions can take a locally responsive form through hospitality, movement, and detail.",
+      "Above Shibuya, the Partner Plex stages a transition from the energy of the city to a setting for hosting, exchange and reflection. Water provides a shared direction for arrival, interiors and environmental graphics."
     ],
+    story: ["Timber doors and a sculptural corridor establish the arrival sequence before the host lobby opens around suspended forms and a pool. Changes in enclosure, material and light carry the transition through the floor.", "The water concept gives different settings a common language: Clouds for boardrooms, a Ripple for the auditorium and Deltas for lounges. Environmental graphics and room naming connect that idea with navigation."],
+    sectionTitles: { story: "Hospitality begins at arrival" },
     challenge: [
       "Google needed a place in Tokyo where APAC teams could host business partners, on the 34th floor of the Shibuya Stream building, above one of the busiest intersections in the world. The mission was to inspire leaders who would then transform society. Three ingredients were given: immersive environments, exceptional hospitality, omotenashi, and curated content.",
     ],
@@ -60,10 +60,10 @@ export const googleTokyoPartnerPlex: ProjectBundle = {
     ],
     leadership: ["As senior designer, I developed concepts and design strategy with the Rapt team, from early development through delivery and execution. The Rapt team developed the interiors and graphics with Google's APAC stakeholders."],
     outcome: [
-      "Completed and photographed. The stated success goals at the time were full daily activation of half the space and higher client engagement and satisfaction. Those are goals, and no measured results are reported here.",
+      "Completed partner experience center, documented in photography."
     ],
     photographyCredit: "Photography: Kohei Take.",
-    involvement: "Senior Designer. Worked on the experience concept and its expression in interiors and graphics, from early development to delivery.",
+    involvement: "Developed the experience concept and its expression in interiors and graphics with the Rapt team, from early development through delivery.",
   },
   decisions: [
     {
@@ -72,7 +72,7 @@ export const googleTokyoPartnerPlex: ProjectBundle = {
       title: "Stage the change of state",
       question: "What does a partner center above Shibuya crossing need to do first?",
       choice: "Design the arrival as a sequence from noise to calm: pre-arrival, timber doors, sculptural corridor, host reveal.",
-      rationale: "Transformation is the mission. The building should perform it on the guest before the content does.",
+      rationale: "The arrival sequence prepares guests for a different pace of interaction before the hosted program begins.",
       tradeoff: "Arrival takes floor area that could have been another meeting room.",
       assetIds: ["ppx-02", "ppx-03"],
     },
@@ -83,7 +83,7 @@ export const googleTokyoPartnerPlex: ProjectBundle = {
       question: "How does one concept hold a whole floor of different rooms?",
       choice: "Boardrooms as Clouds, the auditorium as a Ripple, lounges as Deltas, restrooms as sanctuaries, with room names carried in relief wayfinding.",
       rationale: "A single metaphor lets every room be different and still belong.",
-      tradeoff: "A metaphor can tip into theme. Restraint in materials keeps it on the right side.",
+      tradeoff: "A shared concept needs restraint so that each room remains useful and distinct.",
       assetIds: ["ppx-09", "ppx-16"],
     },
   ],

@@ -10,7 +10,7 @@ import { LensAwareEntry } from "./LensContext";
 export default function WorkTile({ bundle, index }: { bundle: ProjectBundle; index: number }) {
   const { project } = bundle;
   const asset = getIndexAsset(bundle) ?? getHeroAsset(bundle);
-  const category = project.caseStudy === "full" ? project.portfolioRole : project.typeLabel;
+  const category = project.portfolioRole;
   return (
     <LensAwareEntry lensIds={project.lenses} as="li" className="work-tile" mode="filter">
       <Link href={`/work/${project.slug}/`} className="work-tile__link cursor-tile">

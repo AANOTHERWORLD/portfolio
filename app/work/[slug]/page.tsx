@@ -55,7 +55,7 @@ function Opening({ bundle }: { bundle: ProjectBundle }) {
           {project.status !== "completed" && <> <span className="tag tag--status">{STATUS_LABEL[project.status]}</span></>}
         </p>
         {project.permission === "pending" && <DraftBadge note={project.permissionNote} />}
-        {project.caseStudy === "full" && <p className="tag"><Link href={`/approach/#${project.portfolioRole.toLowerCase().replaceAll(" ", "-")}`}>{project.portfolioRole}</Link></p>}
+        <p className="tag"><Link href={`/approach/#${project.portfolioRole.toLowerCase().replaceAll(" ", "-")}`}>{project.portfolioRole}</Link></p>
         <h1 className="project-hero__title">{project.title}</h1>
         <p className="project-hero__thesis">{project.thesis}</p>
         {brief.length > 0 && (
@@ -433,12 +433,19 @@ function LightTemplate({ bundle }: { bundle: ProjectBundle }) {
     <article className="wrap">
       <Opening bundle={bundle} />
       <FeaturedPublication bundle={bundle} />
+      {narrative.story && narrative.story.length > 0 && (
+        <Section id="story" tag="The direction in practice" title={narrative.sectionTitles?.story ?? "How the idea takes form"} asset={null} side="right">
+          {narrative.story.map((p, i) => <p key={i}>{p}</p>)}
+        </Section>
+      )}
       {bundle.decisions.length > 0 && <DecisionBlocks bundle={bundle} />}
-      <Section id="status" tag="Result and involvement" title={project.status === "concept" ? "Where the project stands" : "What was made"} asset={null} side="left">
-        {narrative.outcome.length > 0 ? narrative.outcome.map((p, i) => <p key={i}>{p}</p>) : <p>{STATUS_LABEL[project.status]}, {project.years}.{project.statusNote ? ` ${project.statusNote}` : ""}</p>}
-        <p>{narrative.involvement === project.role ? `My role: ${project.role}.` : `${project.role}. ${narrative.involvement}`}</p>
+      <Gallery assets={assets} title="The work" />
+      <Section id="status" tag="Contribution and status" title={project.status === "concept" ? "Where the project stands" : "What was delivered"} asset={null} side="left">
+        <p className="tag">My contribution</p>
+        <p>{narrative.involvement === project.role ? project.role : `${project.role}. ${narrative.involvement}`}</p>
+        <p className="tag">Result and status</p>
+        {narrative.outcome.length > 0 ? narrative.outcome.map((p, i) => <p key={i}>{p}</p>) : <p>{STATUS_LABEL[project.status]}{project.years ? `, ${project.years}` : ""}.{project.statusNote ? ` ${project.statusNote}` : ""}</p>}
       </Section>
-      <Gallery assets={assets} title="Views" />
       <ProjectInfo bundle={bundle} />
       <ProjectNav bundle={bundle} />
     </article>
