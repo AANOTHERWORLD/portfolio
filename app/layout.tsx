@@ -33,6 +33,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={inter.variable} data-draft={draft || undefined}>
       <body>
+        {/* GA4 reads UTMs on entry. Enhanced Measurement owns history page views;
+            do not add a second route-change page_view or retag internal links. */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-Q5GJ7YP773" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">{`
           window.dataLayer = window.dataLayer || [];

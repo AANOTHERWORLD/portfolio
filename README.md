@@ -6,6 +6,8 @@ Live at https://aanotherworld.github.io/portfolio/ through the GitHub Pages work
 
 ## Contents
 
+Application-specific GA4 links and reporting instructions: [Application attribution](docs/application-tracking.md).
+
 1. [Local setup](#local-setup)
 2. [How the site is organized](#how-the-site-is-organized)
 3. [Content: adding or editing a project](#content-adding-or-editing-a-project)
