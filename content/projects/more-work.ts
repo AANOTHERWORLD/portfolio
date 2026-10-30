@@ -284,7 +284,7 @@ const specs: Spec[] = [
     involvement: "Developed concepts and design strategy with the Rapt team from early development through delivery.",
     outcome: ["Leadership retreat delivered in Napa Valley and documented through event photography."],
     scope: "Retreat environments, experience design and printed materials.",
-    years: "2023",
+    years: "2024",
     location: "Napa Valley, California",
     relatedProject: "club-gemini",
     heroIndex: 1,
