@@ -5,6 +5,7 @@ export interface Editorial {
   thesis: string;
   fields: Field[];
   hero?: string;
+  banner?: boolean;
   index?: string;
   intro: string;
   chapters: Chapter[];
@@ -35,7 +36,7 @@ export const editorial: Record<string, Editorial> = {
     outcome: "The brand platform was delivered, with applications across recruitment collateral, careers content, learning environments and internal playbooks. Further program and environment work continued through 2026. Photographs document the learning space; proposed applications remain labeled as concepts.",
   },
   "tinder-hq": {
-    thesis: "A headquarters organized around the ways people connect.", fields: ["Spatial", "Brand"],
+    thesis: "A headquarters organized around the ways people connect.", fields: ["Spatial", "Brand"], hero: "tinder-social-film", banner: true,
     intro: "Interviews and workshops established a gradient of connection, from casual encounters to more focused conversation. Familiar settings from city life gave each form of connection a place within the headquarters, while a restrained workplace framework left room for employees' own expression.",
     chapters: [
       chapter("Give connection different settings", ["A cafe supports people watching, an arcade invites play, a gallery makes sharing work visible and a speakeasy offers a more intimate setting. The Library's communal table supports quiet company. Each setting translates the same idea into a different social behavior."], ["tinder-07", "tinder-11", "tinder-20", "tinder-24"]),

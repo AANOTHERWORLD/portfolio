@@ -376,6 +376,21 @@ export const tinderHq: ProjectBundle = {
       "credit": "",
       "permission": "confirmed",
       "lens": "brand-detail"
+    },
+    {
+      "id": "tinder-social-film",
+      "projectId": "tinder-hq",
+      "file": "tinder-hq/tinder-film-poster.jpg",
+      "type": "photo",
+      "caption": "Tinder HQ in motion: a 25-second portrait of the workplace and its shared spaces.",
+      "alt": "Film of people moving through and gathering in the Tinder headquarters.",
+      "creator": "Jamel Williams",
+      "credit": "Film supplied by Jamel Williams",
+      "permission": "confirmed",
+      "lens": "interiors-behavior",
+      "motion": {
+        "file": "tinder-hq/tinder-social-film.mp4"
+      }
     }
   ],
   "claims": [

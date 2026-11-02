@@ -2722,3 +2722,10 @@ ol {
   .site-footer__cols { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { .curated-tile__media img { transition: none; } .curated-tile a:hover img { transform: none; } }
+
+/* Wide project film opening, with the complete frame retained on every screen. */
+.editorial-opening.editorial-opening--banner { grid-template-columns: 1fr; }
+.editorial-opening--banner .editorial-opening__text { max-width: 60rem; }
+.editorial-opening--banner .editorial-opening__media { width: 100%; }
+.editorial-opening--banner .picture { margin: 0; }
+.editorial-opening--banner video { aspect-ratio: 16 / 9; object-fit: contain; background: #111; }

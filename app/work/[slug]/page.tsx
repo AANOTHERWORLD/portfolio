@@ -37,7 +37,7 @@ export default async function ProjectPage({ params }: Props) {
   }
   return (
     <article className="wrap editorial-project">
-      <header className="editorial-opening">
+      <header className={`editorial-opening${edit.banner ? " editorial-opening--banner" : ""}`}>
         <div className="editorial-opening__text">
           <p className="tag editorial-meta"><span>{project.typeLabel}</span><span>{project.years}</span></p>
           {project.permission === "pending" && <DraftBadge note={project.permissionNote} />}
@@ -48,7 +48,7 @@ export default async function ProjectPage({ params }: Props) {
             <div><dt>Status</dt><dd>{status}</dd></div>
           </dl>
         </div>
-        <div className="editorial-opening__media">{hero && <Picture asset={hero} priority sizes="(min-width: 900px) 52vw, 100vw" />}</div>
+        <div className="editorial-opening__media">{hero && <Picture asset={hero} priority sizes={edit.banner ? "100vw" : "(min-width: 900px) 52vw, 100vw"} />}</div>
       </header>
       <section className="editorial-brief" aria-labelledby="brief">
         <h2 id="brief" className="tag">The brief</h2>
