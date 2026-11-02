@@ -182,7 +182,7 @@ export interface Claim {
 }
 
 export interface Asset {
-  motion?: { file: string; loop?: boolean; muted?: boolean };
+  motion?: { file: string; loop?: boolean; muted?: boolean; autoPlay?: boolean };
   id: string;
   projectId: string;
   file: string;

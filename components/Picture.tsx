@@ -43,7 +43,8 @@ export default function Picture({ asset, sizes = "(min-width: 1100px) 1100px, 10
         {asset.motion && showCaption ? <video
           controls
           playsInline
-          preload="none"
+          autoPlay={asset.motion.autoPlay}
+          preload={asset.motion.autoPlay ? "auto" : "none"}
           poster={image.src}
           width={image.width}
           height={image.height}

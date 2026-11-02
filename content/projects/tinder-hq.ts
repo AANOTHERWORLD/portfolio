@@ -389,7 +389,10 @@ export const tinderHq: ProjectBundle = {
       "permission": "confirmed",
       "lens": "interiors-behavior",
       "motion": {
-        "file": "tinder-hq/tinder-social-film.mp4"
+        "file": "tinder-hq/tinder-social-film.mp4",
+        "autoPlay": true,
+        "muted": true,
+        "loop": true
       }
     }
   ],
