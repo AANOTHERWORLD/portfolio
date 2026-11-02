@@ -1,30 +1,14 @@
 import Link from "next/link";
 import type { ProjectBundle } from "@/content/types";
-import { getHeroAsset, getIndexAsset } from "@/lib/content";
+import { getIndexAsset } from "@/lib/content";
+import { editorial } from "@/content/editorial";
 import Picture from "./Picture";
-import { LensAwareEntry } from "./LensContext";
-
-// A cell in the Work grid: the project's hero image. On hover or focus the cell grows 5%
-// above its neighbours, the image darkens and zooms slightly inside it, and the title, category
-// and headline appear. The text is always in the markup for screen readers and search.
+import { STATUS_LABEL } from "./WorkCard";
 export default function WorkTile({ bundle, index }: { bundle: ProjectBundle; index: number }) {
   const { project } = bundle;
-  const asset = getIndexAsset(bundle) ?? getHeroAsset(bundle);
-  const category = project.portfolioRole;
-  return (
-    <LensAwareEntry lensIds={project.lenses} as="li" className="work-tile" mode="filter">
-      <Link href={`/work/${project.slug}/`} className="work-tile__link cursor-tile">
-        <div className="work-tile__media">
-          {asset ? <Picture asset={asset} showCaption={false} fit="cover" sizes="(min-width: 1100px) 25vw, (min-width: 720px) 50vw, 100vw" priority={index < 4} /> : <div className="picture__placeholder">Image pending</div>}
-          <div className="work-tile__text">
-            <p className="work-tile__category tag">{category}</p>
-            <h3 className="work-tile__title">{project.title}</h3>
-            <p className="work-tile__headline">{project.thesis}</p>
-            {project.permission === "pending" && <span className="draft-marker">Draft: permission pending</span>}
-          </div>
-        </div>
-        <p className="work-tile__name" aria-hidden="true">{project.title}</p>
-      </Link>
-    </LensAwareEntry>
-  );
+  const asset = getIndexAsset(bundle);
+  return <article className="curated-tile"><Link href={`/work/${project.slug}/`}>
+    <div className="curated-tile__media">{asset && <Picture asset={asset} showCaption={false} fit="cover" sizes="(min-width: 1100px) 33vw, (min-width: 720px) 50vw, 100vw" priority={index < 3} />}</div>
+    <div className="curated-tile__copy"><p className="tag">{editorial[project.id].fields.join(" / ")}</p><h3>{project.title}</h3><p>{project.thesis}</p><p className="curated-tile__role">{project.role} · {STATUS_LABEL[project.status]}</p></div>
+  </Link></article>;
 }

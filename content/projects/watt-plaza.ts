@@ -37,7 +37,7 @@ export const wattPlaza: ProjectBundle = {
       }
     ],
     "portfolioRole": "Define the direction",
-    "typeLabel": "Building repositioning concept",
+    "typeLabel": "Building repositioning",
     "disciplines": "Strategy, Architecture, Experience, Visual direction",
     "sequence": 6,
     "tileSize": 2,
@@ -161,7 +161,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Departure: the building opens toward the neighborhood.",
       "alt": "Aerial concept of two towers with sweeping facade lines and planted terraces.",
       "creator": "Rapt Studio",
-      "credit": "Concept study, Rapt Studio. Unbuilt, AI-assisted concept imagery.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "architecture-place"
     },
@@ -173,7 +173,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Departure: arrival view.",
       "alt": "Concept view of a sculpted fin facade meeting a planted plaza at street level.",
       "creator": "Rapt Studio",
-      "credit": "Concept study, Rapt Studio. Unbuilt, AI-assisted concept imagery.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "architecture-place"
     },
@@ -185,7 +185,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Extension: arrival view.",
       "alt": "Concept view of a glass atrium entrance with terraced steps and planting.",
       "creator": "Rapt Studio",
-      "credit": "Concept study, Rapt Studio. Unbuilt, AI-assisted concept imagery.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "architecture-place"
     },
@@ -197,7 +197,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Expansion: arrival view.",
       "alt": "Concept view of a terracotta-clad retail building with outdoor terraces.",
       "creator": "Rapt Studio",
-      "credit": "Concept study, Rapt Studio. Unbuilt, AI-assisted concept imagery.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "architecture-place"
     },
@@ -205,7 +205,7 @@ export const wattPlaza: ProjectBundle = {
       "id": "watt-extension-program",
       "projectId": "watt-plaza",
       "file": "watt-plaza/deck-28bab2dbd523.webp",
-      "type": "diagram",
+      "type": "render",
       "caption": "Extension: program and connections, unbuilt concept study.",
       "alt": "Extension: program and connections, unbuilt concept study.",
       "creator": "Rapt Studio",
@@ -217,7 +217,7 @@ export const wattPlaza: ProjectBundle = {
       "id": "watt-departure-program",
       "projectId": "watt-plaza",
       "file": "watt-plaza/deck-4292e73f125a.webp",
-      "type": "diagram",
+      "type": "render",
       "caption": "Departure: program and connections, unbuilt concept study.",
       "alt": "Departure: program and connections, unbuilt concept study.",
       "creator": "Rapt Studio",
@@ -229,7 +229,7 @@ export const wattPlaza: ProjectBundle = {
       "id": "watt-expansion-program",
       "projectId": "watt-plaza",
       "file": "watt-plaza/deck-dfcd409d74a0.webp",
-      "type": "diagram",
+      "type": "render",
       "caption": "Expansion: program and connections, unbuilt concept study.",
       "alt": "Expansion: program and connections, unbuilt concept study.",
       "creator": "Rapt Studio",
@@ -245,7 +245,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Early sketches test several relationships between building and ground.",
       "alt": "Early sketches test several relationships between building and ground.",
       "creator": "Rapt Studio",
-      "credit": "Concept and process: Rapt Studio. Unbuilt, AI-assisted studies.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "brand-detail",
       "surface": "light"
@@ -258,7 +258,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Process, Extension: redlines locate changes to arrival, accessible circulation, landscape and the glass atrium.",
       "alt": "A generated view of two towers with red annotations specifying changes.",
       "creator": "Rapt Studio",
-      "credit": "Concept study, Rapt Studio. Unbuilt, AI-assisted concept imagery.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "architecture-place"
     },
@@ -270,7 +270,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Departure: drawn facade lines and planting guide the next iteration.",
       "alt": "Departure: drawn facade lines and planting guide the next iteration.",
       "creator": "Rapt Studio",
-      "credit": "Concept and process: Rapt Studio. Unbuilt, AI-assisted studies.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "brand-detail",
       "surface": "light"
@@ -283,7 +283,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Architectural markup locates proposed changes within the site.",
       "alt": "Architectural markup locates proposed changes within the site.",
       "creator": "Rapt Studio",
-      "credit": "Concept and process: Rapt Studio. Unbuilt, AI-assisted studies.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "brand-detail"
     },
@@ -295,7 +295,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Process, Weave: references, sketches, site information and prompts feed generation, with branches for crop, paint, composite and further generation. A representative workflow, not a full run history.",
       "alt": "Screenshot of a node-based canvas connecting reference images and prompts to generated variants.",
       "creator": "Rapt Studio",
-      "credit": "Concept study, Rapt Studio. Unbuilt, AI-assisted concept imagery.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "architecture-place"
     },
@@ -319,7 +319,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Earlier scope: the plaza upgrade plan.",
       "alt": "Plan of the plaza with new paths, planting and a central fountain.",
       "creator": "Rapt Studio",
-      "credit": "Concept study, Rapt Studio. Unbuilt, AI-assisted concept imagery.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "architecture-place"
     },
@@ -331,7 +331,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Earlier scope: main entry at dusk.",
       "alt": "Concept view of the main entry with a canopy and a car on a patterned drive.",
       "creator": "Rapt Studio",
-      "credit": "Concept study, Rapt Studio. Unbuilt, AI-assisted concept imagery.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "architecture-place"
     },
@@ -343,7 +343,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Earlier scope: street approach.",
       "alt": "Concept view of the street approach with a Watt Plaza sign, lawn and planting.",
       "creator": "Rapt Studio",
-      "credit": "Concept study, Rapt Studio. Unbuilt, AI-assisted concept imagery.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "architecture-place"
     },
@@ -355,7 +355,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Extension: the towers connected through private amenity.",
       "alt": "Aerial concept of two cream towers linked by a bridge above a fountain plaza.",
       "creator": "Rapt Studio",
-      "credit": "Concept study, Rapt Studio. Unbuilt, AI-assisted concept imagery.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "architecture-place"
     },
@@ -367,7 +367,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Expansion: a retail and dining promenade at the base.",
       "alt": "Aerial concept of glass towers above a terracotta-clad base with landscaped terraces.",
       "creator": "Rapt Studio",
-      "credit": "Concept study, Rapt Studio. Unbuilt, AI-assisted concept imagery.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "architecture-place"
     },
@@ -379,7 +379,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Departure: access diagram.",
       "alt": "Massing sketch of two towers with arrows marking new pedestrian access.",
       "creator": "Rapt Studio",
-      "credit": "Concept study, Rapt Studio. Unbuilt, AI-assisted concept imagery.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "architecture-place"
     },
@@ -391,7 +391,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Departure: amenity diagram.",
       "alt": "Massing sketch of two towers with a shared central amenity at the base.",
       "creator": "Rapt Studio",
-      "credit": "Concept study, Rapt Studio. Unbuilt, AI-assisted concept imagery.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "architecture-place"
     },
@@ -403,7 +403,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Departure: reduced-scope study.",
       "alt": "Massing sketch of a lighter version of the Departure idea.",
       "creator": "Rapt Studio",
-      "credit": "Concept study, Rapt Studio. Unbuilt, AI-assisted concept imagery.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "architecture-place"
     },
@@ -415,7 +415,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Extension: reduced-scope study.",
       "alt": "Massing sketch of a lighter version of the Extension idea.",
       "creator": "Rapt Studio",
-      "credit": "Concept study, Rapt Studio. Unbuilt, AI-assisted concept imagery.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "architecture-place"
     },
@@ -427,7 +427,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Expansion: reduced-scope study.",
       "alt": "Massing sketch of a lighter version of the Expansion idea.",
       "creator": "Rapt Studio",
-      "credit": "Concept study, Rapt Studio. Unbuilt, AI-assisted concept imagery.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "architecture-place"
     },
@@ -439,7 +439,7 @@ export const wattPlaza: ProjectBundle = {
       "caption": "Expansion: an alternate facade treatment.",
       "alt": "Concept view of two glass towers with a darker facade over a terracotta base.",
       "creator": "Rapt Studio",
-      "credit": "Concept study, Rapt Studio. Unbuilt, AI-assisted concept imagery.",
+      "credit": "Concept drawing or process study, Rapt Studio.",
       "permission": "confirmed",
       "lens": "architecture-place"
     }

@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { getGsap } from "@/lib/gsap";
 import { debug } from "@/lib/debug";
 
 // Page-wide motion ported from the reference prototype, rescanned on every route change:
@@ -12,11 +11,8 @@ import { debug } from "@/lib/debug";
 //   [data-sweep]   Line sweep on hover: the element's line sits at -102%, slides to 0 on enter
 //                  (300ms), continues out to 101% on leave (300ms), then resets without a
 //                  transition. Used by text links, footer links, nav links and list rows.
-//   .site-footer   Curtain: the footer content starts 100% above its place and settles as the
-//                  footer rises from the viewport bottom to the top (scroll scrub).
 //
-// Reduced motion: reveals show at once, sweeps still run (they are a hover affordance), the
-// footer curtain is skipped.
+// Reduced motion: reveals show at once; sweeps remain a hover affordance.
 
 export default function Motion() {
   const pathname = usePathname();
@@ -78,21 +74,7 @@ export default function Motion() {
       });
     });
 
-    // Footer curtain
-    const footer = document.querySelector<HTMLElement>(".site-footer");
-    const inner = footer?.querySelector<HTMLElement>(".site-footer__inner");
-    if (footer && inner && !reduced) {
-      const { gsap, ScrollTrigger } = getGsap();
-      const ctx = gsap.context(() => {
-        gsap.fromTo(inner, { yPercent: -100 }, { yPercent: 0, ease: "none", scrollTrigger: { trigger: footer, start: "top bottom", end: "top top", scrub: true } });
-      }, footer);
-      cleanups.push(() => ctx.revert());
-      // Layout settles after images and fonts: refresh trigger positions once more.
-      const t = window.setTimeout(() => ScrollTrigger.refresh(), 600);
-      cleanups.push(() => window.clearTimeout(t));
-    }
-
-    debug.log("motion", "scanned", { reveals: reveals.length, sweeps: sweeps.length, footer: !!footer, reduced });
+    debug.log("motion", "scanned", { reveals: reveals.length, sweeps: sweeps.length, reduced });
     return () => cleanups.forEach((fn) => fn());
   }, [pathname]);
 

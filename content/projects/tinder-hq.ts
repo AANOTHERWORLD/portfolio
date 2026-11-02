@@ -80,7 +80,7 @@ export const tinderHq: ProjectBundle = {
       "Connection is a gradient. It runs from casual to deep, and every kind of it happens somewhere specific in a city: a cafe for watching people, an arcade for playing, a gallery for showing work, a library for staying quiet together, a speakeasy for the honest conversation. The office could put employees inside the real-life experience the app promises its users."
     ],
     "vision": [
-      "We called the idea Human Connection. Each connection space draws on the physical, ephemeral, and spatial qualities of a real-world place where people meet. Stacked floor by floor, the spaces move from casual to deep as you climb the building, so the headquarters reads as one argument rather than seven floors of amenities.",
+      "We called the idea Human Connection. Each connection space draws on the physical, ephemeral, and spatial qualities of a real-world place where people meet. Stacked floor by floor, the spaces move from casual to deep as you climb the building, so the headquarters reads as one argument across its social settings.",
       "Around those spaces, the material framework is deliberately pared back. Self-expression is what the app is for, so the workplace leaves room for employees to bring their own personality, with bolder palettes reserved for the connection spaces themselves."
     ],
     "scaleTranslation": [
@@ -92,7 +92,7 @@ export const tinderHq: ProjectBundle = {
       {
         "lens": "interiors-behavior",
         "assetId": "tinder-20",
-        "caption": "Behavior: the Library table is shaped to limit accidental interruption. Seating angles across the building draw on Herman Miller Action Office research on comfortable peer conversation."
+        "caption": "The Gallery: pinning up work turns sharing into an everyday activity."
       },
       {
         "lens": "interiors-behavior",
@@ -370,7 +370,7 @@ export const tinderHq: ProjectBundle = {
       "projectId": "tinder-hq",
       "file": "tinder-hq/tinder-26.jpg",
       "type": "photo",
-      "caption": "Speakeasy detail, at eye level, as the photography direction asked.",
+      "caption": "Shared drinks in the Speakeasy: an overhead detail of informal connection.",
       "alt": "Close view of hands reaching for snacks and drinks on a dark round table.",
       "creator": "",
       "credit": "",

@@ -12,17 +12,6 @@ export default function SiteFooter() {
   return (
     <footer className="site-footer" data-header-invert>
       <div className="site-footer__inner">
-        <div className="site-footer__lead">
-          <p className="site-footer__headline">Let&apos;s shape what comes next</p>
-          <a href={mailto} className="footer-link" data-sweep>Email Me</a>
-          <svg className="site-footer__mark" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
-            <g stroke="currentColor" strokeWidth="9" strokeLinecap="round">
-              <line x1="50" y1="8" x2="50" y2="92" />
-              <line x1="13.6" y1="29" x2="86.4" y2="71" />
-              <line x1="13.6" y1="71" x2="86.4" y2="29" />
-            </g>
-          </svg>
-        </div>
         <div className="site-footer__cols">
           <div>
             <p className="site-footer__label">Navigation</p>

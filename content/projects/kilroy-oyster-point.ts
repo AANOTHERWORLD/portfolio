@@ -90,7 +90,7 @@ export const kilroyOysterPoint: ProjectBundle = {
     "outcome": [
       "Completed interiors and amenities, documented in August 2025 photography. Rapt developed interiors and furnishings; DGA designed the buildings and Field Operations designed the landscape."
     ],
-    "imageCredit": "Completed photography, August 2025, supplied by Rapt Studio; photographer credit to be confirmed. Marketing renderings by Rapt Studio.",
+    "imageCredit": "Completed photography, August 2025, supplied by Rapt Studio. Marketing renderings by Rapt Studio.",
     "sectionTitles": {
       "challenge": "A campus that needed a reason to cross it",
       "vision": "Restaurant and retreat",

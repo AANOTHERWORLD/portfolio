@@ -1,10 +1,16 @@
-import { projectBundles } from "@/content/projects";
+import { editorial } from "@/content/editorial";
+import { projectBundles as sourceBundles } from "@/content/projects";
 import { portfolio } from "@/content/portfolio";
 import { profile, profileAssets, profileClaims } from "@/content/profile";
 import { approachExamples, approachSteps } from "@/content/approach";
 import { lenses, lensById } from "@/content/lenses";
 import type { Asset, Claim, ClaimPlacement, LensId, ProjectBundle, TileSpec } from "@/content/types";
 import { buildLog } from "./debug";
+
+const projectBundles = sourceBundles.map((bundle) => {
+  const edit = editorial[bundle.project.id];
+  return edit ? { ...bundle, project: { ...bundle.project, thesis: edit.thesis, heroAssetId: edit.hero ?? bundle.project.heroAssetId, indexAssetId: edit.index ?? bundle.project.indexAssetId } } : bundle;
+});
 
 // Content loader and governance gates.
 //
@@ -64,8 +70,8 @@ export function getCoreProjects(): ProjectBundle[] {
 }
 
 // Editorial selection, independent of the general project sequence. Order matters.
-export const HOMEPAGE_IDS = ["google-gso-home-of-the-internet", "lsd-running", "intuit-turbotax-retail", "google-room-98", "tinder-hq", "openai"];
-export const SELECTED_WORK_IDS = [...HOMEPAGE_IDS, "kilroy-oyster-point", "watt-plaza"];
+export const HOMEPAGE_IDS = ["lsd-running", "kilroy-oyster-point", "tinder-hq", "google-room-98", "google-gso-home-of-the-internet", "april-jean"];
+export const SELECTED_WORK_IDS = ["lsd-running", "kilroy-oyster-point", "tinder-hq", "google-room-98", "intuit-turbotax-retail", "google-gso-home-of-the-internet", "openai", "april-jean"];
 
 const byIds = (ids: string[]) => (assertSelections(), ids).map((id) => getCoreProjects().find((b) => b.project.id === id)).filter((b): b is ProjectBundle => !!b);
 
@@ -190,7 +196,7 @@ export function getApproachExamples(stepId: string) {
 // contribute a second and a third, smaller tile, until the limit. Projects whose only assets are diagrams
 // (platform maps, concept diagrams) stay out of the field and are reached from Work.
 export const LANDING_TILE_LIMIT = 20;
-const IMAGE_TYPES: Asset["type"][] = ["photo", "render"];
+const IMAGE_TYPES: Asset["type"][] = ["photo", "render", "graphic"];
 
 export interface LandingTile {
   key: string;
@@ -205,11 +211,11 @@ export interface LandingTile {
 export function getLandingTiles(): LandingTile[] {
   const rounds: LandingTile[][] = [[], [], []];
   const sized = (project: ProjectBundle["project"]) => 1 + ((project.tileSize - 1) * 4) / 3;
-  for (const bundle of getCoreProjects()) {
+  for (const bundle of getWorkOrder()) {
     if (!bundle.project.landingTile) continue;
     const images = visibleAssets(bundle).filter((a) => IMAGE_TYPES.includes(a.type));
     if (!images.length) continue;
-    const hero = images.find((a) => a.id === bundle.project.heroAssetId) ?? images[0];
+    const hero = images.find((a) => a.id === bundle.project.indexAssetId) ?? images.find((a) => a.id === bundle.project.heroAssetId) ?? images[0];
     const second = images.find((a) => a.id !== hero.id && a.id === bundle.project.indexAssetId) ?? images.find((a) => a.id !== hero.id);
     const base: TileSpec = bundle.project.tiles?.[0] ?? { x: 0, y: 0, depth: 2, order: bundle.project.sequence };
     rounds[0].push({ key: `${bundle.project.id}-0`, bundle, asset: hero, spec: { ...base, order: bundle.project.sequence }, label: bundle.project.title, size: sized(bundle.project) });

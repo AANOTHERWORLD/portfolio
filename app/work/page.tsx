@@ -1,64 +1,11 @@
 import type { Metadata } from "next";
-import { getWorkGroups, getHeroAsset, getLensCounts } from "@/lib/content";
-import Picture from "@/components/Picture";
+import { getWorkGroups } from "@/lib/content";
+import { editorial } from "@/content/editorial";
 import WorkTile from "@/components/WorkTile";
-import { LensProvider, LensKey, LensGroup, LensEmpty } from "@/components/LensContext";
-
-export const metadata: Metadata = {
-  title: "Work",
-  description: "An ordered sequence of projects showing one creative direction carried across culture, place, behavior, and detail.",
-};
-
+import WorkBrowser from "@/components/WorkBrowser";
+export const metadata: Metadata = { title: "Work", description: "Selected work across brand, spatial, experiential and hospitality design." };
 export default function WorkPage() {
-  // Core projects only: extended placeholders stay out of navigation until they have a story and assets.
   const { selected, further } = getWorkGroups();
-  const core = [...selected, ...further];
-  const projects = core;
-  const counts = getLensCounts();
-  const hero = core.length ? getHeroAsset(core[0]) : null;
-  return (
-    <>
-      <section className="work-banner" aria-labelledby="work-title" data-header-invert>
-        {hero && (
-          <div className="work-banner__media">
-            <Picture asset={hero} showCaption={false} fit="cover" sizes="100vw" priority />
-          </div>
-        )}
-        <div className="work-banner__scrim" aria-hidden="true" />
-        <div className="work-banner__text wrap">
-          <h1 id="work-title" className="work-banner__title">Work</h1>
-          <p className="work-banner__lede">Selected projects show how I establish creative direction, guide teams across disciplines and carry an idea through changing contexts and scales.</p>
-        </div>
-      </section>
-      <div className="wrap">
-      <LensProvider>
-        <div className="lens-filter" aria-label="Highlight by lens">
-          <p className="tag">Explore by lens</p>
-          <LensKey counts={counts} compact total={projects.length} />
-        </div>
-        {projects.length ? (
-          <>
-            <LensEmpty projectLenses={projects.map((b) => b.project.lenses)} />
-            <LensGroup title="Selected projects" projectLenses={selected.map((b) => b.project.lenses)}>
-              <ol className="work-grid" aria-label="Selected projects">
-                {selected.map((bundle, index) => <WorkTile key={bundle.project.id} bundle={bundle} index={index} />)}
-              </ol>
-            </LensGroup>
-            {further.length > 0 && (
-              <LensGroup title="Further work" projectLenses={further.map((b) => b.project.lenses)}>
-                <ol className="work-grid" aria-label="Further work">
-                  {further.map((bundle, index) => <WorkTile key={bundle.project.id} bundle={bundle} index={selected.length + index} />)}
-                </ol>
-              </LensGroup>
-            )}
-          </>
-        ) : (
-          <p className="empty-state">
-            No projects are cleared for publication yet. Set a project&apos;s permission to confirmed in its content file, or build with NEXT_PUBLIC_SHOW_DRAFTS=true to preview drafts.
-          </p>
-        )}
-      </LensProvider>
-      </div>
-    </>
-  );
+  const entries = [...selected, ...further].map((bundle, index) => ({ id: bundle.project.id, selected: index < selected.length, fields: editorial[bundle.project.id].fields, card: <WorkTile bundle={bundle} index={index} /> }));
+  return <div className="wrap"><header className="page-head work-page-head"><p className="tag">Portfolio</p><h1 className="page-head__title">Work</h1><p className="lede">Spaces, identities and experiences shaped by a shared creative direction.</p></header><WorkBrowser entries={entries} /></div>;
 }

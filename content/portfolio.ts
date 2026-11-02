@@ -6,11 +6,11 @@ export const portfolio: Portfolio = {
   wordmark: "Jamel Williams",
   descriptor: "Design Director",
   // Under the H1. The employment title stays Design Director; Creative Director is the next focus.
-  tagline: "Creative Leadership Across Architecture, Interiors, Brand & Experience",
+  tagline: "Architect-trained Design Director. Spaces, brands and experiences.",
   headline: "One Vision. Multiple Scales.",
   statement: "One Vision. Multiple Scales.",
   statementBody:
-    "I lead multidisciplinary teams to translate culture, strategy and brand into connected experiences across spaces, communications and the tools people use.",
+    "I lead multidisciplinary teams from the initial idea through the decisions that give it form: in environments, identities, objects and communications.",
   leadershipHeading: "Set the direction. Give it momentum.",
   leadershipProof: [
     "As Design Director at Rapt Studio, I lead a multidisciplinary team of 13 across seven concurrent projects, guiding creative direction from initial strategy through delivery.",
@@ -22,7 +22,7 @@ export const portfolio: Portfolio = {
   emailSubject: "Contact from Website",
   // Confirm that the location should appear publicly.
   location: "Los Angeles",
-  availability: "I am interested in Creative Director opportunities where spatial design, brand, and human experience meet.",
+  availability: "Open to Creative Director and Design Director opportunities in experiential, spatial, brand and hospitality design.",
   internationalAvailability: "Based in Los Angeles. Open to opportunities in the US and internationally.",
   versionDate: "2026-10-15",
   copyrightHolder: "Jamel Williams",

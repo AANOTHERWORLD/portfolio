@@ -30,14 +30,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section about-snapshot" aria-labelledby="snapshot">
-        <p className="tag">Leadership snapshot</p>
-        <h2 id="snapshot" className="visually-hidden">Leadership snapshot</h2>
-        <ul className="snapshot-list">
-          {profile.leadershipSnapshot.map((item) => <li key={item}>{item}</li>)}
-        </ul>
-      </section>
-
       <section className="section" aria-labelledby="experience">
         <div className="grid-2">
           <div><p className="tag">Experience</p><h2 id="experience" className="section__title">Experience</h2></div>
@@ -57,7 +49,6 @@ export default function AboutPage() {
         <div className="grid-2">
           <div><p className="tag">Leadership</p><h2 id="leadership" className="section__title">{profile.leadershipStatement}</h2></div>
           <div className="prose">
-            <p>{profile.leadershipSummary}</p>
             {profile.leadershipNarrative.map((p, i) => <p key={i}>{p}</p>)}
             <ul>{profile.workingStyle.map((s) => <li key={s}>{s}</li>)}</ul>
           </div>
@@ -86,7 +77,7 @@ export default function AboutPage() {
 
       <section className="section" aria-labelledby="availability">
         <div className="grid-2">
-          <div><p className="tag">Contact</p><h2 id="availability" className="section__title">Open to Creative Director roles</h2></div>
+          <div><p className="tag">Contact</p><h2 id="availability" className="section__title">Creative Director and Design Director opportunities</h2></div>
           <div className="prose">
             <p>{portfolio.internationalAvailability}</p>
             <div className="actions">

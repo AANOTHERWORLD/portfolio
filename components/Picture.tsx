@@ -1,6 +1,5 @@
 import type { Asset } from "@/content/types";
 import { resolveImage } from "@/lib/images";
-import { lensById } from "@/content/lenses";
 import { withBasePath } from "@/lib/basePath";
 
 type Props = {
@@ -69,10 +68,11 @@ export default function Picture({ asset, sizes = "(min-width: 1100px) 1100px, 10
       </div>
       {showCaption && (
         <figcaption className="picture__caption">
-          {showLens && asset.lens && <span className="tag tag--lens">{lensById[asset.lens].name}</span>}
+
           <span className="tag">{asset.motion ? "Film" : typeLabel}</span>
           <span className="picture__text">{asset.caption}</span>
           {asset.credit && <span className="picture__credit">{asset.credit}</span>}
+          {["plan", "diagram"].includes(asset.type) && <a className="picture__enlarge text-link" href={image.src} target="_blank" rel="noopener noreferrer" aria-label={`Open full-size image: ${asset.caption}`}>View full size</a>}
           {asset.permission === "pending" && <span className="draft-marker">Draft: permission pending</span>}
         </figcaption>
       )}

@@ -1,475 +1,100 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { PLACEHOLDER_SLUG, getAllProjectSlugs, getProject, getWorkOrder, getAsset, getHeroAsset, getIndexAsset, getClaims, visibleAssets, lensById } from "@/lib/content";
+import { getAllProjectSlugs, getProject, getWorkOrder, getAsset, getHeroAsset, getIndexAsset, getClaims } from "@/lib/content";
+import { editorial } from "@/content/editorial";
 import Picture from "@/components/Picture";
-import LensTags from "@/components/LensTags";
 import DraftBadge from "@/components/DraftBadge";
 import { STATUS_LABEL } from "@/components/WorkCard";
-import type { Asset, Claim, ProjectBundle } from "@/content/types";
 
 export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return getAllProjectSlugs().map((slug) => ({ slug }));
-}
-
+export function generateStaticParams() { return getAllProjectSlugs().map((slug) => ({ slug })); }
 type Props = { params: Promise<{ slug: string }> };
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const bundle = getProject(slug);
-  if (!bundle) return {};
-  return { title: bundle.project.title, description: bundle.project.thesis };
-}
-
-function ClaimList({ claims }: { claims: Claim[] }) {
-  if (!claims.length) return null;
-  return (
-    <ul className="claims">
-      {claims.map((claim) => (
-        <li key={claim.id} className={claim.status === "awaiting" ? "claim--awaiting" : undefined}>
-          {claim.wording}
-          {claim.status === "awaiting" && <> <span className="draft-marker">Awaiting verification</span></>}
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-// Editorial opening: the hero image sits beside the title, proposition, and the In Brief text,
-// so the first screen reads as one spread. Projects without a short summary lead with the first
-// paragraph of their challenge.
-function Opening({ bundle }: { bundle: ProjectBundle }) {
-  const { project, narrative } = bundle;
-  const hero = getHeroAsset(bundle);
-  const brief = narrative.summary?.length ? narrative.summary : narrative.challenge.slice(0, 1);
-  return (
-    <header className="project-opening">
-      <div className="project-opening__media">
-        {hero ? <Picture asset={hero} priority sizes="(min-width: 900px) 52vw, 100vw" showLens /> : <div className="picture__placeholder">Hero image pending</div>}
-      </div>
-      <div className="project-opening__text">
-        <p className="tag">
-          {project.typeLabel}
-          {project.status !== "completed" && <> <span className="tag tag--status">{STATUS_LABEL[project.status]}</span></>}
-        </p>
-        {project.permission === "pending" && <DraftBadge note={project.permissionNote} />}
-        <p className="tag"><Link href={`/approach/#${project.portfolioRole.toLowerCase().replaceAll(" ", "-")}`}>{project.portfolioRole}</Link></p>
-        <h1 className="project-hero__title">{project.title}</h1>
-        <p className="project-hero__thesis">{project.thesis}</p>
-        {brief.length > 0 && (
-          <div className={`project-opening__brief ${narrative.summaryLabels ? "project-opening__brief--labelled" : ""}`}>
-            <p className="tag">In brief</p>
-            {narrative.summaryLabels
-              ? brief.map((p, i) => <div className="brief-item" key={i}><p className="tag">{narrative.summaryLabels![i]}</p><p>{p}</p></div>)
-              : brief.map((p, i) => <p key={i}>{p}</p>)}
-          </div>
-        )}
-        <dl className="project-opening__facts">
-          <div><dt>Role</dt><dd>{project.role}</dd></div>
-          <div><dt>Disciplines</dt><dd>{project.disciplines}</dd></div>
-          <div><dt>Status</dt><dd>{STATUS_LABEL[project.status]}</dd></div>
-        </dl>
-        <ClaimList claims={getClaims(bundle, "context")} />
-        <LensTags lenses={project.lenses} />
-      </div>
-    </header>
-  );
-}
-
-function Glance({ bundle }: { bundle: ProjectBundle }) {
-  const { project } = bundle;
-  return (
-    <dl className="glance" aria-label="At a glance">
-      {project.clientDisplayName && <div className="glance__item"><dt>Client</dt><dd>{project.clientDisplayName}</dd></div>}
-      {project.location && <div className="glance__item"><dt>Location</dt><dd>{project.location}</dd></div>}
-      {project.years && <div className="glance__item"><dt>Years</dt><dd>{project.years}</dd></div>}
-      <div className="glance__item"><dt>Status</dt><dd>{STATUS_LABEL[project.status]}{project.statusNote ? `. ${project.statusNote}` : ""}</dd></div>
-      <div className="glance__item glance__item--wide"><dt>Role</dt><dd>{project.role}<ClaimList claims={getClaims(bundle, "role")} /></dd></div>
-      {project.scope && <div className="glance__item glance__item--wide"><dt>Scope</dt><dd>{project.scope}</dd></div>}
-      <div className="glance__item"><dt>Practice</dt><dd>{project.practice}</dd></div>
-      {project.team.length > 0 && <div className="glance__item"><dt>Team</dt><dd>{project.team.join(", ")}</dd></div>}
-      {project.collaborators.length > 0 && <div className="glance__item"><dt>Collaborators</dt><dd>{project.collaborators.join("; ")}</dd></div>}
-      <div className="glance__item"><dt>Lenses</dt><dd><LensTags lenses={project.lenses} /></dd></div>
-    </dl>
-  );
-}
-
-function ProjectInfo({ bundle }: { bundle: ProjectBundle }) {
-  return (
-    <section className="project-section project-info" aria-labelledby="project-info">
-      <div className="project-section__head"><p className="tag">Project information</p><h2 id="project-info" className="section__title">At a glance</h2></div>
-      <Glance bundle={bundle} />
-      <Credits bundle={bundle} />
-    </section>
-  );
-}
-
-// Selected press: a magazine cover shown uncropped beside the note, linked to the issue.
-function FeaturedPublication({ bundle }: { bundle: ProjectBundle }) {
-  const publication = bundle.narrative.featuredPublication;
-  if (!publication) return null;
-  const asset = getAsset(bundle, publication.assetId);
-  if (!asset) return null;
-  return (
-    <section className="project-section" aria-labelledby="featured-publication">
-      <div className="spread spread--media-left">
-        <div className="spread__text">
-          <div className="project-section__head"><p className="tag">Selected press</p><h2 id="featured-publication" className="section__title">{publication.title}</h2></div>
-          <div className="prose">
-            <p>{publication.description}</p>
-            <p><a href={publication.url} className="text-link" data-sweep>View the magazine issue</a></p>
-            <p className="picture__credit">{asset.credit}</p>
-          </div>
-        </div>
-        <div className="spread__media">
-          <a href={publication.url} aria-label={`${publication.title}: view the magazine issue`}>
-            <Picture asset={asset} showCaption={false} sizes="(min-width: 900px) 40vw, 100vw" />
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Credits({ bundle }: { bundle: ProjectBundle }) {
-  const { project, narrative } = bundle;
-  const credits = getClaims(bundle, "credits");
-  return (
-    <div className="project-info__credits">
-      <p className="tag">Credits</p>
-      <dl className="credits">
-        <div><dt>Originating practice</dt><dd>{project.practice}</dd></div>
-        <div><dt>Personal involvement</dt><dd>{narrative.involvement}</dd></div>
-        {project.team.length > 0 && <div><dt>Team</dt><dd><ul>{project.team.map((t) => <li key={t}>{t}</li>)}</ul></dd></div>}
-        {project.collaborators.length > 0 && <div><dt>Collaborators</dt><dd><ul>{project.collaborators.map((c) => <li key={c}>{c}</li>)}</ul></dd></div>}
-        {[narrative.photographyCredit, narrative.imageCredit].some(Boolean) && <div><dt>Photography and imagery</dt><dd>{[narrative.photographyCredit, narrative.imageCredit].filter(Boolean).join(" ")}</dd></div>}
-        {credits.length > 0 && <div><dt>Further credits</dt><dd><ClaimList claims={credits} /></dd></div>}
-      </dl>
-    </div>
-  );
-}
-
-// Previous and next project, in Work order, each with its image: a clear way on from any case study.
-function ProjectNav({ bundle }: { bundle: ProjectBundle }) {
-  const list = getWorkOrder();
-  const i = list.findIndex((b) => b.project.id === bundle.project.id);
-  if (i < 0 || list.length < 2) return null;
-  const prev = list[(i - 1 + list.length) % list.length];
-  const next = list[(i + 1) % list.length];
-  const card = (target: ProjectBundle, label: string) => {
-    const asset = getIndexAsset(target);
-    return (
-      <Link href={`/work/${target.project.slug}/`} className="project-nav__item">
-        {asset && <Picture asset={asset} showCaption={false} fit="cover" sizes="(min-width: 800px) 40vw, 100vw" />}
-        <p className="tag">{label}</p>
-        <h2 className="project-nav__title">{target.project.title}</h2>
-        <p className="project-nav__thesis">{target.project.thesis}</p>
-      </Link>
-    );
-  };
-  return (
-    <nav className="project-nav" aria-label="More projects">
-      {card(prev, "Previous project")}
-      {card(next, "Next project")}
-      <p className="project-nav__all"><Link href="/work/" className="text-link" data-sweep>All work</Link></p>
-    </nav>
-  );
-}
-
-function DecisionBlocks({ bundle }: { bundle: ProjectBundle }) {
-  if (!bundle.decisions.length) return null;
-  return (
-    <section className="project-section" aria-labelledby="decisions">
-      <div className="project-section__head"><p className="tag">Decisive choices</p><h2 id="decisions" className="section__title">{bundle.decisions.length > 1 ? "The decisions that shaped the outcome" : "The decision that shaped the outcome"}</h2></div>
-      {bundle.decisions.map((decision, index) => (
-        <div className="decision" key={decision.id}>
-          <div>
-            <h3 className="decision__title"><span className="decision__index">{index + 1}</span>{decision.title}</h3>
-            <dl>
-              <div><dt>Question</dt><dd>{decision.question}</dd></div>
-              <div><dt>Choice</dt><dd>{decision.choice}</dd></div>
-              <div><dt>Reason</dt><dd>{decision.rationale}</dd></div>
-              <div><dt>Tradeoff</dt><dd>{decision.tradeoff}</dd></div>
-              {decision.personalContribution && <div><dt>My part</dt><dd>{decision.personalContribution}</dd></div>}
-            </dl>
-          </div>
-          <div className="decision__media">
-            {decision.assetIds.map((id) => {
-              const asset = getAsset(bundle, id);
-              return asset ? <Picture key={id} asset={asset} sizes="(min-width: 900px) 55vw, 100vw" /> : null;
-            })}
-          </div>
-        </div>
-      ))}
-    </section>
-  );
-}
-
-function Section({ id, tag, title, asset, extra = [], side, children }: { id: string; tag: string; title: string; asset?: Asset | null; extra?: Asset[]; side: "left" | "right"; children: React.ReactNode }) {
-  if (!asset) {
-    return (
-      <section className="project-section" aria-labelledby={id}>
-        <div className="grid-2">
-          <div className="project-section__head"><p className="tag">{tag}</p><h2 id={id} className="section__title">{title}</h2></div>
-          <div className="prose">{children}</div>
-        </div>
-      </section>
-    );
-  }
-  return (
-    <section className="project-section" aria-labelledby={id}>
-      <div className={`spread ${side === "left" ? "spread--media-left" : ""}`}>
-        <div className="spread__text">
-          <div className="project-section__head"><p className="tag">{tag}</p><h2 id={id} className="section__title">{title}</h2></div>
-          <div className="prose">{children}</div>
-        </div>
-        <div className="spread__media"><Picture asset={asset} sizes="(min-width: 900px) 50vw, 100vw" showLens />{extra.map((a) => <Picture key={a.id} asset={a} sizes="(min-width: 900px) 50vw, 100vw" showLens />)}</div>
-      </div>
-    </section>
-  );
-}
-
-// Remaining images flow as a two-column mosaic that keeps each image's own proportions.
-function Gallery({ assets, title }: { assets: ProjectBundle["assets"]; title: string }) {
-  if (!assets.length) return null;
-  return (
-    <section className="project-section" aria-labelledby="gallery">
-      <div className="project-section__head"><p className="tag">Gallery</p><h2 id="gallery" className="section__title">{title}</h2></div>
-      <div className="gallery">
-        {assets.map((asset) => <Picture key={asset.id} asset={asset} sizes="(min-width: 800px) 50vw, 100vw" showLens />)}
-      </div>
-    </section>
-  );
-}
-
-function ClosingGroup({ bundle }: { bundle: ProjectBundle }) {
-  const group = bundle.narrative.closingGroup;
-  if (!group) return null;
-  const items = group.assetIds.map((id) => getAsset(bundle, id)).filter((a): a is Asset => !!a);
-  const photo = getAsset(bundle, group.photoId);
-  if (!items.length) return null;
-  return (
-    <section className="project-section" aria-label={group.caption}>
-      <div className="card-group">
-        <ul className="card-row">
-          {items.map((a) => <li key={a.id}><Picture asset={a} showCaption={false} /></li>)}
-        </ul>
-        {photo && <div className="card-group__photo"><Picture asset={photo} showCaption={false} sizes="(min-width: 900px) 40vw, 100vw" /></div>}
-      </div>
-      <p className="picture__caption"><span className="tag">Graphic</span><span className="picture__text">{group.caption}</span></p>
-    </section>
-  );
-}
-
-function DecisionText({ decision, index }: { decision: ProjectBundle["decisions"][number]; index: number }) {
-  return (
-    <div className="expression-decision">
-      <h3 className="decision__title"><span className="decision__index">{index}</span>{decision.title}</h3>
-      <dl>
-        <div><dt>Question</dt><dd>{decision.question}</dd></div>
-        <div><dt>Choice</dt><dd>{decision.choice}</dd></div>
-        <div><dt>Reason</dt><dd>{decision.rationale}</dd></div>
-        <div><dt>Tradeoff</dt><dd>{decision.tradeoff}</dd></div>
-        {decision.personalContribution && <div><dt>My part</dt><dd>{decision.personalContribution}</dd></div>}
-      </dl>
-    </div>
-  );
-}
-
-// Named expression sections (cities, formats): an intro, then images and decisions in the order given.
-function Expressions({ bundle }: { bundle: ProjectBundle }) {
-  const { narrative, decisions } = bundle;
-  const sections = narrative.expressions ?? [];
-  const sizes = "(min-width: 900px) 50vw, 100vw";
-  return (
-    <>
-      {narrative.intro && (
-        <Section id="intro" tag="Introduction" title={narrative.intro.title} asset={null} side="right">
-          {narrative.intro.paragraphs.map((p, i) => <p key={i}>{p}</p>)}
-        </Section>
-      )}
-      {sections.map((section) => {
-        const blocks: React.ReactNode[] = [];
-        let run: Asset[] = [];
-        const flush = () => {
-          if (run.length) blocks.push(<div className="expression-grid" key={`g-${blocks.length}`}>{run.map((a) => <Picture key={a.id} asset={a} sizes={sizes} showLens />)}</div>);
-          run = [];
-        };
-        section.items.forEach((item, i) => {
-          const asset = item.assetId ? getAsset(bundle, item.assetId) : null;
-          const decisionIndex = item.decisionId ? decisions.findIndex((d) => d.id === item.decisionId) : -1;
-          const decision = decisionIndex >= 0 ? decisions[decisionIndex] : null;
-          if (decision) {
-            flush();
-            blocks.push(
-              <div className="decision" key={`d-${i}`}>
-                <DecisionText decision={decision} index={decisionIndex + 1} />
-                {asset && <div className="decision__media"><Picture asset={asset} sizes="(min-width: 900px) 55vw, 100vw" /></div>}
-              </div>,
-            );
-          } else if (asset && item.wide) {
-            flush();
-            blocks.push(<div className="expression-wide" key={`w-${i}`}><Picture asset={asset} sizes="(min-width: 1100px) 1100px, 100vw" showLens /></div>);
-          } else if (asset) {
-            run.push(asset);
-          }
-        });
-        flush();
-        return (
-          <section className="project-section" aria-labelledby={section.id} id={section.id} key={section.id}>
-            <div className="project-section__head"><p className="tag">{section.id === "retail" ? "Retail formats" : "Flagship"}</p><h2 id={`${section.id}-heading`} className="section__title">{section.title}</h2></div>
-            <div className="prose expression-prose">{section.paragraphs.map((p, i) => <p key={i}>{p}</p>)}</div>
-            {blocks}
-          </section>
-        );
-      })}
-    </>
-  );
-}
-
-function FullTemplate({ bundle }: { bundle: ProjectBundle }) {
-  const { project, narrative, decisions } = bundle;
-  const assets = visibleAssets(bundle);
-  const titles = narrative.sectionTitles ?? {};
-  const assigned = narrative.sectionImages ?? {};
-  const assignedIds = Object.values(assigned).flatMap((v) => (Array.isArray(v) ? v : v ? [v] : []));
-  const group = narrative.closingGroup;
-  const groupIds = group ? [...group.assetIds, ...(group.photoId ? [group.photoId] : [])] : [];
-  const expressionIds = (narrative.expressions ?? []).flatMap((e) => e.items.map((i) => i.assetId).filter(Boolean) as string[]);
-  const otherIds = [...decisions.flatMap((d) => d.assetIds), ...(narrative.scaleTranslation.map((s) => s.assetId).filter(Boolean) as string[])];
-  for (const e of narrative.expressions ?? []) for (const it of e.items) if (it.decisionId && !decisions.some((d) => d.id === it.decisionId)) throw new Error(`${project.id}: expression references missing decision ${it.decisionId}`);
-  for (const id of [...assignedIds, ...groupIds, ...otherIds, ...expressionIds]) if (!assets.some((a) => a.id === id)) throw new Error(`${project.id}: image assignment references missing asset ${id}`);
-  const usedIds = new Set<string>([project.heroAssetId, ...assignedIds, ...groupIds, ...expressionIds, ...decisions.flatMap((d) => d.assetIds), ...(narrative.scaleTranslation.map((s) => s.assetId).filter(Boolean) as string[])]);
-  const pool = assets.filter((a) => !usedIds.has(a.id) && a.id !== narrative.featuredPublication?.assetId);
-  // Only an explicit asset id (or list) produces a section image. A missing key or null is text-only.
-  const pickAll = (key: keyof typeof assigned): Asset[] => {
-    const v = assigned[key];
-    return (Array.isArray(v) ? v : v ? [v] : []).map((id) => getAsset(bundle, id)).filter((a): a is Asset => !!a);
-  };
-  const storyImgAll = pickAll("story");
-  const storyImg = storyImgAll[0] ?? null;
-  const challengeImgAll = pickAll("challenge");
-  const challengeImg = challengeImgAll[0] ?? null;
-  const visionImgAll = pickAll("vision");
-  const visionImg = visionImgAll[0] ?? null;
-  const leadershipImgAll = pickAll("leadership");
-  const leadershipImg = leadershipImgAll[0] ?? null;
-  const outcomeImgAll = pickAll("outcome");
-  const outcomeImg = outcomeImgAll[0] ?? null;
-  return (
-    <article className="wrap">
-      <Opening bundle={bundle} />
-      <FeaturedPublication bundle={bundle} />
-
-      {narrative.expressions?.length ? <Expressions bundle={bundle} /> : (
-        <>
-
-
-      <Section id="challenge" tag="Context" title={titles.challenge ?? "The challenge"} asset={challengeImg} extra={challengeImgAll.slice(1)} side="right">
-        {narrative.challenge.map((p, i) => <p key={i}>{p}</p>)}
-        <ClaimList claims={getClaims(bundle, "context")} />
-      </Section>
-
-      <Section id="vision" tag="Insight and vision" title={titles.vision ?? "The idea that guided the team"} asset={visionImg} extra={visionImgAll.slice(1)} side="left">
-        {narrative.insight.map((p, i) => <p key={`i-${i}`} className="statement">{p}</p>)}
-        {narrative.vision.map((p, i) => <p key={`v-${i}`}>{p}</p>)}
-      </Section>
-
-      <DecisionBlocks bundle={bundle} />
-
-      {narrative.story && narrative.story.length > 0 && (
-        <Section id="story" tag="The story" title={titles.story ?? "How the work developed"} asset={storyImg} extra={storyImgAll.slice(1)} side="right">
-          {narrative.story.map((p, i) => <p key={i}>{p}</p>)}
-        </Section>
-      )}
-
-      <section className="project-section" aria-labelledby="scales">
-        <div className="project-section__head"><p className="tag">Translation across scales</p><h2 id="scales" className="section__title">The direction in practice</h2></div>
-        <div className="scale-sequence">
-          {narrative.scaleTranslation.map((step, index) => {
-            const asset = getAsset(bundle, step.assetId);
-            return (
-              <div className={`scale-step ${asset ? "" : "scale-step--text-only"}`} key={index}>
-                {asset && <div className="scale-step__media"><Picture asset={asset} sizes="(min-width: 900px) 66vw, 100vw" /></div>}
-                <div className="scale-step__text">
-                  <p className="tag tag--lens">{lensById[step.lens].name}</p>
-                  <p className="scale-step__caption">{step.caption}</p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-        </>
-      )}
-
-      <Section id="leadership" tag="My contribution" title={titles.leadership ?? "What was led, and by whom"} asset={leadershipImg} extra={leadershipImgAll.slice(1)} side="right">
-        {narrative.leadership.map((p, i) => <p key={i}>{p}</p>)}
-        {narrative.leadershipMoment && (<><p className="tag">A moment of alignment</p><p>{narrative.leadershipMoment}</p></>)}
-        <ClaimList claims={getClaims(bundle, "leadership")} />
-      </Section>
-
-      <Section id="outcome" tag="Result and status" title={titles.outcome ?? (project.status === "concept" ? "How far the design went" : "What was delivered")} asset={outcomeImg} extra={outcomeImgAll.slice(1)} side="left">
-        {narrative.outcome.map((p, i) => <p key={i}>{p}</p>)}
-        <ClaimList claims={getClaims(bundle, "outcome")} />
-        {narrative.reflection && (<><p className="tag">Reflection</p><p className="statement statement--small">{narrative.reflection}</p></>)}
-      </Section>
-
-      <ClosingGroup bundle={bundle} />
-      <Gallery assets={pool} title="More views" />
-      <ProjectInfo bundle={bundle} />
-      <ProjectNav bundle={bundle} />
-    </article>
-  );
-}
-
-function LightTemplate({ bundle }: { bundle: ProjectBundle }) {
-  const { project, narrative } = bundle;
-  const assets = visibleAssets(bundle).filter((a) => a.id !== project.heroAssetId && a.id !== narrative.featuredPublication?.assetId && !bundle.decisions.some((d) => d.assetIds.includes(a.id)));
-  return (
-    <article className="wrap">
-      <Opening bundle={bundle} />
-      <FeaturedPublication bundle={bundle} />
-      {narrative.story && narrative.story.length > 0 && (
-        <Section id="story" tag="The direction in practice" title={narrative.sectionTitles?.story ?? "How the idea takes form"} asset={null} side="right">
-          {narrative.story.map((p, i) => <p key={i}>{p}</p>)}
-        </Section>
-      )}
-      {bundle.decisions.length > 0 && <DecisionBlocks bundle={bundle} />}
-      <Gallery assets={assets} title="The work" />
-      <Section id="status" tag="Contribution and status" title={project.status === "concept" ? "Where the project stands" : "What was delivered"} asset={null} side="left">
-        <p className="tag">My contribution</p>
-        <p>{narrative.involvement === project.role ? project.role : `${project.role}. ${narrative.involvement}`}</p>
-        <p className="tag">Result and status</p>
-        {narrative.outcome.length > 0 ? narrative.outcome.map((p, i) => <p key={i}>{p}</p>) : <p>{STATUS_LABEL[project.status]}{project.years ? `, ${project.years}` : ""}.{project.statusNote ? ` ${project.statusNote}` : ""}</p>}
-      </Section>
-      <ProjectInfo bundle={bundle} />
-      <ProjectNav bundle={bundle} />
-    </article>
-  );
+  const bundle = getProject((await params).slug);
+  return bundle ? { title: bundle.project.title, description: bundle.project.thesis } : {};
 }
 
 export default async function ProjectPage({ params }: Props) {
-  const { slug } = await params;
-  const bundle = getProject(slug);
-  if (!bundle && slug === PLACEHOLDER_SLUG) {
-    return (
-      <div className="wrap">
-        <section className="page-head">
-          <p className="tag">Work</p>
-          <h1 className="page-head__title">Case studies are being cleared for publication</h1>
-          <p className="lede">Project pages appear here once client and studio permission is confirmed. In the meantime, the approach and contact pages are open.</p>
-          <div className="actions">
-            <Link href="/approach/" className="button" data-sweep>Read the approach</Link>
-            <Link href="/contact/" className="text-link" data-sweep>Get in touch</Link>
+  const bundle = getProject((await params).slug);
+  if (!bundle) notFound();
+  const { project, narrative } = bundle;
+  const edit = editorial[project.id];
+  if (!edit) throw new Error(`Missing editorial sequence: ${project.id}`);
+  const hero = getHeroAsset(bundle);
+  const status = edit.status ?? `${STATUS_LABEL[project.status]}${project.statusNote ? `. ${project.statusNote}` : ""}`;
+  const list = getWorkOrder();
+  const position = list.findIndex((b) => b.project.id === project.id);
+  const next = list[(position + 1) % list.length];
+  const nextAsset = getIndexAsset(next);
+  const publication = narrative.featuredPublication;
+  const claims = ["context", "leadership", "outcome", "credits"].flatMap((placement) => getClaims(bundle, placement as "context" | "leadership" | "outcome" | "credits"));
+  const used = new Set([project.heroAssetId]);
+  for (const section of edit.chapters) for (const id of section.assets) {
+    if (used.has(id)) throw new Error(`${project.id}: repeated curated image ${id}`);
+    if (!bundle.assets.some((a) => a.id === id)) throw new Error(`${project.id}: missing curated image ${id}`);
+    used.add(id);
+  }
+  return (
+    <article className="wrap editorial-project">
+      <header className="editorial-opening">
+        <div className="editorial-opening__text">
+          <p className="tag editorial-meta"><span>{project.typeLabel}</span><span>{project.years}</span></p>
+          {project.permission === "pending" && <DraftBadge note={project.permissionNote} />}
+          <h1 className="project-hero__title">{project.title}</h1>
+          <p className="project-hero__thesis">{edit.thesis}</p>
+          <dl className="project-opening__facts">
+            <div><dt>Role</dt><dd>{project.role}</dd></div>
+            <div><dt>Status</dt><dd>{status}</dd></div>
+          </dl>
+        </div>
+        <div className="editorial-opening__media">{hero && <Picture asset={hero} priority sizes="(min-width: 900px) 52vw, 100vw" />}</div>
+      </header>
+      <section className="editorial-brief" aria-labelledby="brief">
+        <h2 id="brief" className="tag">The brief</h2>
+        <p className="lede">{edit.intro}</p>
+        <nav className="chapter-nav" aria-label="Project chapters">
+          {edit.chapters.map((chapter, i) => <a key={chapter.title} href={`#chapter-${i + 1}`}>{chapter.title}</a>)}
+        </nav>
+      </section>
+      {edit.chapters.map((chapter, i) => (
+        <section className="editorial-chapter" id={`chapter-${i + 1}`} aria-labelledby={`chapter-heading-${i + 1}`} key={chapter.title}>
+          <div className="editorial-chapter__intro">
+            <h2 id={`chapter-heading-${i + 1}`} className="section__title">{chapter.title}</h2>
+            <div className="prose">{chapter.paragraphs.map((p) => <p key={p}>{p}</p>)}</div>
+          </div>
+          <div className="editorial-gallery">
+            {chapter.assets.map((id) => {
+              const asset = getAsset(bundle, id);
+              return asset ? <Picture key={id} asset={asset} sizes="(min-width: 800px) 50vw, 100vw" /> : null;
+            })}
           </div>
         </section>
-      </div>
-    );
-  }
-  if (!bundle) notFound();
-  return bundle.project.caseStudy === "full" ? <FullTemplate bundle={bundle} /> : <LightTemplate bundle={bundle} />;
+      ))}
+      {edit.related && <p className="editorial-related"><Link href={`/work/${edit.related.slug}/`} className="text-link">{edit.related.text}</Link></p>}
+      <section className="editorial-contribution" aria-labelledby="contribution">
+        <div>
+          <h2 id="contribution" className="section__title">Contribution and outcome</h2>
+          <div className="prose"><p>{narrative.involvement}</p>{edit.outcome ? <p>{edit.outcome}</p> : narrative.outcome.map((p) => <p key={p}>{p}</p>)}</div>
+          {claims.length > 0 && <ul className="claims">{claims.map((claim) => <li key={claim.id}>{claim.wording}{claim.status === "awaiting" && <span className="draft-marker">Awaiting verification</span>}</li>)}</ul>}
+          {publication && <p className="editorial-press"><span className="tag">Selected press</span><a href={publication.url} className="text-link">{publication.title}</a></p>}
+        </div>
+        <dl className="credits editorial-credits">
+          {project.location && <div><dt>Location</dt><dd>{project.location}</dd></div>}
+          <div><dt>Practice</dt><dd>{project.practice}</dd></div>
+          {project.scope && <div><dt>Scope</dt><dd>{project.scope}</dd></div>}
+          {project.team.length > 0 && <div><dt>Team</dt><dd>{project.team.join(", ")}</dd></div>}
+          {project.collaborators.length > 0 && <div><dt>Collaborators</dt><dd>{project.collaborators.join("; ")}</dd></div>}
+          {(narrative.photographyCredit || narrative.imageCredit) && <div><dt>Imagery</dt><dd>{[narrative.photographyCredit, narrative.imageCredit].filter(Boolean).join(" ")}</dd></div>}
+        </dl>
+      </section>
+      <nav className="editorial-next" aria-label="More projects">
+        <Link href={`/work/${next.project.slug}/`}>
+          {nextAsset && <Picture asset={nextAsset} showCaption={false} sizes="(min-width: 800px) 30vw, 100vw" />}
+          <span className="tag">Next project</span><h2 className="section__title">{next.project.title}</h2><p>{next.project.thesis}</p>
+        </Link>
+        <Link href="/work/" className="text-link">All work</Link>
+      </nav>
+    </article>
+  );
 }

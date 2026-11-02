@@ -97,7 +97,7 @@ export const googleGso: ProjectBundle = {
     "outcome": [
       "The work extended into recruiting collateral, external Life at Google data center pages, an internal resource hub of playbooks and templates, learning environments and a pop-up learning playbook for 2025 to 2026. Further work in 2026 included Brick and Mortar design reviews, a naming workshop and the IDI Field of Dreams playbook."
     ],
-    "imageCredit": "Photographs: Jamel Williams. Diagrams and process images: Rapt Studio. The Dalles study was generated with Gemini during the project.",
+    "imageCredit": "Learning-space photographs: Jamel Williams. Design, diagrams and visualizations: Rapt Studio.",
     "sectionTitles": {
       "story": "Recruitment, learning, space and tools",
       "challenge": "One organization, connected needs",
@@ -252,12 +252,12 @@ export const googleGso: ProjectBundle = {
     {
       "id": "gso-university-prompt-cards",
       "projectId": "google-gso-home-of-the-internet",
-      "file": "google-gso-home-of-the-internet/gso-university-prompt-cards.jpg",
-      "type": "photo",
-      "caption": "Prompt cards translate the graphic system into a tool for participation.",
-      "alt": "A stack of multicolored prompt cards on a timber side table beside orange seating.",
+      "file": "google-gso-home-of-the-internet/gso-prompt-cards-overview.png",
+      "type": "graphic",
+      "caption": "Conversation prompt cards connect the Google Data Centers identity with shared questions, advice and recommendations.",
+      "alt": "Three white Google Data Centers prompt cards with questions, advice and movie prompts, layered over blue, red and yellow card backs.",
       "creator": "Jamel Williams",
-      "credit": "Photography: Jamel Williams",
+      "credit": "Prompt-card design, Rapt Studio",
       "permission": "confirmed",
       "lens": "brand-detail"
     },
@@ -379,7 +379,7 @@ export const googleGso: ProjectBundle = {
     {
       "id": "gso-steam-lab",
       "projectId": "google-gso-home-of-the-internet",
-      "file": "google-gso-home-of-the-internet/gso-steam-lab-visualization.jpg",
+      "file": "google-gso-home-of-the-internet/gso-steam-lab-feature.png",
       "type": "render",
       "caption": "STEAM Lab kit, concept visualization: a tool wall, a crate on a hand truck and a work table, set in a library.",
       "alt": "Visualization of a STEAM Lab kit in a library: a pegboard wall of hand tools with red bins, a crate on a yellow hand truck and a small timber work table.",
@@ -595,6 +595,33 @@ export const googleGso: ProjectBundle = {
       "credit": "Diagram redrawn for this portfolio",
       "permission": "confirmed",
       "lens": "interiors-behavior"
+    },
+    {
+      "id": "gso-data-center-on-wheels",
+      "projectId": "google-gso-home-of-the-internet",
+      "file": "google-gso-home-of-the-internet/gso-data-center-on-wheels.png",
+      "type": "render",
+      "caption": "Data center on wheels: visualization of a demonstration vehicle bringing the people-powered internet story into a mobile learning experience.",
+      "alt": "Visualization of a white Google Data Centers demonstration truck with a visible server display, People-Powered Internet branding and rear access steps.",
+      "creator": "Rapt Studio",
+      "credit": "Project material supplied by Jamel Williams",
+      "permission": "confirmed",
+      "lens": "brand-detail"
+    },
+    {
+      "id": "gso-website-walkthrough",
+      "projectId": "google-gso-home-of-the-internet",
+      "file": "google-gso-home-of-the-internet/gso-website-walkthrough.jpg",
+      "type": "graphic",
+      "caption": "Home of the Internet: a navigation walkthrough of the Google Data Centers website, developed as part of the GSO work.",
+      "alt": "Video walkthrough of the Google Data Centers website, showing the homepage and navigation.",
+      "creator": "Rapt Studio",
+      "credit": "Project material supplied by Jamel Williams",
+      "permission": "confirmed",
+      "lens": "brand-detail",
+      "motion": {
+        "file": "google-gso-home-of-the-internet/gso-website-walkthrough.mp4"
+      }
     }
   ],
   "claims": [

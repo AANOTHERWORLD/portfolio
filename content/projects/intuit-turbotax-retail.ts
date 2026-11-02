@@ -227,7 +227,7 @@ export const intuitTurbotaxRetail: ProjectBundle = {
       "title": "Plan for the peak",
       "question": "What size is a store designed for?",
       "choice": "Size back of house, lounge and fixtures to peak occupancy, and build a flex or overflow position into every tier.",
-      "rationale": "Wave 1 showed that capacity and throughput are where stores fail: Williamsburg strained at its designed density, and the flagship broke at a 24-person staff peak that its back of house was never sized for.",
+      "rationale": "Wave 1 revealed pressure on capacity, throughput and staff support space at peak occupancy.",
       "tradeoff": "More back of house and flex than an average-day plan would justify.",
       "assetIds": [
         "intuit-retail-plan"
@@ -506,7 +506,7 @@ export const intuitTurbotaxRetail: ProjectBundle = {
       "projectId": "intuit-turbotax-retail",
       "file": "intuit-turbotax-retail/intuit-chicago-massing-forum.jpg",
       "type": "concept",
-      "caption": "Chicago, early massing study: a round skylight over a circular forum counter.",
+      "caption": "Chicago, early massing study: tiered seating and lounge groups beneath a large circular cut.",
       "alt": "Grey massing model of an open space with a circular counter beneath a round skylight and stepped seating.",
       "creator": "Rapt Studio",
       "credit": "Concept study, Rapt Studio",
@@ -518,7 +518,7 @@ export const intuitTurbotaxRetail: ProjectBundle = {
       "projectId": "intuit-turbotax-retail",
       "file": "intuit-turbotax-retail/intuit-chicago-massing-court.jpg",
       "type": "concept",
-      "caption": "Chicago, early massing study: tiered seating and lounge groups beneath a large circular cut.",
+      "caption": "Chicago, early massing study: a round skylight over a circular forum counter.",
       "alt": "Line-rendered study of tiered seating and sofas beneath a large circular opening in the ceiling.",
       "creator": "Rapt Studio",
       "credit": "Concept study, Rapt Studio",

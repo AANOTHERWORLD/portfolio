@@ -42,6 +42,10 @@ npm run build
 
 `npm run build` runs the `prebuild` image pipeline, then `next build`, which writes a self-contained static site to `out/`. There is no server. Serve `out/` with any static file host, or locally with `npx serve out`.
 
+## Editorial curation
+
+The public project pages use `content/editorial.ts` for chapter copy, image sequences, disciplines, and hero/index selection. The original project files retain the complete asset archive, role information, credits and permission gates. Run `node scripts/check-export.mjs` after a root-path production build to check all 22 public pages.
+
 ## How the site is organized
 
 ```

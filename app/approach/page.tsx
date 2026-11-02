@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { approachSteps, getApproachExamples, getProjectById, lenses } from "@/lib/content";
-import { approachAi, approachHeading, approachIntro, approachStatements } from "@/content/approach";
-import { getHeroAsset } from "@/lib/content";
+import { approachAi, approachHeading, approachIntro } from "@/content/approach";
+import { getAsset } from "@/lib/content";
 import Picture from "@/components/Picture";
 import { lensHeading, lensIntro } from "@/content/lenses";
 
@@ -24,8 +24,16 @@ export default function ApproachPage() {
         <div className="steps">
           {approachSteps.map((step) => {
             const examples = getApproachExamples(step.id);
-            const lead = examples[0]?.project;
-            const leadImage = lead ? getHeroAsset(lead) : null;
+            const evidence: Record<string, [string, string]> = {
+              "read-the-context": ["lsd-running", "lsd-workshop"],
+              "define-the-direction": ["lsd-running", "lsd-final-axon"],
+              "connect-the-scales": ["google-gso-home-of-the-internet", "gso-university-prompt-cards"],
+              "guide-the-team": ["watt-plaza", "watt-extension-markup"],
+              "protect-the-intent": ["kilroy-oyster-point", "kilroy-photo-atrium"],
+            };
+            const [projectId, assetId] = evidence[step.id];
+            const lead = getProjectById(projectId);
+            const leadImage = lead ? getAsset(lead, assetId) : null;
             return (
               <div className="step" key={step.id} id={step.id}>
                 <div>
@@ -34,10 +42,9 @@ export default function ApproachPage() {
                 </div>
                 <div>
                   <p className="step__summary">{step.summary}</p>
-                  {approachStatements[step.id] && <blockquote className="step__statement">{approachStatements[step.id]}</blockquote>}
                   {leadImage && lead && (
                     <Link href={`/work/${lead.project.slug}/`} className="step__image">
-                      <Picture asset={leadImage} showCaption={false} fit="cover" sizes="(min-width: 900px) 40vw, 100vw" />
+                      <Picture asset={leadImage} showCaption={false} sizes="(min-width: 900px) 40vw, 100vw" />
                       <span className="tag">See it in {lead.project.title}</span>
                     </Link>
                   )}

@@ -1,25 +1,21 @@
 import Link from "next/link";
-import { getAsset, getProjectById, getApproachExamples, getHomepageProjects, getLandingTiles, getLensCounts, getProfileAsset, getProfileClaimsById, portfolio, profile } from "@/lib/content";
+import { getAsset, getProjectById, getHomepageProjects, getLandingTiles, getProfileAsset, portfolio, profile } from "@/lib/content";
 import { getDownloads } from "@/lib/files";
 import { withBasePath } from "@/lib/basePath";
 import Picture from "@/components/Picture";
 import LensTags from "@/components/LensTags";
 import ScrollStage from "@/components/ScrollStage";
-import LensMarquee from "@/components/LensMarquee";
 import Portrait from "@/components/Portrait";
 import WorkCard from "@/components/WorkCard";
-import { LensProvider, LensKey } from "@/components/LensContext";
-import { lensIntro, lensHeading } from "@/content/lenses";
+import { LensProvider } from "@/components/LensContext";
 
 
 export default function HomePage() {
   const tiles = getLandingTiles();
   const featured = getHomepageProjects();
-  const counts = getLensCounts();
   const lsd = getProjectById("lsd-running");
   const mobileHero = lsd ? getAsset(lsd, "lsd-photo-bench-arc") : null;
   const portrait = getProfileAsset(profile.portraitAssetId);
-  const recognition = getProfileClaimsById(profile.recognitionClaimIds);
   const downloads = getDownloads();
   const mailto = `mailto:${portfolio.email}?subject=${encodeURIComponent(portfolio.emailSubject)}`;
 
@@ -58,7 +54,7 @@ export default function HomePage() {
             ))}
           </ol>
         </ScrollStage>
-        <a href="#lenses" className="scroll-cue" aria-label="Scroll to the work" data-stage-avoid>
+        <a href="#selected-work" className="scroll-cue" aria-label="Scroll to the work" data-stage-avoid>
           <span className="scroll-cue__text" aria-hidden="true">Scroll</span>
           <svg className="scroll-cue__arrow" viewBox="0 0 24 40" aria-hidden="true" focusable="false">
             <path d="M12 2v34M3 27l9 9 9-9" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -81,7 +77,7 @@ export default function HomePage() {
 
       <LensProvider>
         {/* 2. Selected work: sticky heading, six cards beside their text */}
-        <section className="work-section wrap" aria-labelledby="work-heading">
+        <section id="selected-work" className="work-section wrap" aria-labelledby="work-heading">
           <div className="work-section__sticky" data-reveal>
             <h2 id="work-heading" className="work-section__heading">Work</h2>
             <p className="work-section__range">&copy;{portfolio.workRangeLabel}</p>
@@ -96,16 +92,6 @@ export default function HomePage() {
             <p data-reveal><Link href="/work/" className="button" data-sweep>View All Work</Link></p>
           </div>
         </section>
-        {/* 3. Lens marquee and lens key */}
-        <section id="lenses" className="section section--marquee" aria-labelledby="lenses-heading">
-          <LensMarquee />
-          <div className="wrap">
-            <h2 id="lenses-heading" className="section__title lens-heading" data-reveal>{lensHeading}</h2>
-            <p className="lede lens-lede" data-reveal>{lensIntro}</p>
-            <LensKey counts={counts} compact mode="dim" />
-          </div>
-        </section>
-
         {/* 3. Full-bleed portrait */}
         {portrait && (
           <Portrait>
@@ -121,48 +107,15 @@ export default function HomePage() {
               <p className="about-band__bio">{profile.bio}</p>
               <p className="about-band__statement">{profile.leadershipStatement}</p>
             </div>
-            <div className="band-row">
-              <p className="band-row__label" data-reveal>Experience</p>
-              <div>
-                <ol className="timeline">
-                  {profile.experience.map((item) => (
-                    <li key={`${item.title}-${item.years}`} className="timeline__row line-row" data-reveal data-sweep>
-                      <span>{item.title}</span><span>{item.practice}</span><span className="timeline__years">{item.years}</span><span className="line-row__line" aria-hidden="true" />
-                    </li>
-                  ))}
-                </ol>
-                <p className="band-row__link" data-reveal><Link href="/about/" className="text-link text-link--on-accent" data-sweep>More about me</Link></p>
-              </div>
-            </div>
-            {recognition.length > 0 && (
-              <div className="band-row">
-                <p className="band-row__label" data-reveal>Project and studio recognition</p>
-                <ul className="ruled-list">
-                  {recognition.map((claim) => (
-                    <li key={claim.id} className={`line-row ${claim.status === "awaiting" ? "claim--awaiting" : ""}`} data-reveal data-sweep>
-                      {claim.url ? <a href={claim.url} rel="noopener" data-sweep className="sweep-link">{claim.wording}</a> : claim.wording}
-                      <span className="line-row__line" aria-hidden="true" />
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+            <p><Link href="/about/" className="text-link text-link--on-accent">More about me and my experience</Link></p>
           </div>
         </section>
 
       </LensProvider>
 
-      {/* 6. Approach preview and invitation */}
-      <section className="section wrap" aria-labelledby="approach-heading" data-reveal>
-        <p className="tag">Approach</p>
-        <h2 id="approach-heading" className="section__title">Set a clear direction. Give teams the tools to carry it through.</h2>
-        <p className="lede">I translate research and ambition into a creative idea, then establish shared criteria that help teams develop it across disciplines. Through critique, client dialogue and delivery, I keep decisions connected to the intent.</p>
-        <p><Link href="/approach/" className="text-link" data-sweep>Explore my approach to creative direction</Link></p>
-      </section>
-
       <section className="section wrap section--invite" aria-labelledby="invite-heading" data-reveal>
         <p className="tag">Availability</p>
-        <h2 id="invite-heading" className="section__title">Open to Creative Director roles</h2>
+        <h2 id="invite-heading" className="section__title">Creative Director and Design Director opportunities</h2>
         <p className="lede">{portfolio.availability}</p>
         <p className="tag">{portfolio.internationalAvailability}</p>
         <div className="actions">
