@@ -1,14 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { portfolio, profile, getProfileClaimsById, getProfileAsset } from "@/lib/content";
 import { getDownloads } from "@/lib/files";
 import { withBasePath } from "@/lib/basePath";
 import Picture from "@/components/Picture";
 
-export const metadata: Metadata = {
-  title: "About",
-  description: "A multidisciplinary design leader working across architecture, interiors, brand, and experience, with the scope of current leadership.",
-};
+export const metadata = pageMetadata("About", "A multidisciplinary design leader working across architecture, interiors, brand, and experience, with the scope of current leadership.", "/about/");
 
 export default function AboutPage() {
   const downloads = getDownloads();

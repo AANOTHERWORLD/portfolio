@@ -248,3 +248,13 @@ npm run build         # image pipeline + static export, prints every gated exclu
 ```
 
 Accessibility notes: all interactive elements are keyboard reachable with visible focus; the custom cursor never replaces focus styling; the lens key uses `aria-pressed` and a live region; the cursor and trail are disabled on coarse pointers and under `prefers-reduced-motion`, where the native cursor is restored; every image carries alt text, a caption, and a credit from its asset record; important information never depends on hover.
+
+## Privacy, search and release checks
+
+Analytics is optional. `AnalyticsConsent` loads GA4 only after acceptance, saves the choice locally, and provides withdrawal through the footer's Cookie settings button. Rejecting after acceptance removes accessible GA cookies and reloads without the analytics script. Contact, PDF download and project-view events are sent only while accepted. There is no contact form or backend credential in the static app. The GA4 measurement ID is a public identifier, not a secret. Configure any future private integration on a server, never through `NEXT_PUBLIC_*`.
+
+Privacy and terms pages live at `/privacy/` and `/terms/`. Revisit the policy when providers, data collection or retention settings change. GA4 property retention and enhanced-measurement settings remain account-side controls. Verify actual receipt of consented events in Realtime/DebugView; builds cannot verify account-side collection or configuration.
+
+Page metadata uses `lib/seo.ts` for canonical URLs and social cards. The homepage uses the branded 1200 x 630 PNG; project cards use a responsive hero rendition. Favicon and Apple icons are built from `public/favicon.svg`; `scripts/build-brand-assets.mjs` also builds the social PNG from its SVG. Sitemap routes follow the published content gates. Robots blocks indexing on draft builds. Production must leave `SHOW_DRAFTS` off.
+
+Run `npm run typecheck`, `npm run check:copy`, `npm run build`, and `npm run check:export` before publishing. The export check validates all local page links, assets, anchors, alt text, metadata, discovery files and the absence of analytics requests in server-rendered HTML. It does not replace browser testing of consent, keyboard navigation or mobile layouts. GitHub Pages handles HTTPS and domain redirects; retain its existing HTTPS enforcement when changing domains. Avoid embedding credentials in source, workflow arguments or public assets.

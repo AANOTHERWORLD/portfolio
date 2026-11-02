@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { getWorkGroups } from "@/lib/content";
 import { editorial } from "@/content/editorial";
 import WorkTile from "@/components/WorkTile";
 import WorkBrowser from "@/components/WorkBrowser";
-export const metadata: Metadata = { title: "Work", description: "Selected work across brand, spatial, experiential and hospitality design." };
+export const metadata = pageMetadata("Work", "Selected work across brand, spatial, experiential and hospitality design.", "/work/");
 export default function WorkPage() {
   const { selected, further } = getWorkGroups();
   const entries = [...selected, ...further].map((bundle, index) => ({ id: bundle.project.id, selected: index < selected.length, fields: editorial[bundle.project.id].fields, card: <WorkTile bundle={bundle} index={index} /> }));

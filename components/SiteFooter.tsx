@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CookieSettings from "./CookieSettings";
 import { portfolio } from "@/lib/content";
 import { getDownloads } from "@/lib/files";
 import { withBasePath } from "@/lib/basePath";
@@ -20,6 +21,9 @@ export default function SiteFooter() {
               <li><Link href="/work/" className="footer-link" data-sweep>Work</Link></li>
               <li><Link href="/approach/" className="footer-link" data-sweep>Approach</Link></li>
               <li><Link href="/about/" className="footer-link" data-sweep>About</Link></li>
+              <li><Link href="/privacy/" className="footer-link">Privacy</Link></li>
+              <li><Link href="/terms/" className="footer-link">Terms</Link></li>
+              <li><CookieSettings /></li>
               {downloads.portfolioPdf && <li><a href={withBasePath(downloads.portfolioPdf)} className="footer-link" data-sweep>Portfolio PDF</a></li>}
               {downloads.cvPdf && <li><a href={withBasePath(downloads.cvPdf)} className="footer-link" data-sweep>CV</a></li>}
             </ul>

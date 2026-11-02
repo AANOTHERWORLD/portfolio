@@ -1,12 +1,9 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { portfolio } from "@/lib/content";
 import { getDownloads } from "@/lib/files";
 import { withBasePath } from "@/lib/basePath";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: "Get in touch about creative leadership opportunities and collaboration.",
-};
+export const metadata = pageMetadata("Contact", "Get in touch about creative leadership opportunities and collaboration.", "/contact/");
 
 export default function ContactPage() {
   const downloads = getDownloads();

@@ -26,7 +26,7 @@ export default function HomePage() {
         {/* Phones: one still behind the statement. The tile field and its panning are desktop only. */}
         {mobileHero && (
           <div className="stage__mobile-bg" data-header-invert aria-hidden="true">
-            <Picture asset={mobileHero} showCaption={false} fit="cover" sizes="100vw" priority />
+            <Picture asset={mobileHero} showCaption={false} fit="cover" sizes="100vw" media="(max-width: 719px)" priority />
           </div>
         )}
         <ScrollStage>
@@ -37,7 +37,7 @@ export default function HomePage() {
             <p className="stage__body">{portfolio.statementBody}</p>
             <p className="stage__actions">
               <Link href="/work/" className="button" data-sweep>Explore selected work</Link>
-              <Link href="/approach/" className="button" data-sweep>How I approach creative direction</Link>
+              <Link href="/approach/" className="text-link stage__secondary-action" data-sweep>How I approach creative direction</Link>
             </p>
           </div>
           <ol className="stage__field" aria-label="Project tiles">
@@ -45,7 +45,7 @@ export default function HomePage() {
               <li key={tile.key} className={`tile tile--size-${tile.bundle.project.tileSize}`} data-tile data-size={tile.size}>
                 <Link href={`/work/${tile.bundle.project.slug}/`} className="tile__link cursor-tile">
                   <div className="tile__media">
-                    {tile.asset ? <Picture asset={tile.asset} showCaption={false} fit="cover" sizes="(min-width: 720px) 40vw, 50vw" priority={tile.spec.order <= 2 && tile.key.endsWith("-0")} /> : <div className="picture__placeholder">Image pending</div>}
+                    {tile.asset ? <Picture asset={tile.asset} showCaption={false} fit="cover" sizes="(min-width: 720px) 40vw, 50vw" /> : <div className="picture__placeholder">Image pending</div>}
                   </div>
                   <span className="tile__name">{tile.label}</span>
                   <LensTags lenses={tile.bundle.project.lenses} max={2} className="tile__lenses" />

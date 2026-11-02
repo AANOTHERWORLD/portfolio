@@ -7,7 +7,7 @@ const root = path.resolve("out");
 const projectPages = fs.readdirSync(path.join(root, "work"), { withFileTypes: true })
   .filter((entry) => entry.isDirectory() && fs.existsSync(path.join(root, "work", entry.name, "index.html"))).map((entry) => `work/${entry.name}/index.html`);
 assert.equal(projectPages.length, 17, "All 17 project routes must remain published");
-const pages = ["index.html", "work/index.html", "about/index.html", "approach/index.html", "contact/index.html", ...projectPages];
+const pages = ["index.html", "work/index.html", "about/index.html", "approach/index.html", "contact/index.html", "privacy/index.html", "terms/index.html", "404.html", ...projectPages];
 const decode = (s) => s.replaceAll("&amp;", "&");
 for (const page of pages) {
   const html = fs.readFileSync(path.join(root, page), "utf8");
@@ -38,4 +38,21 @@ for (const [slug, related] of [["club-gemini", "napa-retreat"], ["napa-retreat",
   const html = fs.readFileSync(path.join(root, `work/${slug}/index.html`), "utf8");
   assert(html.includes(`href="/work/${related}/"`), `${slug}: retreat relationship missing`);
 }
+// Metadata, image accessibility, privacy defaults and discovery files are release checks.
+for (const page of pages.filter((p) => p !== "404.html")) {
+  const html = fs.readFileSync(path.join(root, page), "utf8");
+  assert(html.includes('rel="canonical"'), `${page}: canonical missing`);
+  assert(html.includes('property="og:image"'), `${page}: social preview missing`);
+  assert(html.includes('name="twitter:card" content="summary_large_image"'), `${page}: social card missing`);
+  assert(!html.includes('src="https://www.googletagmanager.com'), `${page}: analytics must not load before consent`);
+  assert(!html.includes('rel="preload" href="https://www.googletagmanager.com'), `${page}: analytics preload before consent`);
+  for (const image of html.matchAll(/<img\b[^>]*>/g)) assert(/\balt="[^"]+"/.test(image[0]), `${page}: missing descriptive alt text`);
+}
+for (const file of ["robots.txt", "sitemap.xml", "favicon.svg", "favicon.ico", "favicon-32.png", "apple-touch-icon.png", "social-preview.png"]) assert(fs.existsSync(path.join(root, file)), `Missing ${file}`);
+const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
+for (const page of pages.filter((p) => p !== "404.html")) {
+  const pathname = `/${page.replace(/index\.html$/, "")}`;
+  assert(sitemap.includes(`https://jamelwilliams.com${pathname}`), `Sitemap missing ${pathname}`);
+}
+assert(fs.readFileSync(path.join(root, "robots.txt"), "utf8").includes("https://jamelwilliams.com/sitemap.xml"), "Robots must reference sitemap");
 console.log(`Verified ${pages.length} pages: local links, anchors, media, unique titles, project sequences and confirmed credits.`);

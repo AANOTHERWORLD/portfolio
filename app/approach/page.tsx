@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { approachSteps, getApproachExamples, getProjectById, lenses } from "@/lib/content";
 import { approachAi, approachHeading, approachIntro } from "@/content/approach";
@@ -6,10 +6,7 @@ import { getAsset } from "@/lib/content";
 import Picture from "@/components/Picture";
 import { lensHeading, lensIntro } from "@/content/lenses";
 
-export const metadata: Metadata = {
-  title: "Approach",
-  description: "A recurring method: read the context, define the direction, connect the scales, guide the team, protect the intent.",
-};
+export const metadata = pageMetadata("Approach", "A recurring method: read the context, define the direction, connect the scales, guide the team, protect the intent.", "/approach/");
 
 export default function ApproachPage() {
   return (
