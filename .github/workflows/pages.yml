@@ -37,6 +37,9 @@ jobs:
           # Repository variable SHOW_DRAFTS controls the gates. Only "true" turns the draft preview on;
           # builds the draft preview, which shows projects awaiting permission with markers.
           NEXT_PUBLIC_SHOW_DRAFTS: ${{ vars.SHOW_DRAFTS == 'true' }}
+      - name: Validate production export
+        run: npm run typecheck && npm run check:copy && npm run check:export
+        if: steps.pages.outputs.base_path == '' && vars.SHOW_DRAFTS != 'true'
       - run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -5,13 +5,14 @@
   "description": "Portfolio site: One Vision. Multiple Scales.",
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/optimize-images.mjs",
+    "prebuild": "node scripts/optimize-images.mjs && node scripts/build-brand-assets.mjs",
     "build": "next build",
     "start": "npx serve out",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "images": "node scripts/optimize-images.mjs",
-    "check:copy": "node scripts/check-copy.mjs"
+    "check:copy": "node scripts/check-copy.mjs",
+    "check:export": "node scripts/check-export.mjs"
   },
   "dependencies": {
     "gsap": "^3.13.0",

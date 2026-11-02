@@ -31,7 +31,7 @@ export default function WorkCard({ bundle, index, variant = "card" }: Props) {
       <Link href={`/work/${project.slug}/`} className="work-card__link">
         <div className="work-card__frame">
           <div className="work-card__media" data-parallax style={{ "--tile-height": `${tilePx(project.tileSize)}px` } as React.CSSProperties}>
-            {asset ? <Picture asset={asset} showCaption={false} fit="cover" sizes="(min-width: 900px) 60vw, 100vw" priority={index === 0} /> : <div className="picture__placeholder">Image pending</div>}
+            {asset ? <Picture asset={asset} showCaption={false} fit="cover" sizes="(min-width: 900px) 60vw, 100vw" /> : <div className="picture__placeholder">Image pending</div>}
           </div>
         </div>
         <div className="work-card__text">

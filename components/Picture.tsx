@@ -5,6 +5,7 @@ import { withBasePath } from "@/lib/basePath";
 type Props = {
   asset: Asset;
   sizes?: string;
+  media?: string;
   priority?: boolean;
   showCaption?: boolean;
   showLens?: boolean;
@@ -24,7 +25,7 @@ const TYPE_LABEL: Record<Asset["type"], string> = {
 
 // Server component. Emits a responsive <img> with srcset, sizes, explicit width and height
 // (no layout shift), lazy loading below the fold, and a caption with type label and credit.
-export default function Picture({ asset, sizes = "(min-width: 1100px) 1100px, 100vw", priority = false, showCaption = true, showLens = false, className, fit = "contain" }: Props) {
+export default function Picture({ asset, sizes = "(min-width: 1100px) 1100px, 100vw", priority = false, showCaption = true, showLens = false, className, fit = "contain", media }: Props) {
   const image = resolveImage(asset.file);
   if (!image) {
     return (
@@ -55,7 +56,10 @@ export default function Picture({ asset, sizes = "(min-width: 1100px) 1100px, 10
         >
           <source src={withBasePath(`/projects/${asset.motion.file}`)} type="video/mp4" />
           <a href={withBasePath(`/projects/${asset.motion.file}`)}>Watch the film</a>
-        </video> : <img
+        </video> : media ? <picture>
+          <source media={media} srcSet={image.srcSet ?? image.src} sizes={sizes} />
+          <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width={image.width} height={image.height} alt={asset.alt} loading={priority ? "eager" : "lazy"} fetchPriority={priority ? "high" : undefined} decoding="async" />
+        </picture> : <img
           src={image.src}
           srcSet={image.srcSet}
           sizes={image.srcSet ? sizes : undefined}

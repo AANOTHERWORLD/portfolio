@@ -16,3 +16,14 @@ content/generated/
 .DS_Store
 .vscode/
 .idea/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Brand assets generated from tracked SVG sources during prebuild.
+/public/social-preview.png
+/public/favicon-32.png
+/public/apple-touch-icon.png
+/public/favicon.ico

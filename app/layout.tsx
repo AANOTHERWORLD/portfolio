@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Script from "next/script";
+import AnalyticsConsent from "@/components/AnalyticsConsent";
+import { SITE_ORIGIN } from "@/lib/seo";
+import { withBasePath } from "@/lib/basePath";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
@@ -16,6 +18,10 @@ const inter = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_ORIGIN),
+  alternates: { canonical: withBasePath("/") },
+  icons: { icon: [{ url: withBasePath("/favicon.svg"), type: "image/svg+xml" }, { url: withBasePath("/favicon-32.png"), sizes: "32x32", type: "image/png" }], apple: withBasePath("/apple-touch-icon.png") },
+  twitter: { card: "summary_large_image", title: `${portfolio.name}, ${portfolio.headline}`, description: portfolio.positioning, images: [withBasePath("/social-preview.png")] },
   title: {
     default: `${portfolio.name} | Creative Direction, Architecture and Interiors`,
     template: `%s | ${portfolio.name}`,
@@ -25,6 +31,9 @@ export const metadata: Metadata = {
     title: `${portfolio.name}, ${portfolio.headline}`,
     description: portfolio.positioning,
     type: "website",
+    url: withBasePath("/"),
+    siteName: portfolio.name,
+    images: [{ url: withBasePath("/social-preview.png"), width: 1200, height: 630, alt: "Jamel Williams. One Vision. Multiple Scales." }],
   },
 };
 
@@ -33,13 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={inter.variable} data-draft={draft || undefined}>
       <body>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-Q5GJ7YP773" strategy="afterInteractive" />
-        <Script id="google-analytics" strategy="afterInteractive">{`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag("js", new Date());
-          gtag("config", "G-Q5GJ7YP773");
-        `}</Script>
+        <AnalyticsConsent />
         <SiteHeader />
         {draft && (
           <p className="draft-banner" role="status" data-header-invert>

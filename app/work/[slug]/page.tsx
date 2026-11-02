@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import { resolveImage } from "@/lib/images";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllProjectSlugs, getProject, getWorkOrder, getAsset, getHeroAsset, getIndexAsset, getClaims } from "@/lib/content";
@@ -12,7 +14,20 @@ export function generateStaticParams() { return getAllProjectSlugs().map((slug) 
 type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const bundle = getProject((await params).slug);
-  return bundle ? { title: bundle.project.title, description: bundle.project.thesis } : {};
+  if (!bundle) return {};
+  const { project } = bundle;
+  const intro = editorial[project.id]?.intro ?? project.thesis;
+  const description = intro.length > 165 ? `${intro.slice(0, 162).replace(/\s+\S*$/, "")}...` : intro;
+  const hero = getHeroAsset(bundle);
+  const image = hero ? resolveImage(hero.file) : null;
+  // Use an existing 1440px rendition for project previews without fetching the full original.
+  const preview = image?.srcSet?.split(", ").find((entry) => entry.endsWith("1440w"))?.split(" ")[0] ?? image?.src;
+  const metadata = pageMetadata(project.title, description, `/work/${project.slug}/`);
+  if (preview) {
+    metadata.openGraph = { ...metadata.openGraph, images: [{ url: preview, alt: hero!.alt }] };
+    metadata.twitter = { ...metadata.twitter, images: [preview] };
+  }
+  return metadata;
 }
 
 export default async function ProjectPage({ params }: Props) {
