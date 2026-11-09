@@ -6,7 +6,7 @@ import assert from "node:assert/strict";
 const root = path.resolve("out");
 const projectPages = fs.readdirSync(path.join(root, "work"), { withFileTypes: true })
   .filter((entry) => entry.isDirectory() && fs.existsSync(path.join(root, "work", entry.name, "index.html"))).map((entry) => `work/${entry.name}/index.html`);
-assert.equal(projectPages.length, 17, "All 17 project routes must remain published");
+assert.equal(projectPages.length, 18, "All 18 project routes must remain published");
 const pages = ["index.html", "work/index.html", "about/index.html", "approach/index.html", "contact/index.html", "privacy/index.html", "terms/index.html", "404.html", ...projectPages];
 const decode = (s) => s.replaceAll("&amp;", "&");
 for (const page of pages) {
@@ -31,6 +31,11 @@ for (const page of pages) {
   }
 }
 const home = fs.readFileSync(path.join(root, "index.html"), "utf8");
+assert(projectPages.includes("work/metropolis/index.html"), "Metropolis case study must be published");
+for (const page of ["index.html", "work/index.html"]) {
+  const html = fs.readFileSync(path.join(root, page), "utf8");
+  assert(html.includes('href="/work/metropolis/"'), `${page}: Metropolis must be featured`);
+}
 assert(home.includes('href="#selected-work"'), "Homepage cue must target selected work");
 const tokyo = fs.readFileSync(path.join(root, "work/openai/index.html"), "utf8");
 assert(tokyo.includes("Erick Lignel"), "Confirmed Tokyo photographer credit missing");

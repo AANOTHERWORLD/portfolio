@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAsset, getProjectById, getHomepageProjects, getLandingTiles, getProfileAsset, portfolio, profile } from "@/lib/content";
+import { getHeroAsset, getHomepageProjects, getLandingTiles, getProfileAsset, portfolio, profile } from "@/lib/content";
 import { getDownloads } from "@/lib/files";
 import { withBasePath } from "@/lib/basePath";
 import Picture from "@/components/Picture";
@@ -13,8 +13,7 @@ import { LensProvider } from "@/components/LensContext";
 export default function HomePage() {
   const tiles = getLandingTiles();
   const featured = getHomepageProjects();
-  const lsd = getProjectById("lsd-running");
-  const mobileHero = lsd ? getAsset(lsd, "lsd-photo-bench-arc") : null;
+  const mobileHero = featured[0] ? getHeroAsset(featured[0]) : null;
   const portrait = getProfileAsset(profile.portraitAssetId);
   const downloads = getDownloads();
   const mailto = `mailto:${portfolio.email}?subject=${encodeURIComponent(portfolio.emailSubject)}`;
@@ -76,7 +75,7 @@ export default function HomePage() {
       </section>
 
       <LensProvider>
-        {/* 2. Selected work: sticky heading, six cards beside their text */}
+        {/* 2. Selected work: sticky heading with the featured project cards */}
         <section id="selected-work" className="work-section wrap" aria-labelledby="work-heading">
           <div className="work-section__sticky" data-reveal>
             <h2 id="work-heading" className="work-section__heading">Work</h2>

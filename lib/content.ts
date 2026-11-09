@@ -70,8 +70,8 @@ export function getCoreProjects(): ProjectBundle[] {
 }
 
 // Editorial selection, independent of the general project sequence. Order matters.
-export const HOMEPAGE_IDS = ["lsd-running", "kilroy-oyster-point", "tinder-hq", "google-room-98", "google-gso-home-of-the-internet", "april-jean"];
-export const SELECTED_WORK_IDS = ["lsd-running", "kilroy-oyster-point", "tinder-hq", "google-room-98", "intuit-turbotax-retail", "google-gso-home-of-the-internet", "openai", "april-jean"];
+export const HOMEPAGE_IDS = ["metropolis", "lsd-running", "kilroy-oyster-point", "tinder-hq", "google-room-98", "google-gso-home-of-the-internet", "april-jean"];
+export const SELECTED_WORK_IDS = ["metropolis", "lsd-running", "kilroy-oyster-point", "tinder-hq", "google-room-98", "intuit-turbotax-retail", "google-gso-home-of-the-internet", "openai", "april-jean"];
 
 const byIds = (ids: string[]) => (assertSelections(), ids).map((id) => getCoreProjects().find((b) => b.project.id === id)).filter((b): b is ProjectBundle => !!b);
 

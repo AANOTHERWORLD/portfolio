@@ -15,6 +15,49 @@ export interface Editorial {
 }
 const chapter = (title: string, paragraphs: string[], assets: string[]): Chapter => ({ title, paragraphs, assets });
 export const editorial: Record<string, Editorial> = {
+  "metropolis": {
+  "thesis": "A workplace for what comes next",
+  "fields": [
+    "Spatial",
+    "Hospitality"
+  ],
+  "hero": "metropolis-002",
+  "index": "metropolis-002",
+  "intro": "Metropolis’s Santa Monica workplace translates an evolving technology company into a welcoming, tangible experience. Hospitality, social space and quieter settings give employees and guests different ways to engage with the company and one another.",
+  "chapters": [
+    {
+      "title": "Make a changing company tangible",
+      "paragraphs": [
+        "The brief called for a workplace that could express Metropolis’s expansion beyond parking while conveying the confidence of an established organization. Discovery explored how a fixed environment could support a business still evolving, bringing technological ambition together with human comfort."
+      ],
+      "assets": [
+        "metropolis-011",
+        "metropolis-030"
+      ]
+    },
+    {
+      "title": "Give people a reason to gather",
+      "paragraphs": [
+        "The design direction developed toward a hospitality-led workplace, with settings that allow people to choose how they work and connect. In the completed shared spaces, lounge seating, communal tables and banquettes create a range of scales for conversation, framed by daylight and views toward the coast."
+      ],
+      "assets": [
+        "metropolis-023",
+        "metropolis-019",
+        "metropolis-026"
+      ]
+    },
+    {
+      "title": "Make room for discovery",
+      "paragraphs": [
+        "A more intimate speakeasy introduces a distinct social setting within the workplace. Curved seating, warm color and concealed lighting shift the atmosphere from the open, daylit commons. Together, these environments express the project’s ambition through the experience of moving between spaces."
+      ],
+      "assets": [
+        "metropolis-027",
+        "metropolis-017"
+      ]
+    }
+  ]
+},
   "lsd-running": {
     thesis: "A running brand expressed through identity, a first store and product imagery.",
     fields: ["Brand", "Spatial"], hero: "lsd-photo-bench-wide", index: "lsd-product-run-1",

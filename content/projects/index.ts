@@ -10,12 +10,14 @@ import { wattPlaza } from "./watt-plaza";
 import { googleTokyoPartnerPlex } from "./google-tokyo-partner-plex";
 import { googleWsp } from "./google-wsp";
 import { moreWork } from "./more-work";
+import { metropolis } from "./metropolis";
 
 // To add a project: create a file in this folder that exports a ProjectBundle, add the source
 // images to public/projects/<slug>/, and append the bundle here. Layout code never changes.
 // Core projects (tier: core) lead the Work index in sequence order and appear in the PDF.
 // Extended projects (tier: extended) follow under "More work" with lighter pages.
 export const projectBundles: ProjectBundle[] = [
+  metropolis,
   intuitTurbotaxRetail,
   googleGso,
   tinderHq,

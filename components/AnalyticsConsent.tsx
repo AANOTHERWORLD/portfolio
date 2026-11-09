@@ -41,7 +41,9 @@ export default function AnalyticsConsent() {
 
   useEffect(() => {
     const saved = readChoice();
-    setChoice(saved); setOpen(!saved);
+    // Restore the visitor's choice without interrupting their visit.
+    // The controls open only when they explicitly select Cookie settings.
+    setChoice(saved);
     if (saved !== "accepted") clearAnalyticsCookies();
     const show = () => {
       settingsButton.current = document.activeElement as HTMLElement;
@@ -100,7 +102,7 @@ export default function AnalyticsConsent() {
     }} />}
     {open && <section className="cookie-banner" aria-labelledby="cookie-title" aria-describedby="cookie-description" role="region">
       <div><h2 id="cookie-title">Your privacy choices</h2><p id="cookie-description">With your permission, Google Analytics helps me understand how visitors explore this portfolio. Analytics stays off until you accept. You can change your choice in Cookie settings.</p><Link href="/privacy/">Privacy policy</Link></div>
-      <div className="cookie-banner__actions"><button ref={firstButton} type="button" onClick={() => choose("rejected")}>Reject analytics</button><button type="button" onClick={() => choose("accepted")}>Accept analytics</button>{choice && <button type="button" onClick={() => { setOpen(false); settingsButton.current?.focus(); }}>Close settings</button>}</div>
+      <div className="cookie-banner__actions"><button ref={firstButton} type="button" onClick={() => choose("rejected")}>Reject analytics</button><button type="button" onClick={() => choose("accepted")}>Accept analytics</button><button type="button" onClick={() => { setOpen(false); settingsButton.current?.focus(); }}>Close settings</button></div>
     </section>}
   </>;
 }
